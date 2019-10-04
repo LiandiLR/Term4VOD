@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+header{
+}
+
+
+content{
+    width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------------------------------------------ */
+
+.page-title{
+    height: 200px;
+    width: 100%;
+    background-color: aqua;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+}
+
+.back-button{
+    background-color: darkcyan;
+    height: 100%;
+    width: 200px;
+    float: left;
+}
+
+.title{
+    float: left;
+    height: 200px;
+    width: 760px;
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5%;
+    align-content: center;
+    background-color: cadetblue;
+}
+
+.title h1{
+    font-size-adjust: auto;
+    align-content: center;
+}
+/* ------------------------------------------------------------------------ */
+
+.movies-outside{
+    width: 100%;
+    height: 700px;
+    background-color: darkgoldenrod;
+}
+
+/* ------------------------------------------------------------------------ */
+
+.series-outside{
+    width: 100%;
+    height: 700px;
+    background-color: darkblue;
+}
+
+/* ------------------------------------------------------------------------ */
+
+footer{
+    
+}
