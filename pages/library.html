@@ -59,9 +59,70 @@
             
             <div id="onepx" class="col-xs-10"></div> <!--onepx-->
             
-            <div id="movie-filter" class="col-xs-3">
+            <div id="movie-series-container">
+                <div id="movie-filter" class="col-xs-6">
+                    <h1>Movies</h1>    
+                </div> <!--movie-filter-->
+
+                <div id="series-filter" class="col-xs-6">
+                    <h1>Series</h1>
+                </div> <!--series-filter-->     
+                
+            </div> <!--movie-series-container-->
             
-            </div>
+            <div id="filter-container" class="col-xs-12">
+                <h1>All Movies</h1>    
+                <div class="text-underline"></div> <!--text-underline-->
+                
+                <div class="filter-options">
+                    <select id="select-filter" onclick="getGenreInfo();">
+                        <option value="0">Select Option</option>
+                        <option value="1">Release date</option>
+                        <option value="2">IMDB rating</option>
+                        <option value="3">Genre</option>                
+                    </select>
+                </div> <!--filter-options-->
+                
+            </div> <!--filter-container-->
+            
+            <div class="genre-container">
+                <div class="genres">
+                    <h2>Classics</h2>
+                    <h2>Horror</h2>
+                    <h2>Action</h2>
+                    <h2>Adventure</h2>
+                    <h2>Comedy</h2>
+                    <h2>Anime</h2>
+                </div> <!--genres-->
+            </div> <!--genre-container-->
+            
+            <div id="images-container" class="col-xs-10 col-lg-6">
+                <div class="biggest-image">
+                    <img src="../images/BTTF.jpg">    
+                </div> <!--biggest-image-->
+                
+                <div class="small-images-row-one">
+                    <img src="../images/Django.jpg">     
+                </div> <!--small-images-row-one-->
+                
+                <div class="small-images-row-one">
+                    <img src="../images/BTTF.jpg"> 
+                </div> <!--small-images-row-one-->
+                
+                <div class="small-images-row-two">
+                    <img src="../images/Halloween.jpg"> 
+                </div> <!--small-images-row-two-->
+                
+                <div class="small-images-row-two">
+                    <img src="../images/Django.jpg"> 
+                </div> <!--small-images-row-two-->
+                
+                <div class="arrow-right">
+                    <img src="../images/arrow.png">
+                </div>
+                
+            </div> <!--images-container-->
+       
             
         </div> <!--content-container-->
         
