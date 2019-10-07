@@ -1,6 +1,5 @@
 body{
-    margin: 0;
-    padding: 0;
+    background-color: black;
 }
 
 header{
@@ -8,49 +7,39 @@ header{
 
 
 content{
-    width: 100%;
     height: auto;
 }
 
-.left-side{
-    float: left;
-}
-.right-side{
-    float: left;
-}
-
 .mORs-title{
-    width: 950px;
     height: 150px;
     background-color: blueviolet;
     border-bottom: 3px solid white;
     border-top: 3px solid white;
+    float: left;
     
 }
 
 .mORs-information{
-    width: 950px;
-    height: 700px;
+    height: 800px;
     background-color: aqua;
+    float: left;
+    
     
 }
 
 .mORs-poster-box{
-    height: 700px;
-    width: 450px;
-    background-color: coral;
+    height: 950px;
+
         
 }
 .mORs-poster{
-    height: 600px;
-    width: 450px;
-    background-color: coral;
+    height: 800px;
+    background-color: wheat;
         
 }
 
 .mORs-buttons{
-    height: 100px;
-    width: 450px;
+    height: 150px;
     background-color: darkcyan;
 }
 

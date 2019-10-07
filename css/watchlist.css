@@ -1,67 +1,70 @@
 body{
     margin: 0;
     padding: 0;
-    padding-left: 1%;
-    padding-right: 1%;
+
 }
 
 header{
 }
 
-
-content{
-    width: 100%;
+h1{
+    font-size: 6vw;
+}
+section{
     height: auto;
 }
 
 /* ------------------------------------------------------------------------ */
-
-.page-title{
-    height: 200px;
-    width: 100%;
-    background-color: aqua;
-    border-bottom: 3px solid white;
-    border-top: 3px solid white;
+#heading{
+    height: auto;
+    background-color: magenta;
+    text-align: center;
 }
 
-.back-button{
-    background-color: darkcyan;
+.btn-return{
+    background-color: aquamarine;
     height: 100%;
-    width: 200px;
-    float: left;
 }
 
-.title{
-    float: left;
-    height: 200px;
-    width: 760px;
-    padding-top: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-bottom: 5%;
-    align-content: center;
+.page-heading{
+    background-color: lightblue;    
+    height: 100%;
+}
+
+.spacer{
+    height: 35px;
+    background-color: cyan
+}
+
+.my-movies{
     background-color: cadetblue;
+    height: 700px;
 }
 
-.title h1{
-    font-size-adjust: auto;
-    align-content: center;
+.my-series{
+    background-color: blueviolet;
+    height: 700px;
 }
+
+.mymovies-navbar{
+    height: 100px;
+    background-color: crimson;
+}
+
+.myseries-navbar{
+    height: 100px;
+    background-color: mintcream;
+}
+
+
+
 /* ------------------------------------------------------------------------ */
 
-.movies-outside{
-    width: 100%;
-    height: 700px;
-    background-color: darkgoldenrod;
-}
+
 
 /* ------------------------------------------------------------------------ */
 
-.series-outside{
-    width: 100%;
-    height: 700px;
-    background-color: darkblue;
-}
+
 
 /* ------------------------------------------------------------------------ */
 
