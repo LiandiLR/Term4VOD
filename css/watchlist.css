@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+}
+
+h1{
+    font-size: 6vw;
+}
+section{
+    height: auto;
+}
+
+/* ------------------------------------------------------------------------ */
+#heading{
+    height: auto;
+    background-color: magenta;
+    text-align: center;
+}
+
+.btn-return{
+    background-color: aquamarine;
+    height: 100%;
+}
+
+.page-heading{
+    background-color: lightblue;    
+    height: 100%;
+}
+
+.spacer{
+    height: 35px;
+    background-color: cyan
+}
+
+.my-movies{
+    background-color: cadetblue;
+    height: 700px;
+}
+
+.my-series{
+    background-color: blueviolet;
+    height: 700px;
+}
+
+.mymovies-navbar{
+    height: 100px;
+    background-color: crimson;
+}
+
+.myseries-navbar{
+    height: 100px;
+    background-color: mintcream;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------------------ */
+
+footer{
+    
+}
