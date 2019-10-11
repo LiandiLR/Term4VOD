@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META INFORMATION -->
+        <meta name="author" content="">
+        <meta name="student number" content="">
+        <meta name="subject" content="IDV100">
+        <meta name="assessment" content="Term 4 Assessment">
+        <meta name="lecturer" content="Mike Maynard"> 
+        
+        <!-- WEBSITE TITLE -->
+        <title>VideoBench - Info</title>
+        
+        <!-- LINK JQUERY LIBRARY FILES (Before bootstrap files) -->
+        <script src="jquery/1.12.0/jquery.min.js"></script>
+        
+         <!-- LINK BOOTSTRAP-FILES-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        
+        <!-- LINK CSS/JS PROJECT FILEs -->
+        <link rel="stylesheet" href="../css/indiv.css">
+        <!--<script src="main.js"></script>-->
+        
+        <!-- LINK GOOGLE FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <!-------------------- CONTAINER START -------------------->
+        <div class="container-fluid">
+            
+            <!-------------------- NAVIGATION START -------------------->
+            <div class="row">
+                
+                <!-- Mobile Navigation -->
+                <div class="navigation col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on tablet and desktop -->
+                    <div class="nav-menu">
+                    <span class="glyphicon glyphicon-menu-hamburger" style="color:#656565"></span>
+                    </div>
+                    <div class="nav-logo-mobile"></div>
+                    <div class="nav-search-mobile">
+                     <span class="glyphicon glyphicon-search" style="color:#656565"></span>
+                    </div>
+                </div>
+                
+                <!-- Tablet Navigation -->
+                <div class="navigation col-xs-12 hidden-xs"> <!-- Hide on mobile -->
+                    <div class="nav-logo-tablet"></div>
+                    <div class="nav-item home"><h4>Home</h4></div>
+                    <div class="nav-item library"><h4>Movies / Series</h4></div>
+                    <div class="nav-item watchlist"><h4>My List</h4></div>
+                    <div class="nav-profile">
+                        <div class="nav-profile-image"></div>
+                        <h6>Hi Liandi!</h6>
+                    </div>
+                    <div class="nav-search-tablet hidden-md hidden-lg"></div> <!-- Hide on Desktop -->
+                    <div class="nav-search-desktop hidden-xs hidden-sm">
+                        <div class="nav-search-desktop-icon"></div>
+                    </div> <!-- Hide on Mobile and Tablet -->
+                    
+                </div>
+            
+            </div>
+            <!-------------------- NAVIGATION END -------------------->
+            
+            <!-------------------- CONTENT START -------------------->
+            <div class="row">
+                <div class="heading col-xs-12 col-md-6 hidden-md hidden-lg">
+                    
+                    <div class="onepxline" class="col-xs-12"></div> <!--onepxline-->
+            
+                    <div id="movie-series-words" class="col-xs-12">
+                        <div class="back-arrow"></div>
+                        <h1>Django Unchained</h1>
+                    </div> <!--movie-series-words-->
+            
+                    <div class="onepxline pxtwo" class="col-xs-12"></div> <!--onepxline-->
+                
+                </div> <!--heading-->     
+            </div>
+           
+            
+            <div class="row">
+                <div class="poster col-xs-12 col-sm-7 col-md-6 ">
+                    <div class="poster-container">
+                        <div class="poster-image"></div>
+                    </div>
+                    <div class="buttons col-xs-12 hidden-sm">
+                        <div class="action-buttons play">
+                            <h1>Play</h1>
+                        </div> <!--play-button-->
+                        
+                        <div class="action-buttons watchlist">
+                            <h1>+</h1>
+                            <h2>My List</h2>
+                        </div> <!--watchlist-button-->
+                    
+                    </div> <!-- Hide on Tablet -->
+                </div>
+                <div class="indiv-content col-md-6 hidden-xs hidden-sm"> <!-- Hide on Mobile and Tablet -->
+                    <div class="heading col-md-12"></div>
+                </div>
+                <div class="buttons col-sm-5 hidden-xs hidden-md hidden-lg" style="margin-top:160px"></div> <!-- Hide on Mobile and Desktop -->
+            </div>
+        
+            
+    
+            <div class="row">
+                <div class="indiv-content col-xs-12 hidden-md hidden-lg" style="height: 380px">
+                    <h2>In 1858, a bounty hunter named Schultz seeks out a slave named Django and buys him because he needs him to find some men he is looking for. After finding them, Django wants to find his wife, Broomhilda, who along with him were sold separately by his former owner for trying to escape. Schultz offers to help him if he chooses to stay with him and be his partner. Eventually they learn that she was sold to a plantation in Mississippi. Knowing they can't just go in and say they want her, they come up with a plan so that the owner will welcome them into his home and they can find a way.</h2>
+                    <div class="rating-container">
+                        <div class="onepxline left"></div>
+                        <div class="starrater">
+                            <div class="movie-rating">8</div>    
+                        </div>
+                        <div class="onepxline right"></div>
+                    </div> <!--rating-container-->
+                    
+                    <div class="info-left">
+                        <h3>Actors:</h3>
+                        <h3>Genre:</h3>
+                        <h3>Date of Release:</h3>
+                        <h3>Running Time:</h3>
+                        <h3>Budget:</h3>
+                        <h3>Tagline:</h3>
+                    </div>
+                    <div class="info-right">
+                        <h3>Jamie Foxx, Leonardo DiCaprio, Christoph Waltz</h3>
+                        <h3>Drama, Western</h3>
+                        <h3>25 December 2012</h3>
+                        <h3>2h 45min</h3>
+                        <h3>$100,000,000</h3>
+                        <h3>Life, liberty and the pursuit of vengeance</h3>
+                    </div>
+                </div> <!--indiv-content-->          
+            </div>
+            <!-------------------- DESCRIPTION END -------------------->
+            
+            
+            
+            
+            
+            
+            <!-------------------- FOOTER START -------------------->
+            <div class="row">
+                <!----- FOOTER MOBILE ----->
+                <div class="footer-mobile col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
+                    
+                    <div class="footer-connect col-xs-12" style="height:90px">
+                        <p>Stay up to date with new releases and announcements</p>
+                        <div class="connect-textbox">
+                            <input type="text" name="join" value="type your email here">
+                            <button>Join</button>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-social-media col-xs-12" style="height:25px">
+                        <div class="social-media">
+                            <div class="social-media-icon facebook"></div>
+                            <div class="social-media-icon twitter"></div>
+                            <div class="social-media-icon pinterest"></div>
+                    `   </div>
+                    </div>
+                    
+                    
+                    <div class="footer-copywrite col-xs-12" style="height:45px">
+                       <p style="color:#d04925">© 2019 Videobench</p>
+                    </div>
+                    
+                </div>
+                
+                <!----- FOOTER TABLET + DESKTOP ----->
+                <div class="footer-tablet col-sm-12 hidden-xs"> <!-- Hide on Mobile -->
+                    <div class="footer-copywrite col-sm-3" style="margin-top:28px">
+                        <p style="color:#d04925; margin-top:15px">© 2019 Videobench</p>
+                    </div>
+                    <div class="footer-connect col-sm-6">
+                        <h6>Let's Connect!</h6>
+                        <p>Stay up to date with new releases and announcements</p>
+                        <div class="connect-textbox">
+                            <input type="text" name="join" value="type your email here">
+                            <button>Join</button>
+                        </div>
+                    </div>
+                    <div class="footer-social-media col-sm-3" style="margin-top:28px">
+                        <div class="social-media">
+                            <div class="social-media-icon facebook"></div>
+                            <div class="social-media-icon twitter"></div>
+                            <div class="social-media-icon pinterest"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+                
+                
+            </div>
+            <!-------------------- FOOTER END -------------------->
+           
+        </div>
+        <!-------------------- CONTAINER DIV END -------------------->
+        
+        
+        
+        
+        
+    </body>
+</html>
