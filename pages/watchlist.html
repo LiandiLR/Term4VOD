@@ -3,58 +3,105 @@
     
     <head>
         
-        <title>VIDEOBENCH</title>
+        <title>VideoBench - Watchlist</title>
         
         <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="../jquery/1.12.0/jquery.min.js"></script>
         
-        <link href="../css/watchlist.css" rel="stylesheet">
+        <!-- LINK JQUERY LIBRARY FILES (Before bootstrap files) -->
+        <script src="../jquery/1.12.0/jquery.min.js"></script>
+        
+         <!-- LINK BOOTSTRAP-FILES-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="../bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="../js/watchlist.js"></script>
+        
+        
+        <!-- LINK CSS/JS PROJECT FILEs -->
+        <link rel="stylesheet" href="../css/watchlist.css">
+        <!--<script src="main.js"></script>-->
+        
+        <!-- LINK GOOGLE FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         
     </head> <!-- head -->
     
     <body>
         
-        <header>
-            
-            
-        </header> <!-- header -->
+        <!-- nav comes here - START -->
         
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="container-fluid" id="heading">
-                        <div class="row">
-                            <div class="btn-return col-xs-2"></div> <!-- btn-return -->
-                            <div class="page-heading col-xs-10">
-                                <h1>Heading</h1>
-                            </div> <!-- page heading -->
-                        </div>
-                    </div> <!-- heading -->
-                    <div class="spacer col-xs-12"></div> <!-- spacer -->
-                    <div class=" container-fluid my-movies col-xs-12">
-                        <div class="row">
-                            <div class="mymovies-navbar"></div> <!-- mymovies-navbar -->
-                        </div> <!-- row -->
-                    </div> <!-- my-movies -->
-                    <div class="spacer col-xs-12"></div> <!-- spacer -->
-                    <div class=" container-fluid my-series col-xs-12">
-                        <div class="row">
-                            <div class="myseries-navbar"></div> <!-- mymovies-navbar -->
-                        </div> <!-- row -->
-                    </div> <!-- my-movies -->
+        <div id="Add-Class" class="col-xs-12">
+            <button>Hello</button>
+        </div>
+        
+        <!-- nav comes here - END -->
+        
+        <!-- content here - START -->
+        
+        <div class="container-fluid col-xs-12 hidden-sm hidden-md hidden-lg">
+            <div class="row">
+                <div class="mobile-watchlist col-xs-12" id="AddHere">
                     
+                    <div class="item col-xs-6">
+                        Extra Small
+                    </div>
                     
-                    
-                    
-                </div> <!-- row -->
+                </div> <!-- SPWANHERE -->
                 
-            </div> <!-- container-fluid -->
-            
-            
-        </section> <!-- content -->
+            </div>
+        </div>
         
-        <footer>
-            
-        </footer> <!-- footer -->
+        
+        <div class="container-fluid col-xs-12 hidden-xs hidden-md hidden-lg">
+            <div class="row">
+                <div class="tablet-watchlist col-sm-12" id="AddHereTab">
+                    
+                    <div class="item col-xs-3">
+                        Small
+                    </div>
+                    
+                </div> <!-- SPWANHERE -->
+                
+            </div>
+        </div>
+        
+        <div class="container-fluid col-xs-12 hidden-xs hidden-sm hidden-lg">
+            <div class="row">
+                <div class="medium-watchlist col-md-12" id="AddHereMed">
+                    
+                    <div class="item col-xs-2">
+                        Medium
+                    </div>
+                    
+                </div> <!-- SPWANHERE -->
+                
+            </div>
+        </div>
+        
+        <div class="container-fluid col-xs-12 hidden-xs hidden-sm hidden-md">
+            <div class="row">
+                <div class="pc-watchlist col-lg-12" id="AddHerePC">
+                    
+                    <div class="item col-xs-2">
+                        Large
+                    </div>
+                    
+                    
+                </div> <!-- SPWANHERE -->
+                
+            </div>
+        </div>
+        
+        
+        
+        <!-- content here - END -->
+                
+        <!-- footer here - START -->
+        
+        <!-- Footer here - END -->
+        
     </body> <!-- body -->
+    
 </html>
