@@ -34,6 +34,12 @@ a {
    /* background-color:yellow;*/
 }
 
+.navigation h4:hover {
+    cursor: pointer;
+    color: #d04925;
+    font-size: 19px;
+}
+
 .nav-menu{
     width:20%;
     height:100%;
@@ -132,6 +138,10 @@ a {
     text-align: center;
 }
 
+.watchlist {
+    
+}
+
 .library{
     width:150px;
 }
@@ -140,7 +150,7 @@ a {
 
 /* CONTENT START */
 .heading{
-    height:70px;
+    height:80px;
 }
 
 .onepxline {
@@ -159,13 +169,25 @@ a {
     text-align: center;
 }
 
-#movie-series-words h1 {
+#movie-series-words h2 {
     width: 90%;
     margin: 0 auto;
     margin-top: 15px;
     margin-right: 5%;
     float: left;
     font-size: 25px;
+    align-content: center;
+    font-weight: 100;
+    color: #d04925;
+}
+
+#movie-series-words h1 {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-right: 5%;
+    float: left;
+    font-size: 32px;
     align-content: center;
     font-weight: 100;
     color: #d04925;
@@ -186,13 +208,73 @@ a {
 }
 
 .poster{
-    height:400px;
+    height: 320px;
 }
 
 .buttons{
-    height:70px;
+    height: 70px;
     margin-top: 5px;
     text-align: center;
+}
+
+.buttons-tablet {
+    display: block;
+}
+
+.action-buttons-tablet {
+    width: 80%;
+    background-color: #181819;;
+    height: 40px;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 7px; 
+    display: block;
+}
+
+.play-tablet {
+    border: 1px solid #d04925;  
+    color: #d04925;
+    margin-right: 1%;
+}
+
+.play-tablet h1 {
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 7px;
+}
+
+.play-tablet:hover {
+    cursor: pointer;
+    background-color: #d04925;
+    color: #181819;
+}
+
+.my-list-tablet h1 {
+    font-size: 50px;
+    height: 40px;
+    width: 20%;
+    float: left;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-top: -7px;
+}
+
+.my-list-tablet h2 {
+    font-size: 20px;
+    width: 70%;
+    float: left;
+    margin: 0 auto;
+    margin-top: 10px;    
+}
+
+.my-list-tablet:hover {
+    cursor: pointer;
+    border: 1px solid #656565;
+}
+
+
+.buttons-desktop {
+    float: right;
 }
 
 .indiv-content{
@@ -201,10 +283,19 @@ a {
 
 .poster-container {
     width: 100%;
-    height: 320px;
+    height: 420px;
 }
 
-.poster-image{
+.poster-desktop {
+    float: right;
+}
+
+.poster-container-desktop {
+    width: 100%;
+    height: 420px; 
+}
+
+.poster-image {
     width: 55%;
     height: 320px;
     margin-top: 20px;
@@ -213,6 +304,17 @@ a {
     background-repeat: no-repeat;
     transform: skew(-0.5deg); 
     margin:0 auto;
+}
+
+.poster-image-desktop {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    background-image: url(../images/Django.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: skew(-0.5deg); 
+    margin:0 auto;    
 }
 
 .action-buttons {
@@ -238,13 +340,26 @@ a {
     margin-top: 7px;
 }
 
+.play:hover {
+    cursor: pointer;
+    background-color: #d04925;
+    color: #181819;    
+}
+
 .watchlist {
-    color : #d04925;
-    margin-right: 14%;
     margin-left: 1%;
 }
 
-.watchlist h1 {
+.my-list {
+    border: 1px solid #181819;    
+}
+
+.my-list:hover {
+    cursor: pointer;
+    border: 1px solid #656565;   
+}
+
+.my-list h1 {
     font-size: 50px;
     height: 40px;
     width: 20%;
@@ -254,7 +369,7 @@ a {
     margin-top: -7px;
 }
 
-.watchlist h2 {
+.my-list h2 {
     font-size: 20px;
     width: 70%;
     float: left;
@@ -262,14 +377,19 @@ a {
     margin-top: 10px;    
 }
 
+.indiv-content {
+    height: auto;
+}
+
 .indiv-content h2 {
-    font-size: 11px;
-    line-height: 15px;
+    font-size: 100%;
+    height: auto;
 }
 
 .rating-container {
     width: 100%;
     height: 70px;
+    text-align: center;
 }
 
 .left {
@@ -309,8 +429,13 @@ a {
 
 .info-left {
     width: 25%;
+    margin-top: 10px;
     height: 145px;
     float: left;
+}
+
+.info-right {
+    margin-top: 10px;    
 }
 
 .info-left h3 {
@@ -384,30 +509,34 @@ a {
     margin:0 auto;
 }
 
-.social-media-icon{
+.social-media-icon {
     width:33.3%;
     height:100%;
     float:left;
 }
 
+.social-media-icon:hover {
+    cursor: pointer;
+}
+
 .facebook{
-    background-image:url(icons/facebook_orange.png);
+    background-image:url(../images/Facebook.png);
     background-repeat: no-repeat;
-    background-size: 10px;
+    background-size: 20px;
     background-position:center;
 }
 
 .twitter{
-    background-image:url(icons/twitter_orange.png);
+    background-image:url(../images/Twitter.png);
     background-repeat: no-repeat;
-    background-size: 19px;
+    background-size: 25px;
     background-position:center;
 }
 
 .pinterest{
-    background-image:url(icons/pinterest_orange.png);
+    background-image:url(../images/Pinterest.png);
     background-repeat: no-repeat;
-    background-size: 18px;
+    background-size: 20px;
     background-position:center;
 }
 
