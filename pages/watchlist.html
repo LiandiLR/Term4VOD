@@ -3,58 +3,278 @@
     
     <head>
         
-        <title>VIDEOBENCH</title>
+        <title>VideoBench - Watchlist</title>
         
         <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="../jquery/1.12.0/jquery.min.js"></script>
         
-        <link href="../css/watchlist.css" rel="stylesheet">
+        <!-- LINK JQUERY LIBRARY FILES (Before bootstrap files) -->
+        <script src="../jquery/1.12.0/jquery.min.js"></script>
+        
+         <!-- LINK BOOTSTRAP-FILES-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="../bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="../js/watchlist.js"></script>
+        
+        
+        <!-- LINK CSS/JS PROJECT FILEs -->
+        
+        <link rel="stylesheet" href="../css/watchlist.css">
+        <link rel="stylesheet" href="../css/navigation.css">
+        <!--<script src="main.js"></script>-->
+        
+        <!-- LINK GOOGLE FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         
     </head> <!-- head -->
     
     <body>
-        
-        <header>
+        <div class="container-fluid">
+        <!-- nav comes here - START -->
             
-            
-        </header> <!-- header -->
-        
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="container-fluid" id="heading">
-                        <div class="row">
-                            <div class="btn-return col-xs-2"></div> <!-- btn-return -->
-                            <div class="page-heading col-xs-10">
-                                <h1>Heading</h1>
-                            </div> <!-- page heading -->
-                        </div>
-                    </div> <!-- heading -->
-                    <div class="spacer col-xs-12"></div> <!-- spacer -->
-                    <div class=" container-fluid my-movies col-xs-12">
-                        <div class="row">
-                            <div class="mymovies-navbar"></div> <!-- mymovies-navbar -->
-                        </div> <!-- row -->
-                    </div> <!-- my-movies -->
-                    <div class="spacer col-xs-12"></div> <!-- spacer -->
-                    <div class=" container-fluid my-series col-xs-12">
-                        <div class="row">
-                            <div class="myseries-navbar"></div> <!-- mymovies-navbar -->
-                        </div> <!-- row -->
-                    </div> <!-- my-movies -->
-                    
-                    
-                    
-                    
-                </div> <!-- row -->
+        <!-------------------- NAVIGATION START -------------------->
+            <div class="row">
                 
-            </div> <!-- container-fluid -->
+                <!-- Mobile Navigation -->
+                <div class="navigation col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on tablet and desktop -->
+                    <div class="nav-menu"></div>
+                    <div class="nav-logo-mobile"></div>
+                    <div class="nav-search-mobile"></div>
+                </div>
+                
+                <!-- Tablet Navigation -->
+                <div class="navigation col-xs-12 hidden-xs"> <!-- Hide on mobile -->
+                    <div class="nav-logo-tablet"></div>
+                    <div class="nav-item home"><h4>Home</h4></div>
+                    <div class="nav-item library"><h4>Movies / Series</h4></div>
+                    <div class="nav-item watchlist"><h4>My List</h4></div>
+                    <div class="nav-profile">
+                        <div class="nav-profile-image"></div>
+                        <h6>Hi Liandi!</h6>
+                    </div>
+                    <div class="nav-search-tablet hidden-md hidden-lg"></div> <!-- Hide on Desktop -->
+                    <div class="nav-search-desktop hidden-xs hidden-sm">
+                        <div class="nav-search-desktop-icon"></div>
+                    </div> <!-- Hide on Mobile and Tablet -->
+                    
+                </div>
             
-            
-        </section> <!-- content -->
+            </div>
+            <!-------------------- NAVIGATION END -------------------->
         
-        <footer>
+        <!-- nav comes here - END -->
+                
+            <div class="row mobile-heading col-xs-10 hidden-sm hidden-md hidden-lg"><h1>My Watchlist</h1></div>
+            <div class="row tablet-heading col-xs-10 hidden-xs hidden-md hidden-lg"><h1>My Watchlist</h1></div>
+            <div class="row desktop-heading col-xs-10 hidden-xs hidden-sm"><h1>My Watchlist</h1></div>
+        <!-- content here - START -->
             
-        </footer> <!-- footer -->
+            <div class="row">
+                                
+                <!-------------------- IMAGE CAROUSEL MOBILE -------------------->
+                <div class="image-carousel-mobile col-xs-12 hidden-sm hidden-md hidden-lg"><!-- Hide on Tablet + Desktop -->
+                    <div class="image-carousel-visible">
+                        
+                            <!-- MOBILE POSTER CONTENT START -->
+                           <div class="image-carousel-mobile-content">
+                               <!-- POSTER 1 -->
+                                <div class="image-carousel-poster-lg-mobile">
+                                    <div class="recommended-poster1"></div>
+                                </div>
+                               
+                               <!-- POSTER 2 -->
+                                <div class="image-carousel-poster-lg-mobile">
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster2"></div>
+                                    </div>
+                                    <div class="image-carousel-poster-sm-divider"></div>
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster3"></div>
+                                    </div>
+                               </div>
+                               
+                               <!-- POSTER 3 -->
+                                <div class="image-carousel-poster-lg-mobile">
+                                    <div class="recommended-poster1"></div>
+                                </div>
+                               
+                               <!-- POSTER 4 -->
+                                <div class="image-carousel-poster-lg-mobile">
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster2"></div>
+                                    </div>
+                                    <div class="image-carousel-poster-sm-divider"></div>
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster3"></div>
+                                    </div>
+                               </div>
+                               
+                               <!-- POSTER 5 -->
+                                <div class="image-carousel-poster-lg-mobile">
+                                    <div class="recommended-poster1"></div>
+                                </div>
+                               
+                            </div>
+                            <!-- MOBILE POSTER CONTENT END -->
+                    </div>
+                </div>
+                
+                <!-------------------- IMAGE CAROUSEL TABLET -------------------->
+                <div class="image-carousel-tablet col-xs-12 hidden-xs hidden-md hidden-lg"><!-- Hide on Mobile + Desktop -->
+                    <div class="image-carousel-visible">
+                            <!-- TABLET POSTER CONTENT START -->
+                           <div class="image-carousel-tablet-content">
+                                <!-- POSTER 1 -->
+                                <div class="image-carousel-poster-lg-tablet">
+                                    <div class="recommended-poster1"></div>
+                                </div>
+                               
+                               <!-- POSTER 2 -->
+                                <div class="image-carousel-poster-lg-tablet">
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster2"></div>
+                                    </div>
+                                    <div class="image-carousel-poster-sm-divider"></div>
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster3"></div>
+                                    </div>
+                               </div>
+                               
+                               <!-- POSTER 3 -->
+                                <div class="image-carousel-poster-lg-tablet">
+                                    <div class="recommended-poster1"></div>
+                                </div>
+                               
+                               <!-- POSTER 4 -->
+                                <div class="image-carousel-poster-lg-tablet">
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster2"></div>
+                                    </div>
+                                    <div class="image-carousel-poster-sm-divider"></div>
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster3"></div>
+                                    </div>
+                               </div>
+                               
+                               <!-- POSTER 5 -->
+                                <div class="image-carousel-poster-lg-tablet">
+                                    <div class="recommended-poster1"></div>
+                                </div>
+                               
+                               <!-- POSTER 6 -->
+                                <div class="image-carousel-poster-lg-tablet">
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster2"></div>
+                                    </div>
+                                    <div class="image-carousel-poster-sm-divider"></div>
+                                    <div class="image-carousel-poster-sm">
+                                        <div class="recommended-poster3"></div>
+                                    </div>
+                               </div>
+                            </div>
+                            <!-- TABLET POSTER CONTENT END -->
+                    </div>
+                </div>
+                
+                <!-------------------- IMAGE CAROUSEL DESKTOP -------------------->
+                <div class="image-carousel-desktop col-xs-12 hidden-xs hidden-sm"><!-- Hide on Mobile + Tablet -->
+                    <div class="image-carousel-visible">
+                            <!-- TABLET POSTER CONTENT START -->
+                           <div class="image-carousel-desktop-content">
+                                <!-- POSTER 1 -->
+                                <div class="image-carousel-poster-lg-desktop">
+                                    <div class="recommended-poster1"></div>
+                                </div>
+                                <div class="image-carousel-poster-lg-desktop">
+                                    <div class="recommended-poster3"></div>
+                                </div>
+                                <div class="image-carousel-poster-lg-desktop">
+                                    <div class="recommended-poster2"></div>
+                                </div>
+                                <div class="image-carousel-poster-lg-desktop">
+                                    <div class="recommended-poster1"></div>
+                                </div>
+                                <div class="image-carousel-poster-lg-desktop">
+                                    <div class="recommended-poster3"></div>
+                                </div>
+                                <div class="image-carousel-poster-lg-desktop">
+                                    <div class="recommended-poster2"></div>
+                                </div>
+                                <div class="image-carousel-poster-lg-desktop">
+                                    <div class="recommended-poster2"></div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------- IMAGE CAROUSEL END ------------------->
+            
+            
+       
+        
+        <!-- content here - END -->
+                
+        <!-------------------- FOOTER START -------------------->
+            <div class="row">
+                <!----- FOOTER MOBILE ----->
+                <div class="footer-mobile col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
+                    
+                    <div class="footer-connect col-xs-12" style="height:90px">
+                        <p>Stay up to date with new releases and announcements</p>
+                        <div class="connect-textbox">
+                            <input type="text" name="join" value="type your email here">
+                            <button>Join</button>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-social-media col-xs-12" style="height:25px">
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/"><div class="social-media-icon facebook"></div></a>
+                            <a href="https://twitter.com/login"><div class="social-media-icon twitter"></div></a>
+                            <a href="https://za.pinterest.com/"><div class="social-media-icon pinterest"></div></a>
+                    `   </div>
+                    </div>
+                    
+                    
+                    <div class="footer-copywrite col-xs-12" style="height:45px">
+                       <p style="color:#d04925">© 2019 Videobench</p>
+                    </div>
+                    
+                </div>
+                
+                <!----- FOOTER TABLET + DESKTOP ----->
+                <div class="footer-tablet col-sm-12 hidden-xs"> <!-- Hide on Mobile -->
+                    <div class="footer-copywrite col-sm-3" style="margin-top:28px">
+                        <p style="color:#d04925; margin-top:15px">© 2019 Videobench</p>
+                    </div>
+                    <div class="footer-connect col-sm-6">
+                        <h6>Let's Connect!</h6>
+                        <p>Stay up to date with new releases and announcements</p>
+                        <div class="connect-textbox">
+                            <input type="text" name="join" value="type your email here">
+                            <button>Join</button>
+                        </div>
+                    </div>
+                    <div class="footer-social-media col-sm-3" style="margin-top:28px">
+                        <div class="social-media">
+                            <div class="social-media-icon facebook"></div>
+                            <div class="social-media-icon twitter"></div>
+                            <div class="social-media-icon pinterest"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+                
+                
+            </div>
+            <!-------------------- FOOTER END -------------------->
+        </div>
     </body> <!-- body -->
+    
 </html>
