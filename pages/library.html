@@ -25,9 +25,9 @@
         
         <!-- LINK CSS/JS PROJECT FILES -->
         <link rel="stylesheet" href="../css/library.css">        
-
-        <!-- LINK GOOGLE FONT -->        
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+      
+        <!-- LINK GOOGLE FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
     </head>
     
     <body>
@@ -77,16 +77,35 @@
             
             <!-------------------- MOVIES/SERIES BUTTON START -------------------->
             <div class="row">
-                <div class="secondary-navigation-mobile col-xs-12 hidden-sm hidden-md hidden-lg"><!-- Hide on Tablet + Desktop -->
-                </div>
-                <div class="secondary-navigation-tablet col-xs-12 hidden-xs"><!-- Hide on Mobile -->
+                <div class="secondary-navigation col-xs-12">
+                    <div class="secondary-nav-btn-container-mobile visible-xs visible-sm visible-md">
+                        <label class="movies-series-switch">
+                            <input type="checkbox">
+                            <span class="movies-series-slider-mobile">
+                                <span class="movies-text-mobile">Movies</span>
+                                <span class="series-text-mobile">Series</span>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <div class="secondary-nav-btn-container-desktop visible-lg">
+                        <label class="movies-series-switch">
+                            <input type="checkbox">
+                            <span class="movies-series-slider-desktop">
+                                <span class="movies-text-desktop">Movies</span>
+                                <span class="series-text-desktop">Series</span>
+                            </span>
+                        </label>
+                    </div>
                 </div>
             </div>
             <!-------------------- MOVIES/SERIES BUTTON END -------------------->
 
-            <div class="row library-content">
+            <!-------------------- LIBRARY CONTENT START -------------------->
+            <div class="row">
                 
-                <!-------------------- LIBRARY HEADING START -------------------->
+                <!-------------------- LIBRARY HEADING START ------------------>
+                
                 <div class="library-heading-mobile col-xs-7 col-md-8 hidden-md hidden-lg">
                     <div class="library-heading-content-mobile">
                         <h6>All Movies</h6>
@@ -101,7 +120,7 @@
                     </div>
                 </div>
 
-                <!-------------------- LIBRARY FILTER START -------------------->
+                <!-------------------- LIBRARY FILTER START ------------------->
                 <div class="library-filter-mobile col-xs-5 col-md-4 hidden-md hidden-lg">
                     <select class="filter-dropdown-mobile">
                         <option value="genre">Genre</option>
@@ -238,14 +257,16 @@
                     
                     <!-- LIBRARY POSTERS MOBILE -->
                     <div class="library-posters-mobile hidden-sm hidden-md hidden-lg"><!-- Hide on Tablet + Desktop -->
+                        
+                        <!-- MOBILE POSTER CONTAINER ROW 1 -->
                         <div class="posters-container">
-                            <div class="poster-lg-container">
+                            <div class="poster-lg-container-mobile">
                                 <div class="library-poster1"></div>
                             </div>
 
                             <div class="poster-lg-divider"></div>
 
-                            <div class="poster-lg-container">
+                            <div class="poster-lg-container-mobile">
                                 <div class="poster-sm-container">
                                     <div class="library-poster2"></div>
                                 </div>
@@ -256,8 +277,9 @@
                             </div>
                         </div>
                         
+                        <!-- MOBILE POSTER CONTAINER ROW 2 -->
                         <div class="posters-container">
-                            <div class="poster-lg-container">
+                            <div class="poster-lg-container-mobile">
                                 <div class="poster-sm-container">
                                     <div class="library-poster2"></div>
                                 </div>
@@ -269,7 +291,7 @@
 
                             <div class="poster-lg-divider"></div>
                             
-                            <div class="poster-lg-container">
+                            <div class="poster-lg-container-mobile">
                                 <div class="library-poster1"></div>
                             </div>
                         </div>
@@ -277,16 +299,154 @@
 
                     <!-- LIBRARY POSTERS TABLET -->
                     <div class="library-posters-tablet col-xs-12 hidden-xs hidden-lg"><!-- Hide on Mobile + Desktop -->
+                        
+                        <!-- TABLET POSTER CONTAINER ROW 1 -->
+                        <div class="posters-container">
+                            <div class="poster-lg-container-tablet">
+                                <div class="library-poster1"></div>
+                            </div>
 
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-tablet">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-tablet">
+                                <div class="library-poster3"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- TABLET POSTER CONTAINER ROW 2 -->
+                        <div class="posters-container">
+                            <div class="poster-lg-container-tablet">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster3"></div>
+                                </div>
+                            </div>
+
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-tablet">
+                                <div class="library-poster2"></div>
+                            </div>
+                            
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-tablet">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- LIBRARY POSTERS DESKTOP -->
                     <div class="library-posters-desktop col-xs-12 hidden-xs hidden-sm hidden-md"><!-- Hide on Mobile + Tablet -->
+                        
+                        <!-- DESKTOP POSTER CONTAINER ROW 1 -->
+                        <div class="posters-container-desktop">
+                            
+                            <!-- 1 x large -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="library-poster3"></div>
+                            </div>
 
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 2 x small -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 1 x large -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="library-poster2"></div>
+                            </div>
+                            
+                             <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 2 x small -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- DESKTOP POSTER CONTAINER ROW 2 -->
+                        <div class="posters-container-desktop">                     <!-- 2 x small -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 1 x large -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="library-poster3"></div>
+                            </div>
+
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 2 x small -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster3"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 1 x large -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="library-poster2"></div>
+                            </div>
+                        
+                        </div>
                     </div>
                 </div>
                 
             </div>
+            <!-------------------- LIBRARY CONTENT END -------------------->
           
             
             
