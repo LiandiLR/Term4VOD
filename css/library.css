@@ -405,11 +405,16 @@ input:checked + .movies-series-slider-desktop:before {
 .visible-genres{
     width:100%;
     height:100%;
-    overflow:scroll;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .genre-list-mobile,.genre-list-desktop{
-    width:300%;
+    width: 300% ;
     height:95%;
     padding-left:10px;
 }
