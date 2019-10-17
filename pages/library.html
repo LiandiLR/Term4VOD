@@ -3,9 +3,13 @@
 <html>
     <head>
         
+
         <!--meta-information-->
         
         <meta name="description" content="Videobench">
+
+        <!-- META INFORMATION -->
+        <meta name="description" content="Videobench Library Page">
         <meta name="author" content="Stephan de Wet">
         <meta name="assessment" content="Term 4 Project">
         <meta name="lecturer" content="Mike Maynard">
@@ -125,8 +129,506 @@
        
             
         </div> <!--content-container-->
+
+        <!-- PAGE TITLE -->
+        <title>Videobench - Movies/Series</title>
         
         
+        <!-- LINK JQUERY LIBRARY FILES (Before bootstrap files) -->
+        <script src="../jquery/1.12.0/jquery.min.js"></script>
+        
+        <!-- LINK BOOTSTRAP-FILES-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="../bootstrap/3.3.6/js/bootstrap.min.js"></script>         
+        
+        <!-- LINK CSS/JS PROJECT FILES -->
+        <link rel="stylesheet" href="../css/library.css">        
+      
+        <!-- LINK GOOGLE FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <!-------------------- CONTAINER START -------------------->
+        <div class="container-fluid">
+            
+            <!-------------------- NAVIGATION START -------------------->
+            <div class="row">
+                
+                <!-- Mobile Navigation -->
+                <div class="navigation col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on tablet and desktop -->
+                    <div class="nav-menu"></div>
+                    <div class="nav-logo-mobile"></div>
+                    <div class="nav-search-mobile"></div>
+                </div>
+                
+                <!-- Tablet Navigation -->
+                <div class="navigation col-xs-12 hidden-xs"> <!-- Hide on mobile -->
+                    <div class="nav-logo-tablet"></div>
+                    <div class="nav-item home"><h4>Home</h4></div>
+                    <div class="nav-item library"><h4>Movies / Series</h4></div>
+                    <div class="nav-item watchlist"><h4>My List</h4></div>
+                    <div class="nav-profile">
+                        <div class="nav-profile-image"></div>
+                        <h6>Hi Liandi!</h6>
+                    </div>
+                    <div class="nav-search-tablet hidden-md hidden-lg"></div> <!-- Hide on Desktop -->
+                    <div class="nav-search-desktop hidden-xs hidden-sm">
+                        <div class="nav-search-desktop-icon"></div>
+                    </div> <!-- Hide on Mobile and Tablet -->
+                    
+                </div>
+            
+            </div>
+            <!-------------------- NAVIGATION END -------------------->
+            
+            <!-------------------- MOBILE HEADING START -------------------->
+            <div class="row">
+                <div class="mobile-heading col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
+                    <div class="mobile-heading-content">
+                        <div class="mobile-heading-back"></div>
+                        <div class="mobile-heading-text">Movies / Series</div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------- MOBILE HEADING END -------------------->
+            
+            <!-------------------- MOVIES/SERIES BUTTON START -------------------->
+            <div class="row">
+                <div class="secondary-navigation col-xs-12">
+                    <div class="secondary-nav-btn-container-mobile visible-xs visible-sm visible-md">
+                        <label class="movies-series-switch">
+                            <input type="checkbox">
+                            <span class="movies-series-slider-mobile">
+                                <span class="movies-text-mobile">Movies</span>
+                                <span class="series-text-mobile">Series</span>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <div class="secondary-nav-btn-container-desktop visible-lg">
+                        <label class="movies-series-switch">
+                            <input type="checkbox">
+                            <span class="movies-series-slider-desktop">
+                                <span class="movies-text-desktop">Movies</span>
+                                <span class="series-text-desktop">Series</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-------------------- MOVIES/SERIES BUTTON END -------------------->
+
+            <!-------------------- LIBRARY CONTENT START -------------------->
+            <div class="row">
+                
+                <!-------------------- LIBRARY HEADING START ------------------>
+                
+                <div class="library-heading-mobile col-xs-7 col-md-8 hidden-md hidden-lg">
+                    <div class="library-heading-content-mobile">
+                        <h6>All Movies</h6>
+                        <div class="library-heading-line-mobile"></div>
+                    </div>
+                </div>
+                
+                <div class="library-heading-desktop col-xs-7 col-md-8 hidden-xs hidden-sm">
+                    <div class="library-heading-content-desktop">
+                        <h6>All Movies</h6>
+                        <div class="library-heading-line-desktop"></div>
+                    </div>
+                </div>
+
+                <!-------------------- LIBRARY FILTER START ------------------->
+                <div class="library-filter-mobile col-xs-5 col-md-4 hidden-md hidden-lg">
+                    <select class="filter-dropdown-mobile">
+                        <option value="genre">Genre</option>
+                        <option value="title">Title (A-Z)</option>
+                        <option value="release">Release Year</option>
+                        <option value="rating">Rating(high-low)</option>
+                    </select>
+                </div>
+                <div class="library-filter-desktop col-xs-5 col-md-4 hidden-xs hidden-sm">
+                    <select class="filter-dropdown-desktop">
+                        <option value="genre">Genre</option>
+                        <option value="title">Title (A-Z)</option>
+                        <option value="release">Release Year</option>
+                        <option value="rating">Rating(high-low)</option>
+                    </select>
+                </div>
+                
+                <!-------------------- LIBRARY GENRE START -------------------->
+                
+                <!-- LIBRARY MOBILE GENRE -->
+                <div class="library-genre-mobile col-xs-12 hidden-md hidden-lg">
+                    <div class="visible-genres">
+                        <ul class="genre-list-mobile">
+                            <li class="active-genre-mobile">
+                                <p>Classics</p>
+                                <div class="genre-circle-block-mobile active">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Horror</p>
+                                <div class="genre-circle-block-mobile">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Action</p>
+                                <div class="genre-circle-block-mobile">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Adventure</p>
+                                <div class="genre-circle-block-mobile">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Comedy</p>
+                                <div class="genre-circle-block-mobile">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Anime</p>
+                                <div class="genre-circle-block-mobile">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Documentary</p>
+                                <div class="genre-circle-block-mobile">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Romance</p>
+                                <div class="genre-circle-block-mobile">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- LIBRARY DESKTOP GENRE -->
+                <div class="library-genre-desktop col-xs-12 hidden-xs hidden-sm">
+                    <div class="visible-genres">
+                        <ul class="genre-list-desktop">
+                            <li class="active-genre-desktop">
+                                <p>Classics</p>
+                                <div class="genre-circle-block-desktop active">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Horror</p>
+                                <div class="genre-circle-block-desktop">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Action</p>
+                                <div class="genre-circle-block-desktop">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Adventure</p>
+                                <div class="genre-circle-block-desktop">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Comedy</p>
+                                <div class="genre-circle-block-desktop">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Anime</p>
+                                <div class="genre-circle-block-desktop">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Documentary</p>
+                                <div class="genre-circle-block-desktop">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Romance</p>
+                                <div class="genre-circle-block-desktop">
+                                    <div class="genre-circle"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-------------------- LIBRARY POSTERS START -------------------->
+                <div class="library-posters col-xs-12">
+                    
+                    <!-- LIBRARY POSTERS MOBILE -->
+                    <div class="library-posters-mobile hidden-sm hidden-md hidden-lg"><!-- Hide on Tablet + Desktop -->
+                        
+                        <!-- MOBILE POSTER CONTAINER ROW 1 -->
+                        <div class="posters-container">
+                            <div class="poster-lg-container-mobile">
+                                <div class="library-poster1"></div>
+                            </div>
+
+                            <div class="poster-lg-divider"></div>
+
+                            <div class="poster-lg-container-mobile">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- MOBILE POSTER CONTAINER ROW 2 -->
+                        <div class="posters-container">
+                            <div class="poster-lg-container-mobile">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster3"></div>
+                                </div>
+                            </div>
+
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-mobile">
+                                <div class="library-poster1"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LIBRARY POSTERS TABLET -->
+                    <div class="library-posters-tablet col-xs-12 hidden-xs hidden-lg"><!-- Hide on Mobile + Desktop -->
+                        
+                        <!-- TABLET POSTER CONTAINER ROW 1 -->
+                        <div class="posters-container">
+                            <div class="poster-lg-container-tablet">
+                                <div class="library-poster1"></div>
+                            </div>
+
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-tablet">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-tablet">
+                                <div class="library-poster3"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- TABLET POSTER CONTAINER ROW 2 -->
+                        <div class="posters-container">
+                            <div class="poster-lg-container-tablet">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster3"></div>
+                                </div>
+                            </div>
+
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-tablet">
+                                <div class="library-poster2"></div>
+                            </div>
+                            
+                            <div class="poster-lg-divider"></div>
+                            
+                            <div class="poster-lg-container-tablet">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- LIBRARY POSTERS DESKTOP -->
+                    <div class="library-posters-desktop col-xs-12 hidden-xs hidden-sm hidden-md"><!-- Hide on Mobile + Tablet -->
+                        
+                        <!-- DESKTOP POSTER CONTAINER ROW 1 -->
+                        <div class="posters-container-desktop">
+                            
+                            <!-- 1 x large -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="library-poster3"></div>
+                            </div>
+
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 2 x small -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 1 x large -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="library-poster2"></div>
+                            </div>
+                            
+                             <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 2 x small -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- DESKTOP POSTER CONTAINER ROW 2 -->
+                        <div class="posters-container-desktop">                     <!-- 2 x small -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster2"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 1 x large -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="library-poster3"></div>
+                            </div>
+
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 2 x small -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="poster-sm-container">
+                                    <div class="library-poster1"></div>
+                                </div>
+                                <div class="poster-sm-divider"></div>
+                                <div class="poster-sm-container">
+                                    <div class="library-poster3"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="poster-lg-divider-desktop"></div>
+                            
+                            <!-- 1 x large -->
+                            <div class="poster-lg-container-desktop">
+                                <div class="library-poster2"></div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-------------------- LIBRARY CONTENT END -------------------->
+          
+            
+            
+            
+            
+            
+            <!-------------------- FOOTER START -------------------->
+            <div class="row">
+                <!----- FOOTER MOBILE ----->
+                <div class="footer-mobile col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
+                    
+                    <div class="footer-connect col-xs-12" style="height:90px">
+                        <p>Stay up to date with new releases and announcements</p>
+                        <div class="connect-textbox">
+                            <input type="text" name="join" value="type your email here">
+                            <button>Join</button>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-social-media col-xs-12" style="height:25px">
+                        <div class="social-media">
+                            <div class="social-media-icon facebook"></div>
+                            <div class="social-media-icon twitter"></div>
+                            <div class="social-media-icon pinterest"></div>
+                       </div>
+                    </div>
+                    
+                    
+                    <div class="footer-copywrite col-xs-12" style="height:45px">
+                       <p style="color:#d04925">© 2019 Videobench</p>
+                    </div>
+                    
+                </div>
+                
+                <!----- FOOTER TABLET + DESKTOP ----->
+                <div class="footer-tablet col-sm-12 hidden-xs"> <!-- Hide on Mobile -->
+                    <div class="footer-copywrite col-sm-3" style="margin-top:28px">
+                        <p style="color:#d04925; margin-top:15px">© 2019 Videobench</p>
+                    </div>
+                    <div class="footer-connect col-sm-6">
+                        <h6>Let's Connect!</h6>
+                        <p>Stay up to date with new releases and announcements</p>
+                        <div class="connect-textbox">
+                            <input type="text" name="join" value="type your email here">
+                            <button>Join</button>
+                        </div>
+                    </div>
+                    <div class="footer-social-media col-sm-3" style="margin-top:28px">
+                        <div class="social-media">
+                            <div class="social-media-icon facebook"></div>
+                            <div class="social-media-icon twitter"></div>
+                            <div class="social-media-icon pinterest"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-------------------- FOOTER END -------------------->
+            
+            
+        </div>
+        <!-------------------- CONTAINER END -------------------->
         
     </body>
     
