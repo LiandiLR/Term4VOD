@@ -12,9 +12,15 @@
         <title>VideoBench - Info</title>
         
         <!-- LINK JQUERY LIBRARY FILES (Before bootstrap files) -->
-        <script src="jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>             
+        
+        <script src="../jquery/1.12.0/jquery.min.js"></script>
+        <script src="../jquery/jquery.js"></script>        
         
          <!-- LINK BOOTSTRAP-FILES-->
+        <script src="../bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css"> 
+        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -23,7 +29,7 @@
         
         
         <!-- LINK CSS/JS PROJECT FILEs -->
-        <link rel="stylesheet" href="../css/indiv.css">
+        <link rel="stylesheet" href="../css/indiv.css">        
         <!--<script src="main.js"></script>-->
         
         <!-- LINK GOOGLE FONT -->
@@ -51,9 +57,9 @@
                 <!-- Tablet Navigation -->
                 <div class="navigation col-xs-12 hidden-xs"> <!-- Hide on mobile -->
                     <div class="nav-logo-tablet"></div>
-                    <div class="nav-item home"><h4>Home</h4></div>
-                    <div class="nav-item library"><h4>Movies / Series</h4></div>
-                    <div class="nav-item watchlist"><h4>My List</h4></div>
+                    <div class="nav-item home"><a href="../index.html"><h4>Home</h4></a></div>
+                    <div class="nav-item library"><a href="library.html"><h4>Movies / Series</h4></a></div>
+                    <div class="nav-item watchlist"><a href="watchlist.html"><h4>My List</h4></a></div>
                     <div class="nav-profile">
                         <div class="nav-profile-image"></div>
                         <h6>Hi Liandi!</h6>
@@ -99,7 +105,7 @@
             <div class="row">
                 <div class="poster col-xs-12 col-sm-7 col-md-6 hidden-lg">
                     <div class="poster-container">
-                        <div class="poster-image"></div>
+                        <div class="poster-image"><img src=""></div>
                     </div>
                 </div> <!--row-->
                     <div class="buttons col-xs-12 col-md-5 hidden-sm hidden-lg">
@@ -142,14 +148,14 @@
             
             <div class="poster-desktop visible-lg col-lg-6">
                 <div class="poster-container-desktop">
-                    <div class="poster-image-desktop"></div>
+                    <div class="poster-image-desktop"><img src=""></div>
                 </div>
             </div> <!--row--> <!--poster-for-desktop-->              
             
     
             <div class="row">
                 <div class="indiv-content col-xs-12 col-md-12 col-lg-6"> <!-- style="height: 380px">-->
-                    <h2>In 1858, a bounty hunter named Schultz seeks out a slave named Django and buys him because he needs him to find some men he is looking for. After finding them, Django wants to find his wife, Broomhilda, who along with him were sold separately by his former owner for trying to escape. Schultz offers to help him if he chooses to stay with him and be his partner. Eventually they learn that she was sold to a plantation in Mississippi. Knowing they can't just go in and say they want her, they come up with a plan so that the owner will welcome them into his home and they can find a way.</h2>
+                    <h2>Insert movie or series overview</h2>
                     
                     
                     <!-- RATING CONTAINER MOBILE START -->
@@ -183,12 +189,12 @@
                             <h3>Tagline:</h3>
                         </div>
                         <div class="info-right">
-                            <h3>Jamie Foxx, Leonardo DiCaprio, Christoph Waltz</h3>
-                            <h3>Drama, Western</h3>
-                            <h3>25 December 2012</h3>
-                            <h3>2h 45min</h3>
-                            <h3>$100,000,000</h3>
-                            <h3>Life, liberty and the pursuit of vengeance</h3>
+                            <div class="actors"><h3>Jamie Foxx, Leonardo DiCaprio, Christoph Waltz</h3></div>
+                            <div class="genres"><h3>Drama, Western</h3></div>
+                            <div class="release-date"><h3>25 December 2012</h3></div> 
+                            <div class="runtime"><h3>2h 45min</h3></div>
+                            <div class="budget"><h3>$100,000,000</h3></div>
+                            <div class="tagline"><h3>Life, liberty and the pursuit of vengeance</h3></div> 
                         </div>
                     </div>
                 </div> <!--indiv-content-->  

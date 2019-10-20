@@ -1,3 +1,48 @@
+
+body{
+    background-color: black;
+}
+
+
+content{
+    height: auto;
+}
+
+.mORs-title{
+    height: 150px;
+    background-color: blueviolet;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    float: left;
+    
+}
+
+.mORs-information{
+    height: 800px;
+    background-color: aqua;
+    float: left;
+    
+    
+}
+
+.mORs-poster-box{
+    height: 950px;
+
+        
+}
+.mORs-poster{
+    height: 800px;
+    background-color: wheat;
+        
+}
+
+.mORs-buttons{
+    height: 150px;
+    background-color: darkcyan;
+}
+
+
+
 body,p{
     padding:0;
     margin:0;
@@ -138,9 +183,7 @@ a {
     text-align: center;
 }
 
-.watchlist {
-    
-}
+
 
 .library{
     width:150px;
@@ -299,11 +342,17 @@ a {
     width: 55%;
     height: 320px;
     margin-top: 20px;
-    background-image: url(../images/Django.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     transform: skew(-0.5deg); 
     margin:0 auto;
+}
+
+.poster-image img {
+    height: 320px;
+    width: auto;    
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .poster-image-desktop {
@@ -317,9 +366,16 @@ a {
     margin:0 auto;    
 }
 
+.poster-image-desktop img {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .action-buttons {
     width: 35%;
-    background-color: #181819;;
+    background-color: #181819;
     float: left;
     height: 40px;
     text-align: center;
@@ -439,17 +495,17 @@ a {
 }
 
 .movie-rating {
-    font-size: 3vw;
+    font-size: 2vw;
     text-align: center;
-    margin-top: 22%;
+    margin-top: 32%;
     color: #d04925;
     padding-top:1%;
 }
 
 .movie-rating-desktop {
-    font-size: 2.2vw;
+    font-size: 1.4vw;
     text-align: center;
-    margin-top: 22%;
+    margin-top: 35%;
     color: #d04925;
     padding-top:1.5%;
 }

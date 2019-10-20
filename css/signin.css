@@ -1,0 +1,415 @@
+/* general */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Sign-in Page */
+
+.container{
+    background-color: white;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+}
+
+.background-movies{
+    height: 100%;
+    background-image: url(../images/Movie_List.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.background-overlay{
+    height: 75%;
+    width: 100%;
+    background-color: #000000;
+    opacity: .9;
+    margin: 0px;
+}
+
+.background-overlay:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transform: skewY(20deg);
+    box-shadow: 10px 25px 15px #181818;
+}
+
+.content-container{
+    background-color: transparent;
+    height: 100%;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo-container{
+    background-color: transparent;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 2%;
+}
+
+.logo{
+    align-content: center;
+    height: 100px;
+    background-color: #d04925;
+    text-align: center;
+    color: white;
+}
+
+/* sign in container */
+
+.sign-in-container{
+    position: relative;
+    height: 50%;
+    background-color: transparent;
+    margin-top: 350px;
+}
+
+/* START OF SIGN-IN MOBILE */
+
+.sign-in-heading{
+    text-align: center;
+    color: white;
+}
+
+.sign-in-text{
+    font-weight: 300;
+    font-size: 100px;
+}
+
+.email-icon{
+    background-image: url(../images/Email.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 50px;
+    
+}
+
+.email-text{
+    background-color: transparent;
+    width: 50px;
+    height: 20px;
+    margin-left: 20%;
+    margin-top: -40px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.email-line{
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.password-icon{
+    background-image: url(../images/Password.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 80px;
+    
+}
+
+.password-text{
+    background-color: transparent;
+    width: 50px;
+    height: 20px;
+    margin-left: 20%;
+    margin-top: -35px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.password-line{
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.password-show-icon{
+    background-image: url(../images/Password_Show.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 50px;
+    margin-left: 85%;
+    margin-top: -50px;
+    
+}
+
+.sign-in-btn{
+    width: 40%;
+    height: 90px;
+    background-color: transparent;
+    margin-left: 30%;
+    margin-top: 100px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #d04925;
+    border-radius: 25px;
+}
+
+.sign-in-btn-text{
+    color: #d04925;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.sign-in-next-btn{
+    width: 150px;
+    height: 150px;
+    background-color: #d04925;
+    margin-top: 470px;
+    margin-left: 70%;
+    border-radius: 50%;
+}
+
+.sign-in-arrow{
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/Arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 45px;
+    margin-top: 45px;
+    position: absolute;
+}
+
+.sign-up-prompt{
+    width: 250px;
+    height: 20px;
+    background-color: transparent;
+    margin-top: -200px;
+    margin-left: 65%;
+}
+
+.new-here-prompt{
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.sign-up-prompt-text{
+    color: #d04925;
+    font-size: 25px;
+    font-weight: 300;
+    float: right;
+    margin-top: -45px;
+    letter-spacing: 2px;
+}
+
+/* END OF SIGN-IN MOBILE */
+
+/* START OF SIGN-IN TABLET */
+
+.sign-in-heading-tab{
+    text-align: center;
+    color: white;
+}
+
+.sign-in-text-tab{
+    font-weight: 300;
+    font-size: 100px;
+}
+
+.email-icon-tab{
+    background-image: url(../images/Email.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 50px;
+    
+}
+
+.email-text-tab{
+    background-color: transparent;
+    width: 50px;
+    height: 20px;
+    margin-left: 20%;
+    margin-top: -40px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.email-line-tab{
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.password-icon-tab{
+    background-image: url(../images/Password.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 80px;
+    
+}
+
+.password-text-tab{
+    background-color: transparent;
+    width: 50px;
+    height: 20px;
+    margin-left: 20%;
+    margin-top: -35px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.password-line-tab{
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.password-show-icon-tab{
+    background-image: url(../images/Password_Show.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 50px;
+    margin-left: 85%;
+    margin-top: -50px;
+    
+}
+
+.sign-in-btn-tab{
+    width: 40%;
+    height: 90px;
+    background-color: transparent;
+    margin-left: 30%;
+    margin-top: 100px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #d04925;
+    border-radius: 25px;
+}
+
+.sign-in-btn-text-tab{
+    color: #d04925;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.sign-in-next-btn-tab{
+    width: 150px;
+    height: 150px;
+    background-color: #d04925;
+    margin-top: 170px;
+    margin-left: 70%;
+    border-radius: 50%;
+}
+
+.sign-in-arrow-tab{
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/Arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 45px;
+    margin-top: 45px;
+    position: absolute;
+}
+
+.sign-up-prompt-tab{
+    width: 250px;
+    height: 20px;
+    background-color: transparent;
+    margin-top: -200px;
+    margin-left: 65%;
+}
+
+.new-here-prompt-tab{
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.sign-up-prompt-text-tab{
+    color: #d04925;
+    font-size: 25px;
+    font-weight: 300;
+    float: right;
+    margin-top: -45px;
+    letter-spacing: 2px;
+}
+
+/* END OF SIGN-IN TABLET */
+
+
+
+
+
+
