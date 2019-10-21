@@ -46,46 +46,71 @@ $(document).ready(function(){
 
  
     $(".password-hide-icon").bind("click", function() {
-
-    if ($('.password-text').attr('type') =='password'){
-    $('.password-text').attr('type','text');
-    $('.far fa-eye-slash').removeClass('far fa-eye-slash');
-    $('.far fa-eye-slash').addClass('far fa-eye');
-    }else if($('.password-text').attr('type') =='text'){
-    $('.password-text').attr('type','password');
-    $('.far fa-eye').removeClass('far fa-eye');
-    $('.far fa-eye').addClass('far fa-eye-slash');
-    }
+        var test = $(".password-hide-icon").find("i").hasClass("fa-eye-slash");
+        
+        if(test === true){
+            $(".password-hide-icon").find("i").removeClass('fa-eye-slash');
+            $(".password-hide-icon").find("i").addClass('fa-eye');
+        }else{
+            $(".password-hide-icon").find("i").removeClass('fa-eye');
+            $(".password-hide-icon").find("i").addClass('fa-eye-slash');
+        }
+        
+        if ($('.password-text').attr('type') =='password'){
+            $('.password-text').attr('type','text');
+        }else if($('.password-text').attr('type') =='text'){
+            $('.password-text').attr('type','password');
+        }
     })   
     
+
     
     $(".password-hide-icon-tab").bind("click", function() {
+        var test = $(".password-hide-icon-tab").find("i").hasClass("fa-eye-slash");
+        
+        if(test === true){
+            $(".password-hide-icon-tab").find("i").removeClass('fa-eye-slash');
+            $(".password-hide-icon-tab").find("i").addClass('fa-eye');
+        }else{
+            $(".password-hide-icon-tab").find("i").removeClass('fa-eye');
+            $(".password-hide-icon-tab").find("i").addClass('fa-eye-slash');
+        }
+        
+        if ($('.password-text-tab').attr('type') =='password'){
+            $('.password-text-tab').attr('type','text');
+        }else if($('.password-text-tab').attr('type') =='text'){
+            $('.password-text-tab').attr('type','password');
+        }
+    })    
 
-    if ($('.password-text-tab').attr('type') =='password'){
-    $('.password-text-tab').attr('type','text');
-    $('.far fa-eye-slash').removeClass('far fa-eye-slash');
-    $('.far fa-eye-slash').addClass('far fa-eye');
-    }else if($('.password-text-tab').attr('type') =='text'){
-    $('.password-text-tab').attr('type','password');
-    $('.far fa-eye').removeClass('far fa-eye');
-    $('.far fa-eye').addClass('far fa-eye-slash');
-    }
-    })  
-    
     
     $(".password-hide-icon-desk").bind("click", function() {
-
-    if ($('.password-text-desk').attr('type') =='password'){
-    $('.password-text-desk').attr('type','text');
-    $('.far fa-eye-slash').removeClass('far fa-eye-slash');
-    $('.far fa-eye-slash').addClass('far fa-eye');
-    }else if($('.password-text-desk').attr('type') =='text'){
-    $('.password-text-desk').attr('type','password');
-    $('.far fa-eye').removeClass('far fa-eye');
-    $('.far fa-eye').addClass('far fa-eye-slash');
-    }
-    }) 
+        var test = $(".password-hide-icon-desk").find("i").hasClass("fa-eye-slash");
+        
+        if(test === true){
+            $(".password-hide-icon-desk").find("i").removeClass('fa-eye-slash');
+            $(".password-hide-icon-desk").find("i").addClass('fa-eye');
+        }else{
+            $(".password-hide-icon-desk").find("i").removeClass('fa-eye');
+            $(".password-hide-icon-desk").find("i").addClass('fa-eye-slash');
+        }
+        
+        if ($('.password-text-desk').attr('type') =='password'){
+            $('.password-text-desk').attr('type','text');
+        }else if($('.password-text-desk').attr('type') =='text'){
+            $('.password-text-desk').attr('type','password');
+        }
+    })
+    
  
+    
+    
+    // Store
+    localStorage.setItem("username", "mike69");
+    localStorage.setItem("password", "420dab");
+        
+    var x = document.getElementById("password-text");
+    
     
 });
 

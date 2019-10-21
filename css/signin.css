@@ -639,8 +639,11 @@ outline-color : #d04925 !important;
 }
 
 .password-hide-icon-desk:hover{
-    opacity: .5;
+    transform: scale(1,1.5);
+    transition: 300ms;
 }
+
+
 
 .sign-in-btn-desk{
     width: 50%;
@@ -656,7 +659,9 @@ outline-color : #d04925 !important;
 }
 
 .sign-in-btn-desk:hover{
-    opacity: .5;
+    background-color: #d04925;
+    transition: 300ms;
+    box-shadow: 100px 5px 150px #d04925;
 }
 
 .sign-in-btn-text-desk{
@@ -665,6 +670,13 @@ outline-color : #d04925 !important;
     font-size: 25px;
     font-weight: 500;
     margin-top: 12.5px;
+    width: 100%;
+    height: 100%;
+}
+
+.sign-in-btn-text-desk:hover{
+    color: white;
+    transition: 300ms;
 }
 
 
@@ -690,7 +702,9 @@ outline-color : #d04925 !important;
 }
 
 .sign-in-next-btn-desk:hover{
-    opacity: .5;
+    transform: scale(1,1.1);
+    transition: all ease 300ms;
+    cursor: pointer;
 }
 
 .sign-in-arrow-desk{
@@ -1053,7 +1067,9 @@ outline-color : #d04925 !important;
 }
 
 .sign-up-btn-desk:hover{
-    opacity: .5;
+    background-color: #d04925;
+    transition: 300ms;
+    box-shadow: 100px 5px 150px #d04925;
 }
 
 .sign-up-btn-text-desk{
@@ -1061,9 +1077,15 @@ outline-color : #d04925 !important;
     text-align: center;
     font-size: 25px;
     font-weight: 500;
+    width: 100%;
+    height: 100%;
     margin-top: 12.5px;
 }
 
+.sign-up-btn-text-desk:hover{
+    color: white;
+    transition: 300ms;
+}
 
 .sign-up-next-btn-desk{
     width: 100px;
@@ -1077,7 +1099,9 @@ outline-color : #d04925 !important;
 }
 
 .sign-up-next-btn-desk:hover{
-    opacity: .5;
+    transform: scale(1,1.1);
+    transition: all ease 300ms;
+    cursor: pointer;
 }
 
 .sign-up-arrow-desk{
@@ -1115,11 +1139,6 @@ outline-color : #d04925 !important;
     margin-top: -37px;
     letter-spacing: 2px;
 }
-
-
-
-
-
 
 
 
