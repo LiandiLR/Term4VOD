@@ -9,4 +9,12 @@ $(function(){
         $('#AddHerePC').append("<div class='item col-xs-2'>Large</div>");
     });
     
+    $(document).on("ready",function(){
+        console.log("ready up madafaka");
+        
+        for(i=0, i<5,i++) {
+        };
+    
+    });
+    
 });

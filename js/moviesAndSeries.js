@@ -2,9 +2,7 @@ $(function(){
 var apiRequest = new XMLHttpRequest();
     
     
-    apiRequest.open('GET', 'http://www.omdbapi.com/?i=tt3896198&apikey=c0e1ea77', true);
-    
-    apiRequest.send();
+    apiRequest.send('GET', 'http://www.omdbapi.com/?apikey=c0e1ea77', true);
     
     apiRequest.onload = function(){
         var data = JSON.parse(this.response);
