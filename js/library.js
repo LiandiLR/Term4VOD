@@ -61,6 +61,31 @@ $(function(){
     
     /* -------------------- NAVIGATION JS END ----------------------*/
     
+    /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
+    $(".movies-series-slider-mobile").on("click",function(){
+        if($("input[type=checkbox]").is(":checked")){
+            $(".movies").show();
+            $(".series").hide();
+        }else{
+            $(".movies").hide();
+            $(".series").show();
+        }
+    });
+    
+    $(".movies-series-slider-desktop").on("click",function(){
+        if($("input[type=checkbox]").is(":checked")){
+            $(".movies").show();
+            $(".series").hide();
+        }else{
+            $(".movies").hide();
+            $(".series").show();
+        }
+    });
+    
+    
+    
+    /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
+    
     var apiRequest = new XMLHttpRequest();
     
     
