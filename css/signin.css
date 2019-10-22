@@ -98,7 +98,10 @@ outline-color : #d04925 !important;
 .logo{
     align-content: center;
     height: 100px;
-    background-color: #d04925;
+    background-image: url(../images/Video_Bench_Logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     color: white;
 }
