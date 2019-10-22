@@ -1,6 +1,6 @@
 $(function(){
     
-    console.log('hello');
+    console.log('helloooooo');
     
      /* -------------------- NAVIGATION JS START ----------------------*/
     
@@ -61,43 +61,68 @@ $(function(){
     
     /* -------------------- NAVIGATION JS END ----------------------*/
     
-    /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
-    $(".movies-series-slider-mobile").on("click",function(){
-        if($("input[type=checkbox]").is(":checked")){
-            $(".movies").show();
-            $(".series").hide();
-        }else{
-            $(".movies").hide();
-            $(".series").show();
-        }
+    
+    var apiCall = 'https://api.themoviedb.org/3/movie/76341?api_key=9b788b49ee42354dbc57b8a25b87c9df';
+    
+    $.getJSON(apiCall, dataCallBack);
+    
+    function dataCallBack(moviesData){
+        console.log(moviesData);
+        
+        var movieName = moviesData.original_title;
+        var movieOverview = moviesData.overview;
+        var movieBudget = moviesData.budget;
+        var movieRating = moviesData.vote_average;
+        var movieTagline = moviesData.tagline;
+        var movieReleaseDate = moviesData.release_date;
+        var movieRuntime = moviesData.runtime;
+        var movieGenre = moviesData.genres[0,1,2].name;
+        var moviePoster = 'https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg';
+        
+        console.log(movieBudget, movieName, movieGenre, movieOverview, movieRating, movieReleaseDate, movieRuntime, movieTagline);
+        
+        $(".indiv-content h2").text(movieOverview);
+        $("#movie-series-words h1").text(movieName);
+        $("#movie-series-words h2").text(movieName);
+        $(".movie-rating").text(movieRating);
+        $(".movie-rating-desktop").text(movieRating);
+        $(".poster-image").find("img").attr("src", moviePoster);
+        $(".poster-image-desktop").find("img").attr("src", moviePoster);
+        $(".genres h3").text(movieGenre);
+        $(".release-date h3").text(movieReleaseDate);
+        $(".runtime h3").text(movieRuntime);
+        $(".budget h3").text("$" + movieBudget);
+        $(".tagline h3").text(movieTagline);
+        
+    };   
+    
+    $(".play").on("mouseenter", function(){
+        $(this).css({"background-color" : "#d04925", "color" : "#181819", "cursor" : "pointer"});
     });
     
-    $(".movies-series-slider-desktop").on("click",function(){
-        if($("input[type=checkbox]").is(":checked")){
-            $(".movies").show();
-            $(".series").hide();
-        }else{
-            $(".movies").hide();
-            $(".series").show();
-        }
+    $(".play").on("mouseleave", function(){
+        $(this).css({"border" : "1px solid #d04925", "color" : "#d04925", "background-color" : "#181819"});
+    });   
+    
+    $(".my-list").on("mouseenter", function(){
+        $(this).css({"border" : "1px solid #656565", "cursor" : "pointer"});
+    });
+    
+    $(".action-buttons my-list").on("mouseleave", function(){
+        $(this).css({"border" : "none"});
+    }); 
+    
+    $(".my-list").hide();
+    
+    $(".poster-lg-container-mobile").on("mouseenter", function(){
+        $(this).find(".action-buttons").fadeOut();    
     });
     
     
     
-    /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
-    
-    var apiRequest = new XMLHttpRequest();
     
     
-    apiRequest.open('GET', 'http://www.omdbapi.com/?i=tt3896198&apikey=c0e1ea77', true);
     
-    apiRequest.send();
-    
-    apiRequest.onload = function(){
-        var data = JSON.parse(this.response);
-        
-    }
-        
         
         
 });

@@ -12,22 +12,31 @@
         <title>VideoBench - Info</title>
         
         <!-- LINK JQUERY LIBRARY FILES (Before bootstrap files) -->
-        <script src="jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>             
+        
+        <script src="../jquery/1.12.0/jquery.min.js"></script>
+        <script src="../jquery/jquery.js"></script>        
         
          <!-- LINK BOOTSTRAP-FILES-->
+        <script src="../bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css"> 
+        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         
+        <!-- FONT AWESOME LINK-->
+        <script src="https://kit.fontawesome.com/20de71b89c.js" crossorigin="anonymous"></script>
         
+
         <!-- LINK CSS/JS PROJECT FILEs -->
-        <link rel="stylesheet" href="../css/indiv.css">
+        <link rel="stylesheet" href="../css/indiv.css">        
         <!--<script src="main.js"></script>-->
         
         <!-- LINK GOOGLE FONT -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
     </head>
     
     <body>
@@ -38,33 +47,98 @@
             <div class="row">
                 
                 <!-- Mobile Navigation -->
-                <div class="navigation col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on tablet and desktop -->
+                <div class="navigation-mobile col-xs-12 visible-xs"> <!-- Hide on tablet and desktop -->
                     <div class="nav-menu">
-                    <span class="glyphicon glyphicon-menu-hamburger" style="color:#656565"></span>
+                        <i class="fas fa-bars"></i> <!-- Menu Icon -->
                     </div>
                     <div class="nav-logo-mobile"></div>
                     <div class="nav-search-mobile">
-                     <span class="glyphicon glyphicon-search" style="color:#656565"></span>
+                        <i class="fas fa-search"></i> <!-- Search Icon -->
                     </div>
                 </div>
-                
+                                
                 <!-- Tablet Navigation -->
-                <div class="navigation col-xs-12 hidden-xs"> <!-- Hide on mobile -->
+                <div class="navigation-tablet col-xs-12 visible-sm visible-md visible-lg"> <!-- Hide on mobile +  Desktop -->
+                    
                     <div class="nav-logo-tablet"></div>
-                    <div class="nav-item home"><a href="../index.html"><h4>Home</h4></a></div>
-                    <div class="nav-item library"><a href="library.html"><h4>Movies / Series</h4></a></div>
-                    <div class="nav-item watchlist"><a href="watchlist.html"><h4>My List</h4></a></div>
+                    
+                    <!-- Nav Item 1 -->
+                    <div class="nav-item nav-active">
+                        <i class="fas fa-home"></i>
+                        <a href="index.html"><h4>Home</h4></a>
+                        <div class="circle"></div>
+                    </div>
+                    
+                    <!-- Nav Item 2 -->
+                    <div class="nav-item library">
+                        <i class="fas fa-film"></i>
+                        <a href="pages/library.html"><h4>Movies / Series</h4></a>
+                        <div class="circle"></div>
+                    </div>
+                    
+                    <!-- Nav Item 3 -->
+                    <div class="nav-item">
+                        <i class="far fa-heart"></i>
+                        <a href="pages/watchlist.html"><h4>My List</h4></a>
+                        <div class="circle"></div>
+                    </div>
+                    
                     <div class="nav-profile">
                         <div class="nav-profile-image"></div>
-                        <h6>Hi Liandi!</h6>
                     </div>
-                    <div class="nav-search-tablet hidden-md hidden-lg"></div> <!-- Hide on Desktop -->
-                    <div class="nav-search-desktop hidden-xs hidden-sm">
-                        <div class="nav-search-desktop-icon"></div>
-                    </div> <!-- Hide on Mobile and Tablet -->
+                    
+                    <div class="nav-search-tablet visible-sm">
+                        <i class="fas fa-search"></i> <!-- Search Icon -->
+                    </div>
+                    
+                    <div class="nav-search-desktop visible-md visible-lg">
+                        <i class="fas fa-search"></i> <!-- Search Icon -->
+                    </div>
                     
                 </div>
+            </div>
             
+            <div class="row">
+                <!-- Mobile Menu Slider -->
+                <div class="mobile-menu col-xs-10 visible-xs">
+                    
+                    <i class="fas fa-times" style="float:right"></i> <!-- Close Icon -->
+                    <!-- Mobile Menu Profile -->
+                    <div class="mobile-menu-section1">
+                        <div class="mobile-menu-profile">
+                            <div class="mobile-menu-profile-image"></div>
+                        </div>
+                        <h3 style="padding-top:10px;">Hi Liandi!</h3>
+                        <h5>My Account</h5>
+                    </div>
+                    
+                    <!-- Mobile Menu Navigation -->
+                    <div class="mobile-menu-section2">
+                        
+                        <div class="mobile-menu-nav-item mobile-menu-nav-active">
+                            <i class="fas fa-home"></i>
+                            <a href="index.html"><h2>Home</h2></a>
+                            <i class="fas fa-chevron-right" style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
+                        </div>
+                        
+                        <div class="mobile-menu-nav-item">
+                            <i class="fas fa-film"></i>
+                            <a href="pages/library.html"><h2>Movies / Series</h2></a>
+                            <i class="fas fa-chevron-right"style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
+                        </div>
+                        
+                        <div class="mobile-menu-nav-item">
+                            <i class="far fa-heart"></i>
+                            <a href="pages/watchlist.html"><h2>My List</h2></a>
+                            <i class="fas fa-chevron-right"style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Signout -->
+                    <div class="mobile-menu-section3">
+                        <h3>Sign Out</h3>
+                    </div>
+                </div>
             </div>
             <!-------------------- NAVIGATION END -------------------->
             
@@ -99,7 +173,7 @@
             <div class="row">
                 <div class="poster col-xs-12 col-sm-7 col-md-6 hidden-lg">
                     <div class="poster-container">
-                        <div class="poster-image"></div>
+                        <div class="poster-image"><img src=""></div>
                     </div>
                 </div> <!--row-->
                     <div class="buttons col-xs-12 col-md-5 hidden-sm hidden-lg">
@@ -142,14 +216,14 @@
             
             <div class="poster-desktop visible-lg col-lg-6">
                 <div class="poster-container-desktop">
-                    <div class="poster-image-desktop"></div>
+                    <div class="poster-image-desktop"><img src=""></div>
                 </div>
             </div> <!--row--> <!--poster-for-desktop-->              
             
     
             <div class="row">
                 <div class="indiv-content col-xs-12 col-md-12 col-lg-6"> <!-- style="height: 380px">-->
-                    <h2>In 1858, a bounty hunter named Schultz seeks out a slave named Django and buys him because he needs him to find some men he is looking for. After finding them, Django wants to find his wife, Broomhilda, who along with him were sold separately by his former owner for trying to escape. Schultz offers to help him if he chooses to stay with him and be his partner. Eventually they learn that she was sold to a plantation in Mississippi. Knowing they can't just go in and say they want her, they come up with a plan so that the owner will welcome them into his home and they can find a way.</h2>
+                    <h2>Insert movie or series overview</h2>
                     
                     
                     <!-- RATING CONTAINER MOBILE START -->
@@ -183,12 +257,12 @@
                             <h3>Tagline:</h3>
                         </div>
                         <div class="info-right">
-                            <h3>Jamie Foxx, Leonardo DiCaprio, Christoph Waltz</h3>
-                            <h3>Drama, Western</h3>
-                            <h3>25 December 2012</h3>
-                            <h3>2h 45min</h3>
-                            <h3>$100,000,000</h3>
-                            <h3>Life, liberty and the pursuit of vengeance</h3>
+                            <div class="actors"><h3>Jamie Foxx, Leonardo DiCaprio, Christoph Waltz</h3></div>
+                            <div class="genres"><h3>Drama, Western</h3></div>
+                            <div class="release-date"><h3>25 December 2012</h3></div> 
+                            <div class="runtime"><h3>2h 45min</h3></div>
+                            <div class="budget"><h3>$100,000,000</h3></div>
+                            <div class="tagline"><h3>Life, liberty and the pursuit of vengeance</h3></div> 
                         </div>
                     </div>
                 </div> <!--indiv-content-->  
@@ -219,60 +293,68 @@
             
             <!-------------------- FOOTER START -------------------->
             <div class="row">
+                
                 <!----- FOOTER MOBILE ----->
-                <div class="footer-mobile col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
+                <div class="footer-mobile col-xs-12 hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
                     
-                    <div class="footer-connect col-xs-12" style="height:90px">
+                    <div class="footer-connect col-xs-12">
                         <p>Stay up to date with new releases and announcements</p>
                         <div class="connect-textbox">
                             <input type="text" name="join" value="type your email here">
-                            <button>Join</button>
+                            <div>Join</div>
                         </div>
                     </div>
                     
-                    <div class="footer-social-media col-xs-12" style="height:25px">
-                        <div class="social-media">
-                            <a href="https://www.facebook.com/"><div class="social-media-icon facebook"></div></a>
-                            <a href="https://twitter.com/login"><div class="social-media-icon twitter"></div></a>
-                            <a href="https://za.pinterest.com/"><div class="social-media-icon pinterest"></div></a>
+                    <div class="footer-social-media col-xs-12">
+                       <div class="social-media">
+                           <div class="social-media-icon">
+                                <i class="fab fa-facebook-f"></i>
+                           </div>
+                           <div class="social-media-icon">
+                                <i class="fab fa-twitter"></i>
+                           </div>
+                           <div class="social-media-icon">
+                                <i class="fab fa-pinterest-p"></i>
+                           </div>
                     `   </div>
                     </div>
                     
                     
-                    <div class="footer-copywrite col-xs-12" style="height:45px">
-                       <p style="color:#d04925">© 2019 Videobench</p>
+                    <div class="footer-copywrite col-xs-12">
+                       © 2019 Videobench
                     </div>
                     
                 </div>
                 
                 <!----- FOOTER TABLET + DESKTOP ----->
-                <div class="footer-tablet col-sm-12 hidden-xs"> <!-- Hide on Mobile -->
-                    <div class="footer-copywrite col-sm-3" style="margin-top:28px">
-                        <p style="color:#d04925; margin-top:15px">© 2019 Videobench</p>
+                <div class="footer-tablet col-sm-12 visible-md visible-lg"> <!-- Hide on Mobile -->
+                    <div class="footer-copywrite col-sm-3" style="font-size:2vw; padding-top:3vw; height:auto">
+                        © 2019 Videobench
                     </div>
-                    <div class="footer-connect col-sm-6">
+                    
+                    <div class="footer-connect col-sm-6" style="height:100%">
                         <h6>Let's Connect!</h6>
                         <p>Stay up to date with new releases and announcements</p>
-                        <div class="connect-textbox">
-                            <input type="text" name="join" value="type your email here">
-                            <button>Join</button>
+                        <div class="connect-textbox" style="height:30%">
+                            <input type="text" name="join" value="type your email here" style="font-size:1vw">
+                            <div style="font-size:2vw; padding:0">Join</div>
                         </div>
                     </div>
-                    <div class="footer-social-media col-sm-3" style="margin-top:28px">
-                        <div class="social-media">
-                            <div class="social-media-icon facebook"></div>
-                            <div class="social-media-icon twitter"></div>
-                            <div class="social-media-icon pinterest"></div>
-                        </div>
+                    <div class="footer-social-media col-sm-3" style="height:auto; padding-top:1.5vw">
+                        <div class="social-media" style="width:75%;">
+                           <div class="social-media-icon">
+                                <i class="fab fa-facebook-f" style="font-size:2.5vw;"></i>
+                           </div>
+                           <div class="social-media-icon">
+                                <i class="fab fa-twitter" style="font-size:2.5vw;"></i>
+                           </div>
+                           <div class="social-media-icon">
+                                <i class="fab fa-pinterest-p" style="font-size:2.5vw;"></i>
+                           </div>
+                    `   </div>
                     </div>
                     
                 </div>
-                
-                
-                
-                
-                
-                
             </div>
             <!-------------------- FOOTER END -------------------->
            
