@@ -1,0 +1,242 @@
+body,p{
+    padding:0;
+    margin:0;
+    color:#666666;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: "Montserrat";
+    padding:0;
+    margin:0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #181819;
+}
+
+
+.img{
+    background-position: center;
+    height: 100%;
+    background-size: auto;
+}
+
+.item{
+    background-color: greenyellow;
+    height: 300px;
+    margin:0.2% 1% 20px 0%;
+    transform:skewX(-2deg);
+    background-color:white;
+}
+
+content{
+    height: auto;
+    width: 100%;
+}
+
+/* ---------------------------------------- */
+
+.mobile-watchlist{
+    height: auto;
+}
+
+/* -------------------------------------------- */
+
+.tablet-watchlist{
+    height: auto;
+}
+
+/* --------------------------------------------------- */
+
+.medium-watchlist{
+    height: auto;
+}
+
+/* --------------------------------------------------- */
+
+.mobile-heading{
+    height: 50px;
+    text-align:center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 1px solid rgb(102,102,102);
+    border-bottom: 1px solid rgb(102,102,102);
+    margin-left: 5%;
+}
+
+.tablet-heading{
+    height: 50px;
+    text-align:center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 1px solid rgb(102,102,102);
+    border-bottom: 1px solid rgb(102,102,102);
+    margin-left: 5%;
+}
+
+.desktop-heading{
+    height: 50px;
+    text-align:center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 1px solid rgb(102,102,102);
+    border-bottom: 1px solid rgb(102,102,102);
+    margin-left: 5%;
+}
+
+/* --------------------------------------------------- */
+
+.pc-watchlist{
+    height: auto;
+}
+
+/* --------------------------------------------------- */
+
+#Add-Class{
+    height: 200px;
+    background-color: brown;
+}
+
+#Add-Class:hover{
+    cursor: pointer;
+}
+
+.xs-spacer{
+    height: 300px;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* IMAGE CAROUSEL START */
+.image-carousel-mobile{
+    height:40vh;
+    padding:0;
+    margin:0;
+}
+
+.image-carousel-tablet{
+    height:50vh;
+    padding:0;
+    margin:0;
+}
+
+.image-carousel-desktop{
+    height:50vh;
+    padding:0;
+    margin:0;
+}
+
+.image-carousel-visible{
+    width:100%;
+    height:98%;
+    margin:0 auto;
+    overflow:hidden;
+    background-color:rgb(24,24,25);
+    background-color: yellowgreen;
+    overflow-x: scroll;
+}
+
+.image-carousel-mobile-content{
+    width:150%;
+    height:96%;
+    margin:0 auto;
+    padding-left:1.5%;
+}
+
+.image-carousel-tablet-content{
+    width:150%;
+    height:96%;
+    padding-left:1.5%;
+    margin:0 auto;
+}
+
+.image-carousel-desktop-content{
+    width:150%;
+    height:96%;
+    padding-left:1.5%;
+    margin:0 auto;
+    background-color: crimson;
+}
+
+.image-carousel-poster-lg-mobile{
+    width:130px;/*28%;*/
+    height:98%;
+    float:left;
+    margin:5px 13px 20px 0px;
+    transform:skewX(-2deg);
+    background-color: blue;
+}
+
+.image-carousel-poster-lg-tablet{
+    width:150px;/*28%;*/
+    height:98%;
+    float:left;
+    margin:5px 13px 20px 0px;
+    transform:skewX(-2deg);
+    background-color: white;
+}
+
+
+.image-carousel-poster-lg-desktop{
+    width:210px;/*9.5%;*/
+    height:98%;
+    float:left;
+    margin:0.2% 1% 40px 0%;
+    transform:skewX(-2deg);
+    background-color:pink;
+}
+
+.image-carousel-poster-sm{
+    width:100%;
+    height:47.25%;
+    background-color: white;
+    
+}
+
+.image-carousel-poster-sm-divider{
+    width:100%;
+    height:5.5%;
+}
+
+/*.recommended-poster1{
+    width:100%;
+    height:100%;
+    background-image:url(../images/recommended_poster1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 6px rgb(0,0,0,0.50);
+}
+
+.recommended-poster2{
+    width:100%;
+    height:100%;
+    background-image:url(../images/recommended_poster2.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 6px rgb(0,0,0,0.50);
+}
+
+.recommended-poster3{
+    width:100%;
+    height:100%;
+    background-image:url(../images/recommended_poster3.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 6px rgb(0,0,0,0.50);
+}
+/* IMAGE CAROUSEL END */
