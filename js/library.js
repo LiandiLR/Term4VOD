@@ -1,7 +1,5 @@
 $(function(){
     
-    console.log('hello');
-    
      /* -------------------- NAVIGATION JS START ----------------------*/
     
     /* Mobile Side Navigation Slide In */
@@ -86,18 +84,102 @@ $(function(){
     
     /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
     
-    var apiRequest = new XMLHttpRequest();
+        //console.log("Hello");
     
+// 
     
-    apiRequest.open('GET', 'http://www.omdbapi.com/?i=tt3896198&apikey=c0e1ea77', true);
+//    console.log(movieslength);
+//    console.log(randomNumberMovie);
+//    console.log(randomMovieName);
+//    
+//    console.log(serieslength);
+//    console.log(randomNumberSeries);
+//    console.log(randomSeriesName);
+//    
     
-    apiRequest.send();
+//   for(i=0; i < 24 ; i++){
+        //$('#AddHerePC').append("<div class='item col-xs-2'><img src="+  +"></div>");
+//        
+//        var movieslength = movies.length;
+//        var randomNumberMovie = Math.floor((Math.random() * movieslength));
+//        var randomMovieName = movies[randomNumberMovie];
+//        
+//        var movieAPIsearch = "http://www.omdbapi.com/?apikey=c0e1ea77&plot=full&t=" + randomMovieName;
+//        
+//        fetch(movieAPIsearch).then(res => res.json()).then((out) => {console.log(out);}).catch(err => console.error(err));        
+//        
+//        
+//       $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2 poster'><img src='" + movieAPIsearch.Poster + "'></div>");
+//        
+//    };
+//    
+//    for(i=0; i < 24 ; i++){
+//        //$('#AddHerePC').append("<div class='item col-xs-2'><img src="+  +"></div>");
+//        
+//        var serieslength = series.length;
+//        var randomNumberSeries = Math.floor((Math.random() * serieslength));
+//        var randomSeriesName = series[randomNumberSeries];
+//        
+//        var seriesAPIsearch = "http://www.omdbapi.com/?apikey=c0e1ea77&plot=full&t=" + randomSeriesName;
+//        fetch(seriesAPIsearch).then(res => res.json()).then((out) => {console.log('Output: ', out);}).catch(err => console.error(err));
+//        
+//    };
+	
+	var movieslength = movies.length;
+    var randomNumberMovie = Math.floor((Math.random() * movieslength));
+    var randomMovieName = movies[randomNumberMovie];
+	
+	var movieNameLength = randomMovieName.length;
+	var movieNameAPISearch = randomMovieName;
+	
+	
+	var settings = {
+		"async": true,
+		"crossDomain": true,
+		"url": "https://api.themoviedb.org/3/search/movie?api_key=9b788b49ee42354dbc57b8a25b87c9df&query=" + movieNameAPISearch,
+		"method": "GET",
+		"headers": {},
+		"data": "{}"
+	}
+	
+	$.ajax(settings).done(function (response) {
+		console.log("Test ", response);
+		
+	});
+	
+	for (i = 0; i < movieNameLength; i++ ) {
+		movieNameAPISearch = movieNameAPISearch.replace(" ", "%20");
+	}
+	console.log(movieNameAPISearch);
+	
+	var apiCall = settings.url;
     
-    apiRequest.onload = function(){
-        var data = JSON.parse(this.response);
+    $.getJSON(apiCall, dataCallBack);
+    
+    function dataCallBack(moviesData){
+        console.log(moviesData);
         
-    }
+        var movieName = moviesData.results[0].original_title;
+        var movieOverview = moviesData.results[0].overview;
+        var movieRating = moviesData.results[0].vote_average;
+        var movieTagline = moviesData.results[0].tagline;
+        var movieRuntime = moviesData.results[0].runtime;
+        var movieGenre = moviesData.results[0].genre_ids;
+        var moviePoster = 'https://image.tmdb.org/t/p/w500' + moviesData.results[0].poster_path;
         
-        
-        
+        console.log(movieName, movieGenre);
+    }; 
+    
+
+	
+	
+
+	
+	$("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2 poster'><img src='" + + "'></div>");
+	
+	
+	
+	
+	
+    
 });
