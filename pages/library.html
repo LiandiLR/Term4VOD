@@ -133,27 +133,77 @@
 
                 <!-------------------- LIBRARY FILTER START ------------------->
                 <div class="library-filter-mobile col-xs-5 col-md-4 hidden-md hidden-lg">
-                    <select class="filter-dropdown-mobile">
-                        <option value="genre">Genre</option>
-                        <option value="title">Title (A-Z)</option>
-                        <option value="release">Release Year</option>
-                        <option value="rating">Rating(high-low)</option>
-                    </select>
+                    <div class="filter-dropdown-mobile">
+                        <h2><i class="glyphicon glyphicon-filter"></i>Filter</h2>            
+                    </div>
                 </div>
                 <div class="library-filter-desktop col-xs-5 col-md-4 hidden-xs hidden-sm">
-                    <select class="filter-dropdown-desktop">
-                        <option value="genre">Genre</option>
+                    <div class="filter-dropdown-desktop">
+                        <h2><i class="glyphicon glyphicon-filter"></i>Filter</h2>  
+                      <!--  <option value="genre">Genre</option>
                         <option value="title">Title (A-Z)</option>
                         <option value="release">Release Year</option>
-                        <option value="rating">Rating(high-low)</option>
-                    </select>
+                        <option value="rating">Rating(high-low)</option> -->
+                    </div>
                 </div>
                 
                 <!-------------------- LIBRARY GENRE START -------------------->
                 
                 <!-- LIBRARY MOBILE GENRE -->
                 <div class="library-genre-mobile col-xs-12 hidden-md hidden-lg">
-                    <div class="visible-genres">
+                    
+                    <div class="filters-box title">
+                        <h3>Title</h3>
+                        <div class="title-textbox" style="border: 1px solid rgb(208,73,37); border-radius: 4px; background-color: #181819;">
+                            <input type="text" id="title-box" name="title-box" placeholder="Movie title" style="font-size: 2.2vw; width: 100%;">  
+                        </div> 
+                    </div>
+
+                   <div class="filters-box genre">
+                       <h3>Genre</h3>                                          
+                        <div class="dropdown">
+                           <select id="genre-textbox" onchange="">
+                                <option>Select Genre</option>
+                                <option>Action</option>
+                                <option>Adventure</option>
+                                <option>Sci-Fi</option>
+                                <option>Western</option>
+                           </select>
+                        </div>                       
+                    </div>                                         
+                    
+                    <div class="filters-box release-year">
+                        <h3>Release Year</h3> 
+                        <div class="title-textbox" style="border: 1px solid rgb(208,73,37); border-radius: 4px; background-color: #181819;">
+                            <input type="text" id="release-year" name="release-year" placeholder="Release year" style="font-size: 2.2vw; width: 100%;">  
+                        </div>                         
+                    </div>   
+                    
+                    <div class="filters-box rating">
+                        <h3>Rating</h3> 
+                        <div class="dropdown">
+                           <select id="rating-textbox" onchange="">
+                                <option>Select Rating</option>
+                                <option>1+</option>
+                                <option>2+</option>
+                                <option>3+</option>
+                                <option>4+</option>
+                                <option>5+</option>
+                                <option>6+</option>
+                                <option>7+</option>
+                                <option>8+</option>    
+                                <option>9+</option>                            
+                           </select>
+                        </div>                        
+                    </div>
+                    
+                    <div class="filters-box search">
+                        <div class="search-btn">
+                            <input type="submit" id="search" value="SEARCH" style="font-size: 2.2vw; margin-top: 1.5vw; background-color: rgb(208,73,37);; border: none; color: white; padding: 3px 10px; ">
+                        </div>    
+                    </div>                    
+                    
+                   <!-- <div class="visible-genres">
                         <ul class="genre-list-mobile">
                             <li class="active-genre-mobile">
                                 <p>Classics</p>
@@ -204,12 +254,66 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <!-- LIBRARY DESKTOP GENRE -->
-                <div class="library-genre-desktop col-xs-12 hidden-xs hidden-sm">
-                    <div class="visible-genres">
+                <div class="library-genre-desktop col-lg-12 hidden-xs hidden-sm">
+                    
+                    <div class="filters-box title">
+                        <h3>Title</h3>
+                        <div class="title-textbox" style="border: 1px solid rgb(208,73,37); border-radius: 4px; background-color: #181819;">
+                            <input type="text" id="title-box" name="title-box" placeholder="Movie title" style="font-size: 2.2vw; width: 100%;">  
+                        </div> 
+                    </div>
+
+                   <div class="filters-box genre">
+                       <h3>Genre</h3>                                          
+                        <div class="dropdown">
+                           <select id="genre-textbox" onchange="">
+                                <option>Select Genre</option>
+                                <option>Action</option>
+                                <option>Adventure</option>
+                                <option>Sci-Fi</option>
+                                <option>Western</option>
+                           </select>
+                        </div>                       
+                    </div> 
+                    
+                    
+                    
+                    <div class="filters-box release-year">
+                        <h3>Release Year</h3> 
+                        <div class="title-textbox" style="border: 1px solid rgb(208,73,37); border-radius: 4px; background-color: #181819;">
+                            <input type="text" id="release-year" name="release-year" placeholder="Release year" style="font-size: 2.2vw; width: 100%;">  
+                        </div>                         
+                    </div>   
+                    
+                    <div class="filters-box rating">
+                        <h3>Rating</h3> 
+                        <div class="dropdown">
+                           <select id="rating-textbox" onchange="">
+                                <option>Select Rating</option>
+                                <option>1+</option>
+                                <option>2+</option>
+                                <option>3+</option>
+                                <option>4+</option>
+                                <option>5+</option>
+                                <option>6+</option>
+                                <option>7+</option>
+                                <option>8+</option>    
+                                <option>9+</option>                            
+                           </select>
+                        </div>                        
+                    </div>
+                    
+                    <div class="filters-box search">
+                        <div class="search-btn">
+                            <input type="submit" id="search" value="SEARCH" style="font-size: 2.2vw; margin-top: 1.5vw; background-color: rgb(208,73,37);; border: none; color: white; padding: 3px 10px; ">
+                        </div>    
+                    </div>
+                    
+             <!--     <div class="visible-genres">
                         <ul class="genre-list-desktop">
                             <li class="active-genre-desktop">
                                 <p>Classics</p>
@@ -260,7 +364,8 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div>  -->
+                    
                 </div>
                 
                 <!-------------------- LIBRARY POSTERS START -------------------->

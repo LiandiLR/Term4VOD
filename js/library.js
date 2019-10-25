@@ -86,6 +86,28 @@ $(function(){
     
     /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
     
+    $("#title-box").on("click", function(){
+        $("#genre").prop('disabled', true);
+        $(".genre").css({opacity:0.1});
+        $("#release-year").prop('disabled', true);
+        $(".release-year").css({opacity:0.1});
+        $("#rating").prop('disabled', true);
+        $(".rating").css({opacity:0.1});
+    });
+    
+    
+    /*$("#FullName").removeAttr('disabled'); */
+    
+    
+    /* -------------------- FILTER MOVIES / SERIES JS START ----------------------*/
+    
+    
+    
+    
+    
+    
+    /* -------------------- FILTER MOVIES / SERIES JS START ----------------------*/
+    
     var apiRequest = new XMLHttpRequest();
     
     

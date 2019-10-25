@@ -509,11 +509,15 @@ input:checked + .movies-series-slider-desktop:before {
     height:85%;/*6vw;*/
     margin-top:3%;
     margin-left:28%;
-    padding:2px 5px 2px 5px;
+    padding: 5px 5px 2px 5px;
     background-color:transparent;
-    border:0.2vw solid rgba(102,102,102,0.75);
-    border-radius:0.8vw;
+    text-align: center;
     font-size:2.5vw;
+}
+
+.filter-dropdown-mobile:hover {
+    color: rgb(208,73,37);
+    cursor: pointer;
 }
 
 .filter-dropdown-desktop{
@@ -521,36 +525,123 @@ input:checked + .movies-series-slider-desktop:before {
     height:90%;/*6vw;*/
     margin-top:3%;
     margin-left:4%;
-    padding:2px 5px 2px 5px;
+    padding:5px 5px 2px 5px;
     background-color:transparent;
-    border:0.15vw solid rgba(102,102,102,0.75);
-    border-radius:0.8vw;
+    text-align: center;
     font-size:1.7vw;
 }
 
-.filter-dropdown-mobile option{
-    font-size:2vw;
+.filter-dropdown-desktop:hover {
+    color: rgb(208,73,37);
+    cursor: pointer;
 }
 
-.filter-dropdown-desktop option{
-    font-size:1.7vw;
+
+.filter-dropdown-mobile h2{
+    font-size:3vw;
 }
+
+.filter-dropdown-desktop h2{
+    font-size:3vw;
+}
+
 
 /* LIBRARY FILTER END */
 
 /* LIBRARY GENRE START */
 
+#dropbtn {
+    background-color: #181819;
+    font-size: 2.2vw;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    width: 100%;
+    height: 100%;
+    background-color: #181819; 
+    position: relative; 
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 2.2vw;
+    float: left;
+}
+
+
 .library-genre-mobile{
     height:10vw;
-    padding:0;
     margin:0;
+    margin-top: 2vw;
+    text-align: center;
+    float: left;
+}
+
+.filters-box {
+    width: 19%;
+    height: 9vw;
+    display: inline-block;
+}
+
+.filters-box h3 {
+    font-size: 2.2vw;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-bottom: 2vw;
+}
+
+.search {
+    margin-top: 3vw;
+    float: right;    
+}
+
+.submit {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;    
+}
+
+#genre-textbox {
+    width:100%;
+    height:45%;
+    background-color: #181819; 
+    border: 1px solid rgb(208,73,37);
+    border-radius:4px;
+    padding:3px;
+    margin:0 auto;    
+}
+
+#rating-textbox {
+    width:100%;
+    height:45%;
+    background-color: #181819; 
+    border: 1px solid rgb(208,73,37);
+    border-radius:4px;
+    padding:3px;
+    margin:0 auto;    
+}
+
+
+.title-textbox {
+    width:100%;
+    height:45%;
+    border-radius:6px;
+    padding:3px;
+    background-color:#ffffff;
+    margin:0 auto;    
 }
 
 .library-genre-desktop{
-    height:6vw;
-    padding:0;
+    height:10vw;
     margin:0;
-    /*background-color:yellow;*/
+    margin-top: 2vw;
+    text-align: center;
+    float: left;
 }
 
 .visible-genres{
