@@ -61,7 +61,7 @@ $(function(){
     
     /* -------------------- NAVIGATION JS END ----------------------*/
     
-    
+    //76341
     var apiCall = 'https://api.themoviedb.org/3/movie/76341?api_key=9b788b49ee42354dbc57b8a25b87c9df';
     
     $.getJSON(apiCall, dataCallBack);
@@ -77,7 +77,7 @@ $(function(){
         var movieReleaseDate = moviesData.release_date;
         var movieRuntime = moviesData.runtime;
         var movieGenre = moviesData.genres[0,1,2].name;
-        var moviePoster = 'https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg';
+        var moviePoster = 'https://image.tmdb.org/t/p/w500' + moviesData.poster_path;
         
         console.log(movieBudget, movieName, movieGenre, movieOverview, movieRating, movieReleaseDate, movieRuntime, movieTagline);
         
