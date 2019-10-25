@@ -941,3 +941,10 @@ input[type=text]{
     margin-top:2vw;
 }
 /* FOOTER END */
+
+.img{
+    background-position: center;
+    height: 100%;
+    background-size: auto;
+    display: inline-block;
+}
