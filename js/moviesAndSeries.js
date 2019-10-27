@@ -131,7 +131,7 @@ var series = [
 
   var genres = [
     {
-      "id": 28,
+      "id": 28,                //should id have aanhalings ?
       "name": "Action"
     },
     {

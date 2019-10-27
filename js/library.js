@@ -96,8 +96,8 @@ $(function(){
         $(".rating").css({opacity:0.1});
     });
     
-    $(".library-poster1").on("click", function(){
-           
+    $(".poster-lg-container-mobile").on("click", function(){
+        console.log("poster click works")       ;
     });
     
     
@@ -106,19 +106,58 @@ $(function(){
     
     /* -------------------- FILTER MOVIES / SERIES JS START ----------------------*/  
     
+
+    for (var i = 0; i < 24; i++) {
+        $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2'><div class='library-poster1'><img src='https://image.tmdb.org/t/p/w500/lN0mP3BNaKirkKl6FJ0yL0wmjSJ.jpg'></div></div>");  
+        
+
+        };
+    
+    
+    
     
     
     $("#search").on("click", function() {
         var movieTitle = $("#title-box").val();
-        console.log(movieTitle);  
+        var genreSelected = document.getElementById("genre-textbox").value;
+        var ratingSelected = document.getElementById("rating-textbox").value; 
+        var releaseYear = document.getElementById("release-year").value;
         
+        
+        
+        
+        
+        console.log(movieTitle);  
+        console.log(genreSelected);
+        console.log(releaseYear);
+        console.log(ratingSelected);
 
         
-        for (i = 0; i < movieNameLength ; i++) {
-            if(movieTitle == movieName);
+        for (var i = 0; i < movieslength; i++) {
+            
+            if(movies[i] === movieTitle){
+             $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2        poster'><img src='" + + "'><div class='library-poster1'></div></div>"); 
+                
+                $(".library-poster1").find("img").attr("src", moviePosterIndivual);
+                
+                
+            } else {
+                console.log("movie not found");
+            };       
         }
         
+        
+        for (var i = 0; i < movieslength; i++) {
+            if(genres[i] === genreSelected){
+                
+            };    
+        }      
+        
+        
+        
     });
+    
+    
     
     
     
@@ -195,10 +234,11 @@ $(function(){
     var seriesNameAPISearch = randomSeriesName;
     
     
+    console.log(movieslength);
     console.log(seriesNameAPISearch);
     console.log(seriesNameLength);
     console.log(serieslength);
-    console.log(movieslength);
+   
 	
 	
 	var settings = {
@@ -234,7 +274,8 @@ $(function(){
         var movieTagline = moviesData.results[0].tagline;
         var movieRuntime = moviesData.results[0].runtime;
         var movieGenre = moviesData.results[0].genre_ids;
-        var moviePoster = 'https://image.tmdb.org/t/p/w500' + moviesData.results[0].poster_path;
+        var moviePosterComplete = 'https://image.tmdb.org/t/p/w500' + moviesData.results[0].poster_path;
+        var moviePosterIndividual = moviesData.results[0].poster_path; 
         
         console.log(movieName, movieGenre);
     }; 
