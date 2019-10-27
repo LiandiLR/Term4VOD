@@ -17,26 +17,28 @@
         
         <title>Videobench</title>
         
+        <!-- LINK JQUERY LIBRARY FILES (Before bootstrap files) -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>   
+        
+        <script src="../jquery/1.12.0/jquery.min.js"></script>
+        <script src="../js/library.js"></script>
+        <script src="../js/moviesAndSeries.js"></script>
+        
         
         <!--Bootstrap-files-->
         <script src="../bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css">
         
-        
-        <!--jQuery-file-->
-        <script src="../jquery/1.12.0/jquery.min.js"></script>
-        
-        <script src="../js/library.js"></script>
-        <script src="../js/moviesAndSeries.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!--CSS-link-->
-        <link rel="stylesheet" href="../css/library.css">        
+        <link rel="stylesheet" href="../css/library.css"> 
+        <link rel="stylesheet" href="../css/navigation.css">
 
         
         <!--google-font-->
-        
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:400,700&display=swap" rel="stylesheet">
 
     </head>
     
@@ -49,29 +51,102 @@
             <div class="row">
                 
                 <!-- Mobile Navigation -->
-                <div class="navigation col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on tablet and desktop -->
-                    <div class="nav-menu"></div>
-                    <div class="nav-logo-mobile"></div>
-                    <div class="nav-search-mobile"></div>
+                <div class="navigation-mobile col-xs-12 visible-xs"> <!-- Hide on tablet and desktop -->
+                    <div class="nav-menu">
+                        <i class="fas fa-bars"></i> <!-- Menu Icon -->
+                    </div>
+                    <div class="nav-logo-mobile">
+                        <img src="../images/Video_Bench_Logo.png">
+                    </div>
+                    <div class="nav-search-mobile">
+                        <i class="fas fa-search"></i> <!-- Search Icon -->
+                    </div>
                 </div>
-                
+                                
                 <!-- Tablet Navigation -->
-                <div class="navigation col-xs-12 hidden-xs"> <!-- Hide on mobile -->
-                    <div class="nav-logo-tablet"></div>
-                    <div class="nav-item home"><a href="../index.html"><h4>Home</h4></a></div>
-                    <div class="nav-item library"><a href="library.html"><h4>Movies / Series</h4></a></div>
-                    <div class="nav-item watchlist"><a href="watchlist.html"><h4>My List</h4></a></div>
+                <div class="navigation-tablet col-xs-12 visible-sm visible-md visible-lg"> <!-- Hide on mobile +  Desktop -->
+                    
+                    <div class="nav-logo-tablet">
+                        <img src="../images/Video_Bench_Logo.png">
+                    </div>
+                    
+                    <!-- Nav Item 1 -->
+                    <div class="nav-item nav-active">
+                        <i class="fas fa-home"></i>
+                        <a href="../index.html"><h4>Home</h4></a>
+                        <div class="circle"></div>
+                    </div>
+                    
+                    <!-- Nav Item 2 -->
+                    <div class="nav-item library">
+                        <i class="fas fa-film"></i>
+                        <a href="../pages/library.html"><h4>Movies / Series</h4></a>
+                        <div class="circle"></div>
+                    </div>
+                    
+                    <!-- Nav Item 3 -->
+                    <div class="nav-item">
+                        <i class="far fa-heart"></i>
+                        <a href="../pages/watchlist.html"><h4>My List</h4></a>
+                        <div class="circle"></div>
+                    </div>
+                    
                     <div class="nav-profile">
                         <div class="nav-profile-image"></div>
-                        <h6>Hi Liandi!</h6>
                     </div>
-                    <div class="nav-search-tablet hidden-md hidden-lg"></div> <!-- Hide on Desktop -->
-                    <div class="nav-search-desktop hidden-xs hidden-sm">
-                        <div class="nav-search-desktop-icon"></div>
-                    </div> <!-- Hide on Mobile and Tablet -->
+                    
+                    <div class="nav-search-tablet visible-sm">
+                        <i class="fas fa-search"></i> <!-- Search Icon -->
+                    </div>
+                    
+                    <div class="nav-search-desktop visible-md visible-lg">
+                        <i class="fas fa-search"></i> <!-- Search Icon -->
+                    </div>
                     
                 </div>
+            </div>
             
+            <div class="row">
+                <!-- Mobile Menu Slider -->
+                <div class="mobile-menu col-xs-10 visible-xs">
+                    
+                    <i class="fas fa-times" style="float:right"></i> <!-- Close Icon -->
+                    <!-- Mobile Menu Profile -->
+                    <div class="mobile-menu-section1">
+                        <div class="mobile-menu-profile">
+                            <div class="mobile-menu-profile-image"></div>
+                        </div>
+                        <h3 style="padding-top:10px;">Hi Liandi!</h3>
+                        <h5>My Account</h5>
+                    </div>
+                    
+                    <!-- Mobile Menu Navigation -->
+                    <div class="mobile-menu-section2">
+                        
+                        <div class="mobile-menu-nav-item mobile-menu-nav-active">
+                            <i class="fas fa-home"></i>
+                            <a href="../index.html"><h2>Home</h2></a>
+                            <i class="fas fa-chevron-right" style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
+                        </div>
+                        
+                        <div class="mobile-menu-nav-item">
+                            <i class="fas fa-film"></i>
+                            <a href="../pages/library.html"><h2>Movies / Series</h2></a>
+                            <i class="fas fa-chevron-right"style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
+                        </div>
+                        
+                        <div class="mobile-menu-nav-item">
+                            <i class="far fa-heart"></i>
+                            <a href="../pages/watchlist.html"><h2>My List</h2></a>
+                            <i class="fas fa-chevron-right"style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Signout -->
+                    <div class="mobile-menu-section3">
+                        <h3>Sign Out</h3>
+                    </div>
+                </div>
             </div>
             <!-------------------- NAVIGATION END -------------------->
             
@@ -150,7 +225,7 @@
                 <!-------------------- LIBRARY GENRE START -------------------->
                 
                 <!-- LIBRARY MOBILE GENRE -->
-                <div class="library-genre-mobile col-xs-12 hidden-md hidden-lg">
+                <div class="library-genre-mobile col-xs-12 col-lg-12">
                     
                     <div class="filters-box title">
                         <h3>Title</h3>
@@ -258,12 +333,12 @@
                 </div>
                 
                 <!-- LIBRARY DESKTOP GENRE -->
-                <div class="library-genre-desktop col-lg-12 hidden-xs hidden-sm">
+       <!--         <div class="library-genre-desktop col-lg-12 hidden-xs hidden-sm">
                     
                     <div class="filters-box title">
                         <h3>Title</h3>
                         <div class="title-textbox" style="border: 1px solid rgb(208,73,37); border-radius: 4px; background-color: #181819;">
-                            <input type="text" id="title-box" name="title-box" placeholder="Movie title" style="font-size: 2.2vw; width: 100%;">  
+                            <input type="text" id="title-box" placeholder="Movie title" style="font-size: 2.2vw; width: 100%;">
                         </div> 
                     </div>
 
@@ -313,7 +388,7 @@
                         </div>    
                     </div>
                     
-             <!--     <div class="visible-genres">
+                 <div class="visible-genres">
                         <ul class="genre-list-desktop">
                             <li class="active-genre-desktop">
                                 <p>Classics</p>
@@ -364,9 +439,9 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>  -->
+                    </div>  
                     
-                </div>
+                </div>  -->
                 
                 <!-------------------- LIBRARY POSTERS START -------------------->
                 <div class="library-posters col-xs-12">
@@ -402,7 +477,7 @@
             
             
             
-            <!-------------------- FOOTER START -------------------->
+        <!-------------------- FOOTER START -------------------->
             <div class="row">
                 <!----- FOOTER MOBILE ----->
                 <div class="footer-mobile col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
@@ -417,10 +492,10 @@
                     
                     <div class="footer-social-media col-xs-12" style="height:25px">
                         <div class="social-media">
-                            <div class="social-media-icon facebook"></div>
-                            <div class="social-media-icon twitter"></div>
-                            <div class="social-media-icon pinterest"></div>
-                       </div>
+                            <a href="https://www.facebook.com/"><div class="social-media-icon facebook"></div></a>
+                            <a href="https://twitter.com/login"><div class="social-media-icon twitter"></div></a>
+                            <a href="https://za.pinterest.com/"><div class="social-media-icon pinterest"></div></a>
+                    `   </div>
                     </div>
                     
                     
@@ -452,6 +527,12 @@
                     </div>
                     
                 </div>
+                
+                
+                
+                
+                
+                
             </div>
             <!-------------------- FOOTER END -------------------->
             

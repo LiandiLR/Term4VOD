@@ -84,7 +84,9 @@ $(function(){
     
     /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
     
-<<<<<<< HEAD
+
+    console.log("toets");
+    
     $("#title-box").on("click", function(){
         $("#genre").prop('disabled', true);
         $(".genre").css({opacity:0.1});
@@ -94,11 +96,29 @@ $(function(){
         $(".rating").css({opacity:0.1});
     });
     
+    $(".library-poster1").on("click", function(){
+           
+    });
+    
     
     /*$("#FullName").removeAttr('disabled'); */
     
     
-    /* -------------------- FILTER MOVIES / SERIES JS START ----------------------*/
+    /* -------------------- FILTER MOVIES / SERIES JS START ----------------------*/  
+    
+    
+    
+    $("#search").on("click", function() {
+        var movieTitle = $("#title-box").val();
+        console.log(movieTitle);  
+        
+
+        
+        for (i = 0; i < movieNameLength ; i++) {
+            if(movieTitle == movieName);
+        }
+        
+    });
     
     
     
@@ -119,47 +139,46 @@ $(function(){
         
     }
         
-=======
-        //console.log("Hello");
+  /*      console.log("Hello");
     
-// 
+ 
     
-//    console.log(movieslength);
-//    console.log(randomNumberMovie);
-//    console.log(randomMovieName);
-//    
-//    console.log(serieslength);
-//    console.log(randomNumberSeries);
-//    console.log(randomSeriesName);
-//    
+    console.log(movieslength);
+    console.log(randomNumberMovie);
+    console.log(randomMovieName);
     
-//   for(i=0; i < 24 ; i++){
+    console.log(serieslength);
+    console.log(randomNumberSeries);
+    console.log(randomSeriesName);
+    
+    
+   for(i=0; i < 24 ; i++){
         //$('#AddHerePC').append("<div class='item col-xs-2'><img src="+  +"></div>");
-//        
-//        var movieslength = movies.length;
-//        var randomNumberMovie = Math.floor((Math.random() * movieslength));
-//        var randomMovieName = movies[randomNumberMovie];
-//        
-//        var movieAPIsearch = "http://www.omdbapi.com/?apikey=c0e1ea77&plot=full&t=" + randomMovieName;
-//        
-//        fetch(movieAPIsearch).then(res => res.json()).then((out) => {console.log(out);}).catch(err => console.error(err));        
-//        
-//        
-//       $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2 poster'><img src='" + movieAPIsearch.Poster + "'></div>");
-//        
-//    };
-//    
-//    for(i=0; i < 24 ; i++){
-//        //$('#AddHerePC').append("<div class='item col-xs-2'><img src="+  +"></div>");
-//        
-//        var serieslength = series.length;
-//        var randomNumberSeries = Math.floor((Math.random() * serieslength));
-//        var randomSeriesName = series[randomNumberSeries];
-//        
-//        var seriesAPIsearch = "http://www.omdbapi.com/?apikey=c0e1ea77&plot=full&t=" + randomSeriesName;
-//        fetch(seriesAPIsearch).then(res => res.json()).then((out) => {console.log('Output: ', out);}).catch(err => console.error(err));
-//        
-//    };
+        
+        var movieslength = movies.length;
+        var randomNumberMovie = Math.floor((Math.random() * movieslength));
+        var randomMovieName = movies[randomNumberMovie];
+        
+        var movieAPIsearch = "http://www.omdbapi.com/?apikey=c0e1ea77&plot=full&t=" + randomMovieName;
+        
+        fetch(movieAPIsearch).then(res => res.json()).then((out) => {console.log(out);}).catch(err => console.error(err));        
+        
+        
+       $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2 poster'><img src='" + movieAPIsearch.Poster + "'></div>");
+        
+    };
+    
+    for(i=0; i < 24 ; i++){
+        //$('#AddHerePC').append("<div class='item col-xs-2'><img src="+  +"></div>");
+        
+        var serieslength = series.length;
+        var randomNumberSeries = Math.floor((Math.random() * serieslength));
+        var randomSeriesName = series[randomNumberSeries];
+        
+        var seriesAPIsearch = "http://www.omdbapi.com/?apikey=c0e1ea77&plot=full&t=" + randomSeriesName;
+        fetch(seriesAPIsearch).then(res => res.json()).then((out) => {console.log('Output: ', out);}).catch(err => console.error(err));
+        
+   }; */
 	
 	var movieslength = movies.length;
     var randomNumberMovie = Math.floor((Math.random() * movieslength));
@@ -167,6 +186,19 @@ $(function(){
 	
 	var movieNameLength = randomMovieName.length;
 	var movieNameAPISearch = randomMovieName;
+    
+    
+    var serieslength = series.length;
+    var randomNumberSeries = Math.floor(Math.random() * serieslength);
+    var randomSeriesName = series[randomNumberSeries];
+    var seriesNameLength = randomSeriesName.length;
+    var seriesNameAPISearch = randomSeriesName;
+    
+    
+    console.log(seriesNameAPISearch);
+    console.log(seriesNameLength);
+    console.log(serieslength);
+    console.log(movieslength);
 	
 	
 	var settings = {
@@ -184,7 +216,7 @@ $(function(){
 	});
 	
 	for (i = 0; i < movieNameLength; i++ ) {
-		movieNameAPISearch = movieNameAPISearch.replace(" ", "%20");
+		movieNameAPISearch = movieNameAPISearch.replace(" ", " ");
 	}
 	console.log(movieNameAPISearch);
 	
@@ -194,7 +226,7 @@ $(function(){
     
     function dataCallBack(moviesData){
         console.log(moviesData);
->>>>>>> fae919b277386fcccb2972cd2d2f579b902ccd5d
+        fae919b277386fcccb2972cd2d2f579b902ccd5d
         
         var movieName = moviesData.results[0].original_title;
         var movieOverview = moviesData.results[0].overview;
