@@ -723,7 +723,7 @@ input:checked + .movies-series-slider-desktop:before {
 /* LIBRARY GENRE END */
 
 /* LIBRARY POSTERS START */
-.library-posters{
+.library-posters-housing{
     height:auto;
     padding:0;
     margin:0;
@@ -761,8 +761,6 @@ input:checked + .movies-series-slider-desktop:before {
 }
 
 .poster-lg-container-mobile{
-    width:45.5%;
-    height:60vw;
     float:left;
     margin-bottom: 7vw;
     transform:skewX(-0.5deg);
@@ -806,46 +804,23 @@ input:checked + .movies-series-slider-desktop:before {
     height:8%;
 }
 
-.library-poster1{
+.library-poster{
     width:100%;
     height:100%;
-    background-image:url();
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
     box-shadow: 5px 5px 6px rgb(0,0,0,0.50);
 }
 
-.library-poster1 img {
+.library-poster img {
     width:100%;
     height:100%;
-    background-image:url();
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
     box-shadow: 5px 5px 6px rgb(0,0,0,0.50);   
 }
-
-.library-poster2{
-    width:100%;
-    height:100%;
-    background-image:url(../images/recommended_poster2.jpg);
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 5px 5px 6px rgb(0,0,0,0.50);
-}
-
-.library-poster3{
-    width:100%;
-    height:100%;
-    background-image:url(../images/recommended_poster3.jpg);
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 5px 5px 6px rgb(0,0,0,0.50);
-}
-
 
 /* LIBRARY POSTERS END */
 

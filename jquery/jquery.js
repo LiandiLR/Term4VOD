@@ -117,10 +117,13 @@ $(function(){
     $(".poster-lg-container-mobile").on("mouseenter", function(){
         $(this).find(".action-buttons").fadeOut();    
     });
-    
-    
-    
-    
+	
+	
+	var test = window.sessionStorage.getItem('data');
+	
+	console.log(test);
+	
+	
     
     
         
