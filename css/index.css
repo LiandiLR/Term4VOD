@@ -538,9 +538,7 @@ a,a:hover {
     margin:0;
     background-color:rgb(24,24,25);
 }
-#wrapper {
-	background-color: deeppink;
-	border: 1px solid #ccc;
+.wrapper {
 	padding: 10px;
     height:100%;
 	margin: 0; /*-75px 0 0 -410px;*/
@@ -549,52 +547,153 @@ a,a:hover {
 	top: 0;
 }
 
-#carousel{
-    background-color:antiquewhite;
-}
-
-#carousel img {
+.image-container{
     width: 201px;/*201px;*/
-	height:250px;/*127px;*/
-	margin: 0 5px;
+	height:310px;/*127px;*/
+    margin: 0 6px;
 	float: left;
     transform:skew(-2deg);
+    box-shadow: 5px 5px 4px rgb(0,0,0,0.30);
+    background-color:antiquewhite;
+    cursor:pointer;
+}
+.image-container img {
 }
 
-#prev, #next {
-    background: transparent url("../images/img/carousel_control.png ") no-repeat 0 0;
+.poster-name{
+    width:100%;
+    height:12%;
+    position:absolute;
+    top:0;
+    padding-top:5px;
+    font-size:calc(1vw + 0.5vh);
+    text-align: center;
+    background-color: rgb(24,24,25);
+    color:rgb(208,73,37);
+    display:none;
+}
+
+.poster-buttons{
+    width:100%;
+    height:18%;
+    position:absolute;
+    top:78%;
+    padding:15px 5px 0px 15px;
+    background-color: rgba(24,24,25,0.9);
+    display:none;
+}
+
+.poster-button-info{
+    width:25%;
+    height:70%;
+    float:left;
+    text-align:center;
+    font-size:calc(0.6vw + 1vh);
+    padding:3% 0% 3% 0%;
+    color:rgb(208,73,37);
+}
+
+.poster-button-play{
+    width:45%;
+    height:70%;
+    float:left;
+    border-radius:5px;
+    text-align:center;
+    margin:0% 2.5% 0% 2.5%;
+    font-size:calc(1vw + 0.5vh);
+    font-weight:100;
+    padding:1% 0% 2.5% 0%;
+    color:rgb(208,73,37); 
+    border:1px solid rgb(208,73,37); 
+    transition:0.5s ease;
+}
+
+.poster-button-list{
+    width:25%;
+    height:70%;
+    float:right;
+    text-align:center;
+    font-size:calc(0.6vw + 1vh);
+    padding:3% 0% 3% 0%;
+    color:rgb(208,73,37);
+}
+
+
+.poster-button-play:hover{
+    color:rgb(255,255,255);
+    background-color:rgb(208,73,37); 
+    cursor:pointer;
+}
+
+.poster-button-list:hover, .poster-button-info:hover{
+    cursor:pointer;
+    font-size:calc(0.95vh + 0.8vw);
+    transition:0.3s ease;
+}
+
+
+#next {
+    background-color:rgb(208,73,37);
+    background-image:url(../images/Arrow_left.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+    box-shadow: 
+    /*background: red url("../images/Arrow_right") no-repeat 0 0;*/
 	text-indent: -999px;
 	display: block;
 	overflow: hidden;
-	width: 15px;
-	height: 21px;
+	width: 45px;
+	height: 45px;
+    border-radius:50px;
 	position: absolute;
-	top: 65px;
+	top: 145px;
+    opacity:0.5;
+    box-shadow: -5px 5px 6px rgba(24,24,25,0.9);
+    transition:0.4s ease;
+}
+
+#prev{
+    background-color:rgb(208,73,37);
+    background-image:url(../images/Arrow_right.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+	text-indent: -999px;
+	display: block;
+	overflow: hidden;
+	width: 45px;
+	height: 45px;
+    border-radius:50px;
+	position: absolute;
+	top: 145px;
+    opacity:0.5;
+    box-shadow: 5px 5px 6px rgba(24,24,25,0.9);
+    transition:0.4s ease;
 }
 
 #prev {
-    background-position: 0 0;
 	left: 30px;
 }
 
 #prev:hover {
-    left: 29px;
+    cursor:pointer;
+    opacity:1;
 }			
 
 #next {
-    background-position: -18px 0;
 	right: 30px;
 }
 			
 #next:hover {
-	right: 29px;
+    cursor:pointer;
+    opacity:1;
 }
 
 #pager {
     text-align: center;
 	margin: 0 auto;
 	padding-top: 20px;
-    background-color:aqua;
 }
 
 #pager a {
@@ -655,12 +754,14 @@ a,a:hover {
 .footer-tablet p{
     font-size:1.5vw;
     padding:0px 5px 8px 5px;
+    background-color:#151516;
 }
 
 .footer-tablet h6{
     font-size:1.8vw;
     padding-top:10px;
     margin:0;
+    background-color:#151516;
 }
 
 .connect-textbox{
