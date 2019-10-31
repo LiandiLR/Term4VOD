@@ -1,5 +1,8 @@
 $(function(){
-    
+	
+
+	
+
      /* -------------------- NAVIGATION JS START ----------------------*/
     
     /* Mobile Side Navigation Slide In */
@@ -85,7 +88,7 @@ $(function(){
     /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
     
 
-    console.log("toets");
+//    console.log("toets");
     
     $("#title-box").on("click", function(){
         $("#genre").prop('disabled', true);
@@ -168,24 +171,7 @@ $(function(){
 	
 	
 	/*------------------ Testing data transfering from library to indiv --------------------------------------*/
-	
 
-	
-
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-    
-});
-
-function populateHTML(){
 	
 		var index = 0;
 		for(index; index < 24; index++){
@@ -208,21 +194,21 @@ function populateHTML(){
 			}
 			
 			$.ajax(settings).done(function (response) {
-				console.log("Test ", response);
+				//console.log("Test ", response);
 				
 			});
 			
 			for (i = 0; i < movieNameLength; i++ ) {
 				movieNameAPISearch = movieNameAPISearch.replace(" ", "%20");
 			}
-			console.log(movieNameAPISearch);
+			//console.log(movieNameAPISearch);
 			
 			var apiCall = settings.url;
 			
 			$.getJSON(apiCall, dataCallBack);
 			
 			function dataCallBack(moviesData){
-				console.log(moviesData);
+				//console.log(moviesData);
 				
 				var movieName = moviesData.results[0].original_title;
 				var movieOverview = moviesData.results[0].overview;
@@ -231,12 +217,40 @@ function populateHTML(){
 				var movieRuntime = moviesData.results[0].runtime;
 				var movieGenre = moviesData.results[0].genre_ids;
 				var movieIMDBid = moviesData.results[0].id;
-				var moviePoster = 'https://image.tmdb.org/t/p/w500' + moviesData.results[0].poster_path;
+				var moviePoster = 'https://image.tmdb.org/t/p/original' + moviesData.results[0].poster_path;
 				
-				$("#addPosters").append("<div class='poster-lg-container-mobile col-xs-6 col-sm-6 col-md-3 col-lg-2' data='"+ movieIMDBid +"'><a href='indiv.html'><img class='library-poster'  src='" + moviePoster + "'></a></div>");
-				console.log(movieName, movieGenre);
+				//$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'> <div class='clickable'><img class='moviePosterImgTag' data='"+ movieIMDBid +"'  src='" + moviePoster + "' ></div></div>"); 
+				//console.log(movieName, movieGenre, movieIMDBid);
+				
+				$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><div id='clickable' class='clickable'><img class='library-poster' data='"+ movieIMDBid +"'  src='" + moviePoster + "'></div> <!-- clickable --></a></div> <!-- movie poster -->");
 			}; 
 			
 			
+			
+			
 		};
-};
+	
+	console.log("WTF");
+	
+			$(document).on("click", ".library-poster", function() {
+        		localStorage.setItem('imdbID', this.getAttribute('data'));
+				console.log(this.getAttribute('data'));
+    		});
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+    
+});//end of ready event 
+
+
+
+	
+
+	
