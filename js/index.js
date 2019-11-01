@@ -120,7 +120,8 @@ $(function(){
     
     /*---------------- IMAGE CAROUSEL JS START ---------------- */
     $(".carousel").carouFredSel({
-        width: 1350,
+        width: "100%",
+		
        
 		items: 6,
 		scroll: 1,
@@ -153,65 +154,73 @@ $(function(){
     /*---------------- RECOMMENDED POSTERS  APISTART ----------------*/ 
     
     // Store
-    for (i = 1; i < 4; i++){
-        var movieslength = movies.length;
-        var randomNumberMovie = i + 6;
-        var randomMovieName = movies[randomNumberMovie];
-        var movieNameLength = randomMovieName.length;
-        var movieNameAPISearch = randomMovieName;
+	+localStorage.setItem('RecNum', 0);
+	index = 0;
+    for (index; index < 8; index++){
+		
+		console.log(index);
+		
+		var movieslength = movies.length;
+		var randomNumberMovie = Math.floor((Math.random() * movieslength));
+		var randomMovieName = movies[randomNumberMovie];
+		
+		var movieNameLength = randomMovieName.length;
+		var movieNameAPISearch = randomMovieName;
+		
+		var settings = {
+			"async": true,
+			"crossDomain": true,
+			"url": "https://api.themoviedb.org/3/search/movie?api_key=9b788b49ee42354dbc57b8a25b87c9df&query=" + movieNameAPISearch,
+			"method": "GET",
+			"headers": {},
+			"data": "{}"
+		}
+		
+		$.ajax(settings).done(function (response) {
+			//console.log("Test ", response);
+			
+		});
+		
+		for (i = 0; i < movieNameLength; i++ ) {
+			movieNameAPISearch = movieNameAPISearch.replace(" ", "%20");
+		}
+		//console.log(movieNameAPISearch);
+		
+		var apiCall = settings.url;
+		
+		$.getJSON(apiCall, dataCallBack);
+		
+		
+		function dataCallBack(moviesData){
+			//console.log(moviesData);
+			
+			var movieName = moviesData.results[0].original_title;
+			var movieOverview = moviesData.results[0].overview;
+			var movieRating = moviesData.results[0].vote_average;
+			var movieTagline = moviesData.results[0].tagline;
+			var movieRuntime = moviesData.results[0].runtime;
+			var movieGenre = moviesData.results[0].genre_ids;
+			var movieIMDBid = moviesData.results[0].id;
+			var moviePoster = 'https://image.tmdb.org/t/p/original' + moviesData.results[0].poster_path;
 
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://api.themoviedb.org/3/search/movie?api_key=9b788b49ee42354dbc57b8a25b87c9df&query=" + movieNameAPISearch,
-            "method": "GET",
-            "headers": {},
-            "data": "{}"
-        }
-        console.log(i);
-        console.log(movieNameAPISearch);
-    }
+		console.log(movieName, movieGenre, movieIMDBid);
+			var newRecNum = parseFloat(localStorage.getItem('RecNum')) + 1;
+			
+			localStorage.setItem('RecNum', newRecNum);
+			
+			console.log(newRecNum);
+			
+			//$("#posterRefs").append("<div class='imageRef' data='Test'></div>");
+			//console.log('Test');		
+			
+			$('.'+newRecNum+'poster').find('img').attr('src', moviePoster);
+			$('.'+newRecNum+'name').text(movieName);
+			$('.'+newRecNum+'hover').find('img').attr('src', moviePoster);
+		};
+		
+		
+	};
+	
 
-        var apiCall = settings.url;
-
-        $.getJSON(apiCall, dataCallBack);
-        
-        
-
-        function dataCallBack(moviesData){
-            var movieName = moviesData.results[0].original_title;
-            var moviePosterComplete = 'https://image.tmdb.org/t/p/w500' + moviesData.results[0].poster_path;
-        }
-    
-     // Movie Name + Poster For Loop Start 
-    for (i = 1; i < 4; i++){
-        var movieslength = movies.length;
-        var randomNumberMovie = i + 6;
-        var randomMovieName = movies[randomNumberMovie];
-        var movieNameLength = randomMovieName.length;
-        var movieNameAPISearch = randomMovieName;
-
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://api.themoviedb.org/3/search/movie?api_key=9b788b49ee42354dbc57b8a25b87c9df&query=" + movieNameAPISearch,
-            "method": "GET",
-            "headers": {},
-            "data": "{}"
-        }
-        console.log(i);
-        console.log(movieNameAPISearch);
-    }
-
-        var apiCall = settings.url;
-
-        $.getJSON(apiCall, dataCallBack);
-        
-        
-
-        function dataCallBack(moviesData){
-            var movieName = moviesData.results[0].original_title;
-            var moviePosterComplete = 'https://image.tmdb.org/t/p/w500' + moviesData.results[0].poster_path;
-        }
-    
+  
 });
