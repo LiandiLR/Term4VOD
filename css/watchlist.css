@@ -298,7 +298,6 @@ a,a:hover {
     background-position: left;
     background-size:calc(2.5vh + 2.5vw);
     cursor:pointer;
-    background-color:red;
 }
 
 .mobile-heading-text{
