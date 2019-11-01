@@ -103,19 +103,34 @@ $(document).ready(function(){
     })
     
  
-    
-    
-    // Store
-    localStorage.setItem("username", "mike69");
-    localStorage.setItem("password", "420dab");
+
+
+    $('.sign-in-btn-desk').on("click", function(){  
         
-    var x = document.getElementById("password-text");
-    
+    var userEmail = document.getElementById("email-text-desk").value;   
+    console.log(userEmail);
+        
+    localStorage.setItem(userEmail);    
+        
+    var userPassword = document.getElementById("password-text-desk").value;   
+    console.log(userPassword);    
+        
+        for (var i=0; i < threeUsers.length; i++){
+            if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
+                console.log("user valid");
+            } else {
+                console.log("not valid");
+            }   
+        };    
+
+   
+    }); 
+        
+
     
 });
 
-
-
+        
 
 
 
