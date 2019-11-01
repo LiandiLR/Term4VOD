@@ -314,6 +314,7 @@ a,a:hover {
     background-repeat:no-repeat;
     background-position: left;
     background-size:calc(2.5vh + 2.5vw);
+    cursor:pointer;
 }
 
 .mobile-heading-text{

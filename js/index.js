@@ -64,13 +64,45 @@ $(function(){
 
                 
     /*---------------- HEADER SLIDER JS START ----------------*/
-    /*	Determine Current and Next Active Slide
+    /*	Determine Current and Next Active Slide */
+    
     var headerSliderWidth = $(".header-slider").width();
-    var currentActiveSlideNr = $(".header-slide-active").data("slide"); /* 1 
-    var headerSliderArray = $(".header-slider").find(".header-slide"); /* 3 
+    var currentActiveSlideNr = $(".header-slide-active").data("slide"); /* 1 */
+    
+    if(currentActiveSlideNr === 1){
+        console.log("add");
+        for(i=1; i < 4; i++){
+            setInterval(function(){
+                // Remove Active Class + Resize Header Slide
+                $(".header-slide").removeClass("header-slide-active");
+                $(".header-slide[data-slide='" + i + "']").stop().animate({width:headerSliderWidth*0.15});
+
+                nextActiveSlideNr = i + 1
+
+                // Resize Next Active Slide + Add Active Class
+                $(".header-slide[data-slide='" + nextActiveSlideNr + "']").addClass("header-slide-active");
+                $(".header-slide[data-slide='" + nextActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.70});
+
+            },3000);
+        }
+    }else if(currentActiveSlideNr === 3){
+       /* console.log("minus");
+        // Remove Active Class + Resize Header Slide
+        $(".header-slide").removeClass("header-slide-active");
+        $(".header-slide[data-slide='" + currentActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.15});
+            
+        nextActiveSlideNr = currentActiveSlideNr - 1
+            
+        // Resize Next Active Slide + Add Active Class
+        $(".header-slide[data-slide='" + nextActiveSlideNr + "']").addClass("header-slide-active");
+        $(".header-slide[data-slide='" + nextActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.70}); */
+    }
+    
+    /*var headerSliderArray = $(".header-slider").find(".header-slide"); /* 3 
     var i = 0;
     
     setInterval(function(){
+    
     
         for(i = 0; i < 6; i++){
             if(i === 3){break;}
@@ -83,38 +115,13 @@ $(function(){
             $(".header-circle").removeClass("header-circle-active");
             $(".header-circle[data-index='" + circleIndexNr + "']").addClass("header-circle-active");
             
-            // Remove Active Class + Resize Header Slide
-            $(".header-slide").removeClass("header-slide-active");
-            $(".header-slide[data-slide='" + currentActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.15});
-
-            // Resize Next Active Slide + Add Active Class
-            $(".header-slide[data-slide='" + nextActiveSlideNr + "']").addClass("header-slide-active");
-            $(".header-slide[data-slide='" + nextActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.70});
+            
                 
             
          
-    if(currentActiveSlideNr =  3){
-        // Run Previous loop
-        
-             
-                var headerSliderWidth = $(".header-slider").width();
-                var nextActiveSlideNr = currentActiveSlideNr + 1;
-                var circleIndexNr = currentActiveSlideNr + 1;
-
-                //Set circle index 
-                $(".header-circle").removeClass("header-circle-active");
-                $(".header-circle[data-index='" + circleIndexNr + "']").addClass("header-circle-active");
-
-                // Remove Active Class + Resize Header Slide
-                $(".header-slide").removeClass("header-slide-active");
-                $(".header-slide[data-slide='" + currentActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.15});
-
-
-                // Resize Next Active Slide + Add Active Class
-                $(".header-slide[data-slide='" + nextActiveSlideNr + "']").addClass("header-slide-active");
-                $(".header-slide[data-slide='" + nextActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.70});
+    
                 
-            },3000);
+            
     
     /*---------------- HEADER SLIDER JS END ----------------*/
     

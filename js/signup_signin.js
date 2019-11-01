@@ -106,13 +106,105 @@ $(document).ready(function(){
     
     
     // Store
-    localStorage.setItem("username", "mike69");
-    localStorage.setItem("password", "420dab");
+        $(".password-hide-icon-desk").bind("click", function() {
+        var test = $(".password-hide-icon-desk").find("i").hasClass("fa-eye-slash");
         
-    var x = document.getElementById("password-text");
+        if(test === true){
+            $(".password-hide-icon-desk").find("i").removeClass('fa-eye-slash');
+            $(".password-hide-icon-desk").find("i").addClass('fa-eye');
+        }else{
+            $(".password-hide-icon-desk").find("i").removeClass('fa-eye');
+            $(".password-hide-icon-desk").find("i").addClass('fa-eye-slash');
+        }
+        
+        if ($('.password-text-desk').attr('type') =='password'){
+            $('.password-text-desk').attr('type','text');
+        }else if($('.password-text-desk').attr('type') =='text'){
+            $('.password-text-desk').attr('type','password');
+        }
+    })
     
+    
+    
+    
+    
+    
+    $('.sign-in-btn-desk').on("click", function(){  
+        
+    var userEmail = document.getElementById("email-text-desk").value;   
+    console.log(userEmail);
+            
+    var userPassword = document.getElementById("password-text-desk").value;   
+    console.log(userPassword);    
+        
+        for (var i=0; i < threeUsers.length; i++){
+            if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
+                localStorage.setItem('username',userEmail);
+                console.log("user valid");
+                window.location.href = "../index.html";
+            } else {
+                console.log("not valid");
+            }   
+        };    
+
+   
+    }); 
+    
+    
+    
+    
+    $('.sign-in-btn').on("click", function(){  
+        
+    var userEmail = document.getElementById("email-text").value;   
+    console.log(userEmail);
+            
+    var userPassword = document.getElementById("password-text").value;   
+    console.log(userPassword);    
+        
+        for (var i=0; i < threeUsers.length; i++){
+            if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
+                localStorage.setItem('username',userEmail);
+                console.log("user valid");
+                window.location.href = "../index.html";
+            } else {
+                console.log("not valid");
+            }   
+        };    
+
+   
+    }); 
+    
+    
+    
+    
+    $('.sign-in-btn-tab').on("click", function(){  
+        
+    var userEmail = document.getElementById("email-text-tab").value;   
+    console.log(userEmail);
+            
+    var userPassword = document.getElementById("password-text-tab").value;   
+    console.log(userPassword);    
+        
+        for (var i=0; i < threeUsers.length; i++){
+            if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
+                localStorage.setItem('username',userEmail);
+                console.log("user valid");
+                window.location.href = "../index.html";
+            } else {
+                console.log("not valid");
+            }   
+        };    
+
+   
+    }); 
+        
+
     
 });
+
+    
+    
+
 
 
 

@@ -65,20 +65,29 @@ $(function(){
     $(".movies-series-slider-mobile").on("click",function(){
         if($("input[type=checkbox]").is(":checked")){
             $(".movies").show();
+            $(".all-movies-heading").show();
             $(".series").hide();
+            $(".all-series-heading").hide();
+            
         }else{
             $(".movies").hide();
+            $(".all-movies-heading").hide();
             $(".series").show();
+            $(".all-series-heading").show();
         }
     });
     
     $(".movies-series-slider-desktop").on("click",function(){
         if($("input[type=checkbox]").is(":checked")){
             $(".movies").show();
+            $(".all-movies-heading").show();
             $(".series").hide();
+            $(".all-series-heading").hide();
         }else{
             $(".movies").hide();
+            $(".all-movies-heading").hide();
             $(".series").show();
+            $(".all-series-heading").show();
         }
     });
     
@@ -231,6 +240,7 @@ $(function(){
 			
 		};
     
+    
     /*---------------- POSTERS HOVER START ----------------*/
     
     $(".library-poster").on("mouseenter", function(){
@@ -259,7 +269,8 @@ $(function(){
 				console.log(this.getAttribute('data'));
     		});
     
-    /* Filter Button Click - Show/Hide Filter Options */
+    /* -------------------- Filter Button Click - Show/Hide Filter Options ----------------------*/
+    
     $(".library-filter-mobile").on("click",function(){
         if($(this).hasClass("filter-active")){
             $(this).removeClass("filter-active");
