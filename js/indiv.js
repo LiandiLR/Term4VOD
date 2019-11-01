@@ -103,7 +103,6 @@ $(function(){
     $(".nav-item").on("click",function(){
         $(".nav-item").removeClass("nav-active");
         $(this).addClass("nav-active");
-        $(this).find("i").css({transform:"rotate(-180deg)"})
     });
     
     /* Tablet Nav Item Mouse Enter */
