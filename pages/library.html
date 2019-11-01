@@ -124,23 +124,23 @@
                     <!-- Mobile Menu Navigation -->
                     <div class="mobile-menu-section2">
                         
-                        <div class="mobile-menu-nav-item mobile-menu-nav-active">
+                        <a href="../index.html"><div class="mobile-menu-nav-item">
                             <i class="fas fa-home"></i>
-                            <a href="index.html"><h2>Home</h2></a>
+                            <h2>Home</h2>
                             <i class="fas fa-chevron-right" style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
-                        </div>
+                        </div></a>
                         
-                        <div class="mobile-menu-nav-item">
+                        <a href="library.html"><div class="mobile-menu-nav-item mobile-menu-nav-active">
                             <i class="fas fa-film"></i>
-                            <a href="pages/library.html"><h2>Movies / Series</h2></a>
+                            <h2>Movies / Series</h2>
                             <i class="fas fa-chevron-right"style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
-                        </div>
+                        </div></a>
                         
-                        <div class="mobile-menu-nav-item">
+                        <a href="watchlist.html"><div class="mobile-menu-nav-item">
                             <i class="far fa-heart"></i>
-                            <a href="pages/watchlist.html"><h2>My List</h2></a>
+                            <h2>My List</h2>
                             <i class="fas fa-chevron-right"style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
-                        </div>
+                        </div></a>
                     </div>
                     
                     <!-- Mobile Menu Signout -->
@@ -155,7 +155,7 @@
             <div class="row">
                 <div class="mobile-heading col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
                     <div class="mobile-heading-content">
-                        <div class="mobile-heading-back"></div>
+                        <a href="../index.html"><div class="mobile-heading-back"></div></a>
                         <div class="mobile-heading-text">Movies / Series</div>
                     </div>
                 </div>
@@ -195,14 +195,16 @@
                 
                 <div class="library-heading-mobile col-xs-7 col-md-8 hidden-md hidden-lg">
                     <div class="library-heading-content-mobile">
-                        <h6>All Movies</h6>
+                        <h6 class="all-movies-heading">All Movies</h6>
+                        <h6 class="all-series-heading" style="display:none">All Series</h6>
                         <div class="library-heading-line-mobile"></div>
                     </div>
                 </div>
                 
                 <div class="library-heading-desktop col-xs-7 col-md-8 hidden-xs hidden-sm">
                     <div class="library-heading-content-desktop">
-                        <h6>All Movies</h6>
+                        <h6 class="all-movies-heading">All Movies</h6>
+                        <h6 class="all-series-heading" style="display:none">All Series</h6>
                         <div class="library-heading-line-desktop"></div>
                     </div>
                 </div>
@@ -279,20 +281,34 @@
             </div>
                 
                 <!-------------------- LIBRARY POSTERS START -------------------->
-                <div class="library-posters-housing col-xs-12">
-                        
-                        <!-- MOBILE POSTER CONTAINER ROW 1 -->
-                        <div class="posters-container row" id="addPosters">
+            
+                <!-- Movies Container Start -->
+                <div class="library-posters-housing movies col-xs-12" style="background-color:antiquewhite">
+                    <!-- MOBILE POSTER CONTAINER ROW 1 -->
+                    <div class="posters-container row" id="addPosters">
 							
-							<div class='movie-poster hideThisPosterAsItIsUseless col-xs-6 col-sm-6 col-md-3 col-lg-2'>
-								
-								<div id='clickable' class='clickable'>
-									<img class='library-poster'>
-								</div> <!-- clickable -->
-							</div> <!-- movie poster -->
+				        <div class='movie-poster hideThisPosterAsItIsUseless col-xs-6 col-sm-6 col-md-3 col-lg-2'>
+				            <div id='clickable' class='clickable'>
+								<img class='library-poster'>
+				            </div> <!-- clickable -->
+				        </div> <!-- movie poster -->
 							
-						</div>
-                    </div>
+				    </div>
+                </div>
+            
+                
+                <!-- Series Container Start -->
+                <div class="library-posters-housing series col-xs-12" style="background-color: aqua">
+                    <!-- MOBILE POSTER CONTAINER ROW 1 -->
+                    <div class="posters-container row" id="addPosters">
+							
+				        <div class='movie-poster hideThisPosterAsItIsUseless col-xs-6 col-sm-6 col-md-3 col-lg-2'>
+				            <div id='clickable' class='clickable'>
+								<img class='library-poster'>
+				            </div> <!-- clickable -->
+				        </div> <!-- movie poster -->
+							
+				    </div>
                 </div>
             
             <!-------------------- LIBRARY CONTENT END -------------------->
@@ -369,7 +385,7 @@
             </div>
             <!-------------------- FOOTER END -------------------->
             
-        
+        </div>
         <!-------------------- CONTAINER END -------------------->
         
     </body>
