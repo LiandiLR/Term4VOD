@@ -139,7 +139,7 @@ $(function(){
         for (var i = 0; i < movieslength; i++) {
             
             if(movies[i] === movieTitle){
-             $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2        poster'><img src='" + + "'><div class='library-poster1'></div></div>"); 
+             $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2 poster'><img src='" + + "'><div class='library-poster1'></div></div>"); 
                 
                 $(".library-poster1").find("img").attr("src", moviePosterIndivual);
                 
