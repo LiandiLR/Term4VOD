@@ -3,7 +3,7 @@ $(function(){
 
 	
 
-     /* -------------------- NAVIGATION JS START ----------------------*/
+     /*---------------- NAVIGATION JS START ----------------*/
     
     /* Mobile Side Navigation Slide In */
      $(".fa-bars").on("click",function(){
@@ -37,7 +37,6 @@ $(function(){
     $(".nav-item").on("click",function(){
         $(".nav-item").removeClass("nav-active");
         $(this).addClass("nav-active");
-        $(this).find("i").css({transform:"rotate(-180deg)"})
     });
     
     /* Tablet Nav Item Mouse Enter */
@@ -60,7 +59,7 @@ $(function(){
         $(this).find("div").css({display:"none"});
     });
     
-    /* -------------------- NAVIGATION JS END ----------------------*/
+    /*---------------- NAVIGATION JS END ----------------*/
     
     /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
     $(".movies-series-slider-mobile").on("click",function(){
@@ -236,7 +235,29 @@ $(function(){
         		localStorage.setItem('imdbID', this.getAttribute('data'));
 				console.log(this.getAttribute('data'));
     		});
-	
+    
+    /* Filter Button Click - Show/Hide Filter Options */
+    $(".library-filter-mobile").on("click",function(){
+        if($(this).hasClass("filter-active")){
+            $(this).removeClass("filter-active");
+            $(".library-genre-mobile").slideUp(600);
+        }else{
+            console.log("add");
+            $(this).addClass("filter-active");
+            $(".library-genre-mobile").slideDown(600);
+        }
+    });
+    
+    $(".library-filter-desktop").on("click",function(){
+        if($(this).hasClass("filter-active")){
+            $(this).removeClass("filter-active");
+            $(".library-genre-mobile").slideUp(600);
+        }else{
+            console.log("add");
+            $(this).addClass("filter-active");
+            $(".library-genre-mobile").slideDown(600);
+        }
+    });
 
 	
 	

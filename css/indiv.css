@@ -99,17 +99,24 @@ a,a:hover {
 
 .nav-logo-mobile{
     width:52vw;
-    height:100%;
-    padding:0;
+    height:85%;
     float:left;
-    background-color:orange;
+    margin-top:3%;
+    background-image:url(../images/Video_Bench_Logo.png);
+    background-size:100%;
+    background-position:center center;
+    background-repeat:no-repeat;
 }
 
 .nav-logo-tablet{
     width:20vw;
-    height:100%;
+    height:85%;
     float:left;
-    background-color:orange;
+    margin-top:1%;
+    background-image:url(../images/Video_Bench_Logo.png);
+    background-size:80%;
+    background-position:left;
+    background-repeat:no-repeat;
 }
 
 .nav-item{
@@ -119,7 +126,6 @@ a,a:hover {
     padding-top:10px;
     float:left;
     text-align: center;
-    color:red;
 }
 
 .nav-item h4{

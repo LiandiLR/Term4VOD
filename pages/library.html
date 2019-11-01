@@ -27,13 +27,13 @@
 
         
         <script src="../js/moviesAndSeries.js"></script>
-        <script src="../js/library.js"></script>
-		<script src="../js/test.js"></script>    
+        <script src="../js/library.js"></script>    
         
         <!--CSS-link-->
-        <link rel="stylesheet" href="../css/library.css"> 
-        <link rel="stylesheet" href="../css/navigation.css">
+        <link rel="stylesheet" href="../css/library.css">
 
+        <!-- FONT AWESOME LINK-->
+        <script src="https://kit.fontawesome.com/20de71b89c.js" crossorigin="anonymous"></script>
         
         <!--google-font-->
         <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:400,700&display=swap" rel="stylesheet">
@@ -57,9 +57,7 @@
                     <div class="nav-menu">
                         <i class="fas fa-bars"></i> <!-- Menu Icon -->
                     </div>
-                    <div class="nav-logo-mobile">
-                        <img src="../images/Video_Bench_Logo.png">
-                    </div>
+                    <div class="nav-logo-mobile"></div>
                     <div class="nav-search-mobile">
                         <i class="fas fa-search"></i> <!-- Search Icon -->
                     </div>
@@ -68,30 +66,31 @@
                 <!-- Tablet Navigation -->
                 <div class="navigation-tablet col-xs-12 visible-sm visible-md visible-lg"> <!-- Hide on mobile +  Desktop -->
                     
-                    <div class="nav-logo-tablet">
-                        <img src="../images/Video_Bench_Logo.png">
-                    </div>
+                    <div class="nav-logo-tablet"></div>
                     
                     <!-- Nav Item 1 -->
-                    <div class="nav-item nav-active">
+                    <a href="../index.html"><div class="nav-item">
+                   
                         <i class="fas fa-home"></i>
-                        <a href="../index.html"><h4>Home</h4></a>
+
+                        <h4>Home</h4>
                         <div class="circle"></div>
-                    </div>
+                        </div></a>
                     
                     <!-- Nav Item 2 -->
-                    <div class="nav-item library">
+
+                    <a href="library.html"><div class="nav-item nav-active library">
                         <i class="fas fa-film"></i>
-                        <a href="../pages/library.html"><h4>Movies / Series</h4></a>
+                        <h4>Movies / Series</h4>
                         <div class="circle"></div>
-                    </div>
+                        </div></a>
                     
                     <!-- Nav Item 3 -->
-                    <div class="nav-item">
+                    <a href="watchlist.html"><div class="nav-item">
                         <i class="far fa-heart"></i>
-                        <a href="../pages/watchlist.html"><h4>My List</h4></a>
+                        <h4>My List</h4>
                         <div class="circle"></div>
-                    </div>
+                    </div></a>
                     
                     <div class="nav-profile">
                         <div class="nav-profile-image"></div>
@@ -127,19 +126,19 @@
                         
                         <div class="mobile-menu-nav-item mobile-menu-nav-active">
                             <i class="fas fa-home"></i>
-                            <a href="../index.html"><h2>Home</h2></a>
+                            <a href="index.html"><h2>Home</h2></a>
                             <i class="fas fa-chevron-right" style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
                         </div>
                         
                         <div class="mobile-menu-nav-item">
                             <i class="fas fa-film"></i>
-                            <a href="../pages/library.html"><h2>Movies / Series</h2></a>
+                            <a href="pages/library.html"><h2>Movies / Series</h2></a>
                             <i class="fas fa-chevron-right"style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
                         </div>
                         
                         <div class="mobile-menu-nav-item">
                             <i class="far fa-heart"></i>
-                            <a href="../pages/watchlist.html"><h2>My List</h2></a>
+                            <a href="pages/watchlist.html"><h2>My List</h2></a>
                             <i class="fas fa-chevron-right"style="float:right; padding:18px 10px 18px 0px;font-size:calc(2vh + 1vw);"></i>
                         </div>
                     </div>
@@ -216,11 +215,7 @@
                 </div>
                 <div class="library-filter-desktop col-xs-5 col-md-4 hidden-xs hidden-sm">
                     <div class="filter-dropdown-desktop">
-                        <h2><i class="glyphicon glyphicon-filter"></i>Filter</h2>  
-                      <!--  <option value="genre">Genre</option>
-                        <option value="title">Title (A-Z)</option>
-                        <option value="release">Release Year</option>
-                        <option value="rating">Rating(high-low)</option> -->
+                        <h2><i class="glyphicon glyphicon-filter"></i>Filter</h2>
                     </div>
                 </div>
                 
@@ -309,63 +304,70 @@
             
         <!-------------------- FOOTER START -------------------->
             <div class="row">
+                
                 <!----- FOOTER MOBILE ----->
-                <div class="footer-mobile col-xs-12 hidden-sm hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
+                <div class="footer-mobile col-xs-12 hidden-md hidden-lg"> <!-- Hide on Tablet + Desktop -->
                     
-                    <div class="footer-connect col-xs-12" style="height:90px">
+                    <div class="footer-connect col-xs-12">
                         <p>Stay up to date with new releases and announcements</p>
                         <div class="connect-textbox">
                             <input type="text" name="join" value="type your email here">
-                            <button>Join</button>
+                            <div>Join</div>
                         </div>
                     </div>
                     
-                    <div class="footer-social-media col-xs-12" style="height:25px">
-                        <div class="social-media">
-                            <a href="https://www.facebook.com/"><div class="social-media-icon facebook"></div></a>
-                            <a href="https://twitter.com/login"><div class="social-media-icon twitter"></div></a>
-                            <a href="https://za.pinterest.com/"><div class="social-media-icon pinterest"></div></a>
+                    <div class="footer-social-media col-xs-12">
+                       <div class="social-media">
+                           <div class="social-media-icon">
+                                <i class="fab fa-facebook-f"></i>
+                           </div>
+                           <div class="social-media-icon">
+                                <i class="fab fa-twitter"></i>
+                           </div>
+                           <div class="social-media-icon">
+                                <i class="fab fa-pinterest-p"></i>
+                           </div>
                     `   </div>
                     </div>
                     
                     
-                    <div class="footer-copywrite col-xs-12" style="height:45px">
-                       <p style="color:#d04925">© 2019 Videobench</p>
+                    <div class="footer-copywrite col-xs-12">
+                       © 2019 Videobench
                     </div>
                     
                 </div>
                 
                 <!----- FOOTER TABLET + DESKTOP ----->
-                <div class="footer-tablet col-sm-12 hidden-xs"> <!-- Hide on Mobile -->
-                    <div class="footer-copywrite col-sm-3" style="margin-top:28px">
-                        <p style="color:#d04925; margin-top:15px">© 2019 Videobench</p>
+                <div class="footer-tablet col-sm-12 visible-md visible-lg"> <!-- Hide on Mobile -->
+                    <div class="footer-copywrite col-sm-3" style="font-size:2vw; padding-top:3vw; height:auto">
+                        © 2019 Videobench
                     </div>
-                    <div class="footer-connect col-sm-6">
+                    
+                    <div class="footer-connect col-sm-6" style="height:100%">
                         <h6>Let's Connect!</h6>
                         <p>Stay up to date with new releases and announcements</p>
-                        <div class="connect-textbox">
-                            <input type="text" name="join" value="type your email here">
-                            <button>Join</button>
+                        <div class="connect-textbox" style="height:30%">
+                            <input type="text" name="join" value="type your email here" style="font-size:1vw">
+                            <div style="font-size:2vw; padding:0">Join</div>
                         </div>
                     </div>
-                    <div class="footer-social-media col-sm-3" style="margin-top:28px">
-                        <div class="social-media">
-                            <div class="social-media-icon facebook"></div>
-                            <div class="social-media-icon twitter"></div>
-                            <div class="social-media-icon pinterest"></div>
-                        </div>
+                    <div class="footer-social-media col-sm-3" style="height:auto; padding-top:1.5vw">
+                        <div class="social-media" style="width:75%;">
+                           <div class="social-media-icon">
+                                <i class="fab fa-facebook-f" style="font-size:2.5vw;"></i>
+                           </div>
+                           <div class="social-media-icon">
+                                <i class="fab fa-twitter" style="font-size:2.5vw;"></i>
+                           </div>
+                           <div class="social-media-icon">
+                                <i class="fab fa-pinterest-p" style="font-size:2.5vw;"></i>
+                           </div>
+                    `   </div>
                     </div>
                     
                 </div>
-                
-                
-                
-                
-                
-                
             </div>
             <!-------------------- FOOTER END -------------------->
-            
             
         
         <!-------------------- CONTAINER END -------------------->

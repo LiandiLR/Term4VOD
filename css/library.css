@@ -60,20 +60,26 @@ a,a:hover {
     text-align:left;
 }
 
-
-.nav-logo-mobile img {
-    width: 12vw;
-    margin-left: 40%;
-}
-
-.nav-logo-tablet {
-    width:20vw;
-    height:100%;
+.nav-logo-mobile{
+    width:52vw;
+    height:85%;
     float:left;
+    margin-top:3%;
+    background-image:url(../images/Video_Bench_Logo.png);
+    background-size:100%;
+    background-position:center center;
+    background-repeat:no-repeat;
 }
 
-.nav-logo-tablet img {
-    width: 15vw;
+.nav-logo-tablet{
+    width:20vw;
+    height:85%;
+    float:left;
+    margin-top:1%;
+    background-image:url(../images/Video_Bench_Logo.png);
+    background-size:80%;
+    background-position:left;
+    background-repeat:no-repeat;
 }
 
 .nav-item{
@@ -83,7 +89,6 @@ a,a:hover {
     padding-top:10px;
     float:left;
     text-align: center;
-    color:red;
 }
 
 .nav-item h4{
@@ -128,7 +133,7 @@ a,a:hover {
 
 /* Active Nav Item End */
 
-.nav-search-mobile {
+.nav-search-mobile{
     width:20vw;
     height:auto;
     float:right;
@@ -199,6 +204,7 @@ a,a:hover {
     color:rgb(102,102,102);
     font-size:150%;
     padding:15px 10px 15px 10px;
+    cursor:pointer;
 }
 
 /* Mobile Menu Slider */
@@ -512,6 +518,7 @@ input:checked + .movies-series-slider-desktop:before {
 .library-filter-desktop{
     height:5vw;
     padding:0.5% 2% 0% 10%;
+    cursor:pointer;
 }
 
 .filter-dropdown-mobile{
@@ -520,14 +527,12 @@ input:checked + .movies-series-slider-desktop:before {
     margin-top:3%;
     margin-left:28%;
     padding: 5px 5px 2px 5px;
-    background-color:transparent;
     text-align: center;
     font-size:2.5vw;
 }
 
-.filter-dropdown-mobile:hover {
-    color: rgb(208,73,37);
-    cursor: pointer;
+ .filter-active{
+     color: rgb(208,73,37);
 }
 
 .filter-dropdown-desktop{
@@ -542,8 +547,9 @@ input:checked + .movies-series-slider-desktop:before {
 }
 
 .filter-dropdown-desktop:hover {
-    color: rgb(208,73,37);
     cursor: pointer;
+    transform:scale(1.1);
+    transition:0.5s ease;
 }
 
 
@@ -586,6 +592,7 @@ input:checked + .movies-series-slider-desktop:before {
     margin-top: 2vw;
     text-align: center;
     float: left;
+    display:none;
 }
 
 .filters-box {
@@ -823,12 +830,14 @@ input:checked + .movies-series-slider-desktop:before {
 .footer-tablet p{
     font-size:1.5vw;
     padding:0px 5px 8px 5px;
+    background-color:#151516;
 }
 
 .footer-tablet h6{
     font-size:1.8vw;
     padding-top:10px;
     margin:0;
+    background-color:#151516;
 }
 
 .connect-textbox{
@@ -881,7 +890,7 @@ input[type=text]{
 }
 
 .fa-facebook-f, .fa-twitter, .fa-pinterest-p{
-    font-size:2.5vw;
+    font-size:3.5vw;
     color:rgb(208,73,37);
     margin-top:2vw;
 }
