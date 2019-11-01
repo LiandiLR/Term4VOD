@@ -60,20 +60,26 @@ a,a:hover {
     text-align:left;
 }
 
-
-.nav-logo-mobile img {
-    width: 12vw;
-    margin-left: 40%;
-}
-
-.nav-logo-tablet {
-    width:20vw;
-    height:100%;
+.nav-logo-mobile{
+    width:52vw;
+    height:85%;
     float:left;
+    margin-top:3%;
+    background-image:url(../images/Video_Bench_Logo.png);
+    background-size:100%;
+    background-position:center center;
+    background-repeat:no-repeat;
 }
 
-.nav-logo-tablet img {
-    width: 15vw;
+.nav-logo-tablet{
+    width:20vw;
+    height:85%;
+    float:left;
+    margin-top:1%;
+    background-image:url(../images/Video_Bench_Logo.png);
+    background-size:80%;
+    background-position:left;
+    background-repeat:no-repeat;
 }
 
 .nav-item{
@@ -128,7 +134,7 @@ a,a:hover {
 
 /* Active Nav Item End */
 
-.nav-search-mobile {
+.nav-search-mobile{
     width:20vw;
     height:auto;
     float:right;
@@ -823,12 +829,14 @@ input:checked + .movies-series-slider-desktop:before {
 .footer-tablet p{
     font-size:1.5vw;
     padding:0px 5px 8px 5px;
+    background-color:#151516;
 }
 
 .footer-tablet h6{
     font-size:1.8vw;
     padding-top:10px;
     margin:0;
+    background-color:#151516;
 }
 
 .connect-textbox{
@@ -881,7 +889,7 @@ input[type=text]{
 }
 
 .fa-facebook-f, .fa-twitter, .fa-pinterest-p{
-    font-size:2.5vw;
+    font-size:3.5vw;
     color:rgb(208,73,37);
     margin-top:2vw;
 }
