@@ -204,6 +204,7 @@ a,a:hover {
     color:rgb(102,102,102);
     font-size:150%;
     padding:15px 10px 15px 10px;
+    cursor:pointer;
 }
 
 /* Mobile Menu Slider */
@@ -517,6 +518,7 @@ input:checked + .movies-series-slider-desktop:before {
 .library-filter-desktop{
     height:5vw;
     padding:0.5% 2% 0% 10%;
+    cursor:pointer;
 }
 
 .filter-dropdown-mobile{
@@ -525,14 +527,12 @@ input:checked + .movies-series-slider-desktop:before {
     margin-top:3%;
     margin-left:28%;
     padding: 5px 5px 2px 5px;
-    background-color:transparent;
     text-align: center;
     font-size:2.5vw;
 }
 
-.filter-dropdown-mobile:hover {
-    color: rgb(208,73,37);
-    cursor: pointer;
+ .filter-active{
+     color: rgb(208,73,37);
 }
 
 .filter-dropdown-desktop{
@@ -547,8 +547,9 @@ input:checked + .movies-series-slider-desktop:before {
 }
 
 .filter-dropdown-desktop:hover {
-    color: rgb(208,73,37);
     cursor: pointer;
+    transform:scale(1.1);
+    transition:0.5s ease;
 }
 
 
@@ -591,6 +592,7 @@ input:checked + .movies-series-slider-desktop:before {
     margin-top: 2vw;
     text-align: center;
     float: left;
+    display:none;
 }
 
 .filters-box {

@@ -235,7 +235,29 @@ $(function(){
         		localStorage.setItem('imdbID', this.getAttribute('data'));
 				console.log(this.getAttribute('data'));
     		});
-	
+    
+    /* Filter Button Click - Show/Hide Filter Options */
+    $(".library-filter-mobile").on("click",function(){
+        if($(this).hasClass("filter-active")){
+            $(this).removeClass("filter-active");
+            $(".library-genre-mobile").slideUp(600);
+        }else{
+            console.log("add");
+            $(this).addClass("filter-active");
+            $(".library-genre-mobile").slideDown(600);
+        }
+    });
+    
+    $(".library-filter-desktop").on("click",function(){
+        if($(this).hasClass("filter-active")){
+            $(this).removeClass("filter-active");
+            $(".library-genre-mobile").slideUp(600);
+        }else{
+            console.log("add");
+            $(this).addClass("filter-active");
+            $(".library-genre-mobile").slideDown(600);
+        }
+    });
 
 	
 	
