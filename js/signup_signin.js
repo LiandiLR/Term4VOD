@@ -102,11 +102,9 @@ $(document).ready(function(){
         }
     })
     
- 
-
-function doRedirect(){
     
-};
+    
+    
     
     
     $('.sign-in-btn-desk').on("click", function(){  
@@ -121,7 +119,7 @@ function doRedirect(){
             if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
                 localStorage.setItem('username',userEmail);
                 console.log("user valid");
-                window.location.href = "../pages/indiv.html";
+                window.location.href = "../index.html";
             } else {
                 console.log("not valid");
             }   
@@ -145,7 +143,7 @@ function doRedirect(){
             if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
                 localStorage.setItem('username',userEmail);
                 console.log("user valid");
-                window.location.href = "../pages/indiv.html";
+                window.location.href = "../index.html";
             } else {
                 console.log("not valid");
             }   
@@ -169,7 +167,7 @@ function doRedirect(){
             if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
                 localStorage.setItem('username',userEmail);
                 console.log("user valid");
-                window.location.href = "../pages/indiv.html";
+                window.location.href = "../index.html";
             } else {
                 console.log("not valid");
             }   
