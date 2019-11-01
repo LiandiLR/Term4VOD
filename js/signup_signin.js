@@ -104,20 +104,24 @@ $(document).ready(function(){
     
  
 
-
+function doRedirect(){
+    
+};
+    
+    
     $('.sign-in-btn-desk').on("click", function(){  
         
     var userEmail = document.getElementById("email-text-desk").value;   
     console.log(userEmail);
-        
-    localStorage.setItem(userEmail);    
-        
+            
     var userPassword = document.getElementById("password-text-desk").value;   
     console.log(userPassword);    
         
         for (var i=0; i < threeUsers.length; i++){
             if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
+                localStorage.setItem('username',userEmail);
                 console.log("user valid");
+                
             } else {
                 console.log("not valid");
             }   
