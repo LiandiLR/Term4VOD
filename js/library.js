@@ -3,7 +3,7 @@ $(function(){
 
 	
 
-     /* -------------------- NAVIGATION JS START ----------------------*/
+     /*---------------- NAVIGATION JS START ----------------*/
     
     /* Mobile Side Navigation Slide In */
      $(".fa-bars").on("click",function(){
@@ -60,7 +60,7 @@ $(function(){
         $(this).find("div").css({display:"none"});
     });
     
-    /* -------------------- NAVIGATION JS END ----------------------*/
+    /*---------------- NAVIGATION JS END ----------------*/
     
     /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
     $(".movies-series-slider-mobile").on("click",function(){
