@@ -3,7 +3,7 @@ $(function(){
 
 	
 
-     /* -------------------- NAVIGATION JS START ----------------------*/
+     /*---------------- NAVIGATION JS START ----------------*/
     
     /* Mobile Side Navigation Slide In */
      $(".fa-bars").on("click",function(){
@@ -37,7 +37,6 @@ $(function(){
     $(".nav-item").on("click",function(){
         $(".nav-item").removeClass("nav-active");
         $(this).addClass("nav-active");
-        $(this).find("i").css({transform:"rotate(-180deg)"})
     });
     
     /* Tablet Nav Item Mouse Enter */
@@ -60,26 +59,35 @@ $(function(){
         $(this).find("div").css({display:"none"});
     });
     
-    /* -------------------- NAVIGATION JS END ----------------------*/
+    /*---------------- NAVIGATION JS END ----------------*/
     
     /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
     $(".movies-series-slider-mobile").on("click",function(){
         if($("input[type=checkbox]").is(":checked")){
             $(".movies").show();
+            $(".all-movies-heading").show();
             $(".series").hide();
+            $(".all-series-heading").hide();
+            
         }else{
             $(".movies").hide();
+            $(".all-movies-heading").hide();
             $(".series").show();
+            $(".all-series-heading").show();
         }
     });
     
     $(".movies-series-slider-desktop").on("click",function(){
         if($("input[type=checkbox]").is(":checked")){
             $(".movies").show();
+            $(".all-movies-heading").show();
             $(".series").hide();
+            $(".all-series-heading").hide();
         }else{
             $(".movies").hide();
+            $(".all-movies-heading").hide();
             $(".series").show();
+            $(".all-series-heading").show();
         }
     });
     
@@ -139,7 +147,7 @@ $(function(){
         for (var i = 0; i < movieslength; i++) {
             
             if(movies[i] === movieTitle){
-             $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2        poster'><img src='" + + "'><div class='library-poster1'></div></div>"); 
+             $("#addPosters").append("<div class='poster-lg-container-mobile col-sm-6 col-md-3 col-lg-2 poster'><img src='" + + "'><div class='library-poster1'></div></div>"); 
                 
                 $(".library-poster1").find("img").attr("src", moviePosterIndivual);
                 
@@ -222,13 +230,37 @@ $(function(){
 				//$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'> <div class='clickable'><img class='moviePosterImgTag' data='"+ movieIMDBid +"'  src='" + moviePoster + "' ></div></div>"); 
 				//console.log(movieName, movieGenre, movieIMDBid);
 				
-				$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><div id='clickable' class='clickable'><img class='library-poster' data='"+ movieIMDBid +"'  src='" + moviePoster + "'></div> <!-- clickable --></a></div> <!-- movie poster -->");
+				$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><div class='poster-hover 5hover><div class ='poster-name 5name'>" + movieName + "</div><img class='library-poster' data='"+ movieIMDBid + "'  src='" + moviePoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div> <!-- movie poster -->");
+                
+                /*<div class ="image-container 5poster"><img src="images/Django.jpg" width="100%" height="100%"/><div class="poster-hover 5hover"><div class ="poster-name 5name">Django Unchained</div><img src="images/Django.jpg" width="100%" height="72%"/><div class ="poster-buttons"><div class="poster-button-info"><i class="fas fa-info"></i></div><div class="poster-button-play">Play</div><div class="poster-button-list"><i class="fas fa-plus"></i></div></div></div></div>*/
 			}; 
 			
 			
 			
 			
 		};
+    
+    
+    /*---------------- POSTERS HOVER START ----------------*/
+    
+    $(".library-poster").on("mouseenter", function(){
+        console.log("test");
+    });
+    /*$(".library-poster").hover(function(){
+        console.log("test");
+        $(this).find(".poster-name").slideDown();
+        $(this).find(".poster-buttons").fadeIn(500);
+        $(this).find("img").css({filter:"grayscale(100%)", opacity:"0.5", transition:"0.5s ease"})
+    },function(){
+        $(this).find(".poster-name").slideUp();
+        $(this).find(".poster-buttons").fadeOut(400);
+        $(this).find("img").css({filter:"grayscale(0%)", opacity:"1"})
+    });*/
+        
+   
+    
+    /*---------------- POSTERS HOVER END ----------------*/ 
+    
 	
 	console.log("WTF");
 	
@@ -236,7 +268,41 @@ $(function(){
         		localStorage.setItem('imdbID', this.getAttribute('data'));
 				console.log(this.getAttribute('data'));
     		});
-	
+    
+    /* -------------------- Filter Button Click - Show/Hide Filter Options ----------------------*/
+    
+    $(".library-filter-mobile").on("click",function(){
+        if($(this).hasClass("filter-active")){
+            $(this).removeClass("filter-active");
+            $(".library-genre-mobile").slideUp(600);
+        }else{
+            console.log("add");
+            $(this).addClass("filter-active");
+            $(".library-genre-mobile").slideDown(600);
+        }
+    });
+    
+    $(".library-filter-desktop").on("click",function(){
+        if($(this).hasClass("filter-active")){
+            $(this).removeClass("filter-active");
+            $(".library-genre-mobile").slideUp(600);
+        }else{
+            console.log("add");
+            $(this).addClass("filter-active");
+            $(".library-genre-mobile").slideDown(600);
+        }
+    });
+    
+        $(".movie-poster").hover(function(){
+        $(this).find(".poster-name").slideDown();
+        $(this).find(".poster-buttons").fadeIn(500);
+        $(this).find("img").css({filter:"grayscale(100%)", opacity:"0.5", transition:"0.5s ease"})
+    },function(){
+        $(this).find(".poster-name").slideUp();
+        $(this).find(".poster-buttons").fadeOut(400);
+        $(this).find("img").css({filter:"grayscale(0%)", opacity:"1"})
+    });
+        
 
 	
 	
