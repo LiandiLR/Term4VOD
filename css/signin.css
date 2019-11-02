@@ -96,11 +96,12 @@ outline-color : #d04925 !important;
 }
 
 .logo{
-    align-content: center;
-    height: 100px;
-    background-color: #d04925;
-    text-align: center;
-    color: white;
+    height: 100%;
+    float:left;
+    background-image:url(../images/Video_Bench_Logo.png);
+    background-size:100%;
+    background-position:center center;
+    background-repeat:no-repeat;
 }
 
 /* sign in container */
