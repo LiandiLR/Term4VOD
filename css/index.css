@@ -63,7 +63,7 @@ a,a:hover {
 }
 
 .nav-logo-tablet{
-    width:10vw;
+    width:20vw;
     height:85%;
     float:left;
     margin-top:1%;
@@ -164,7 +164,10 @@ a,a:hover {
     width:45px;
     height:45px;
     border-radius:50px;
-    background-color:beige;
+    background-image:url(../images/mike_2.jpeg);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center;
 }
 
 .nav-profile h6{
@@ -318,6 +321,12 @@ a,a:hover {
     border-radius:50px;
     opacity:0.5;
     transition:0.5s;
+}
+
+
+.header-circle:hover{
+    cursor:pointer;
+    opacity:0.8;
 }
 
 .header-circle-active{
