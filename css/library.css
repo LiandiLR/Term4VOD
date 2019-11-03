@@ -657,6 +657,12 @@ input:checked + .movies-series-slider-desktop:before {
     font-family: "Darker Grotesque", sans-serif;
 }
 
+#rating-textbox:disabled, #genre-textbox:disabled, #title-box:disabled, #release-year:disabled{
+    filter:grayscale(100%);
+    opacity:0.2;
+    border-color: transparent;
+}
+
 .library-genre-desktop{
     height:10vw;
     margin:0;
@@ -897,7 +903,9 @@ input[type=text]{
 }
 /* FOOTER END */
 
-
+.poster-hover{
+    display:none;
+}
 .poster-name{
     width:100%;
     height:12%;
