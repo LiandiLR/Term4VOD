@@ -1,8 +1,26 @@
 $(function(){
     console.log("ready");
     
+    /* GET USERNAME AND IMAGE FROM LOCAL STORAGE */
+    var userEmail = localStorage.getItem("username");
+    var userNameArray = userEmail.split('@');
+    var userName = userNameArray[0];
+    var userImage = localStorage.getItem("userimage");
+    
+    /* Display User Image */
+    console.log(userImage);
+    $(".nav-profile-image").css("background-image","url(../images/" + userImage + ")");
+    
+    /* Print Username to welcome message */
+    $(".header-text").find("h1").text("Welcome back " + userName);
+    $(".mobile-menu-section1").find("h3").text("Hi "+ userName);
+    
+     
+    
     /* On Page Load, display active slide content */
     $(".header-slide-content").fadeIn(600);
+    
+   
     
     /*---------------- NAVIGATION JS START ----------------*/
     
@@ -64,65 +82,31 @@ $(function(){
 
                 
     /*---------------- HEADER SLIDER JS START ----------------*/
-    /*	Determine Current and Next Active Slide */
-    
-    var headerSliderWidth = $(".header-slider").width();
-    var currentActiveSlideNr = $(".header-slide-active").data("slide"); /* 1 */
-    
-    if(currentActiveSlideNr === 1){
-        console.log("add");
-        for(i=1; i < 4; i++){
-            setInterval(function(){
-                // Remove Active Class + Resize Header Slide
-                $(".header-slide").removeClass("header-slide-active");
-                $(".header-slide[data-slide='" + i + "']").stop().animate({width:headerSliderWidth*0.15});
-
-                nextActiveSlideNr = i + 1
-
-                // Resize Next Active Slide + Add Active Class
-                $(".header-slide[data-slide='" + nextActiveSlideNr + "']").addClass("header-slide-active");
-                $(".header-slide[data-slide='" + nextActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.70});
-
-            },3000);
-        }
-    }else if(currentActiveSlideNr === 3){
-       /* console.log("minus");
-        // Remove Active Class + Resize Header Slide
-        $(".header-slide").removeClass("header-slide-active");
-        $(".header-slide[data-slide='" + currentActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.15});
-            
-        nextActiveSlideNr = currentActiveSlideNr - 1
-            
-        // Resize Next Active Slide + Add Active Class
-        $(".header-slide[data-slide='" + nextActiveSlideNr + "']").addClass("header-slide-active");
-        $(".header-slide[data-slide='" + nextActiveSlideNr + "']").stop().animate({width:headerSliderWidth*0.70}); */
-    }
-    
-    /*var headerSliderArray = $(".header-slider").find(".header-slide"); /* 3 
-    var i = 0;
-    
-    setInterval(function(){
-    
-    
-        for(i = 0; i < 6; i++){
-            if(i === 3){break;}
+    $(".header-circle").on("click",function(){
+       var slideNr = $(this).data("index"); 
         
-            var headerSliderWidth = $(".header-slider").width();
-            var nextActiveSlideNr = currentActiveSlideNr + 1;
-            var circleIndexNr = currentActiveSlideNr + 1;
-
-            //Set circle index 
-            $(".header-circle").removeClass("header-circle-active");
-            $(".header-circle[data-index='" + circleIndexNr + "']").addClass("header-circle-active");
-            
-            
-                
-            
-         
-    
-                
-            
-    
+        /* Set circle class to active */
+        $(".header-circle").removeClass("header-circle-active");
+        $(this).addClass("header-circle-active");
+        
+        /* Determine which slide to show */
+        if(slideNr === 1){
+            /* Set Header Class to Active */
+            $(".header-slide").removeClass("header-slide-active");
+            $('[data-slide = "1"]').addClass("header-slide-active");
+            $(".header-text").find("h3").text("1.Avengers:Infinity War");
+        }else if(slideNr === 2){
+             /* Set Header Class to Active */
+            $(".header-slide").removeClass("header-slide-active");
+            $('[data-slide = "2"]').addClass("header-slide-active");
+            $(".header-text").find("h3").text("2.Captain America:The Winter Soldier");
+        }else{
+            /* Set Header Class to Active */
+            $(".header-slide").removeClass("header-slide-active");
+            $('[data-slide = "3"]').addClass("header-slide-active");
+            $(".header-text").find("h3").text("3.Inception");
+        }
+    });
     /*---------------- HEADER SLIDER JS END ----------------*/
     
     /*---------------- IMAGE CAROUSEL JS START ---------------- */
@@ -227,6 +211,7 @@ $(function(){
 		
 		
 	};
+    
 	
 
   

@@ -52,7 +52,7 @@ a,a:hover {
 }
 
 .nav-logo-mobile{
-    width:32vw;
+    width:52vw;
     height:85%;
     float:left;
     margin-top:3%;
@@ -63,7 +63,7 @@ a,a:hover {
 }
 
 .nav-logo-tablet{
-    width:10vw;
+    width:20vw;
     height:85%;
     float:left;
     margin-top:1%;
@@ -164,7 +164,10 @@ a,a:hover {
     width:45px;
     height:45px;
     border-radius:50px;
-    background-color:beige;
+    background-image:url(../images/mike_2.jpeg);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center;
 }
 
 .nav-profile h6{
@@ -320,6 +323,12 @@ a,a:hover {
     transition:0.5s;
 }
 
+
+.header-circle:hover{
+    cursor:pointer;
+    opacity:0.8;
+}
+
 .header-circle-active{
     background-color:rgb(208,73,37); /* Orange background color */
     opacity:0.8;
@@ -334,6 +343,36 @@ a,a:hover {
     opacity:0.5;
     filter: blur(0.3px) grayscale(100%);
 }
+
+.header-poster1{
+    width:100%;
+    height:100%;
+    background-image:url(../images/header_poster1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+    
+.header-poster2{
+    width:100%;
+    height:100%;
+    background-image:url(../images/header_poster2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+    border-left:1px solid rgb(255,255,255);
+    border-right:1px solid rgb(255,255,255);
+}
+
+.header-poster3{
+    width:100%;
+    height:100%;
+    background-image:url(../images/header_poster3.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
 
 .header-slide-active{
     width:70%;
@@ -365,6 +404,14 @@ a,a:hover {
     margin-top:5%;
 }
 
+.header-buttons-container-mobile{
+    width:100%;
+    height:18%;
+    padding-top:4%;
+    background-color:rgba(24,24,25,0.9);
+    position:absolute;
+    top:83%;
+}
 .header-button-info{
     width:30%;
     height:70%;
@@ -460,58 +507,39 @@ a,a:hover {
 
 
 /* RECOMMENDED SECTION START */
-.recommended-mobile{
-    height:9vw;
-    padding:0 4vw 0 4vw;
-    background-color:rgb(24,24,25); /* Dark Grey2 Background Color */
-    margin-top:0.5vh;
-}
 
 .recommended-desktop{
-    height:6vw;
+    height:calc(1vh + 6vw);
     margin-left:0.4%;
 }
 
-.recommended-carousel{
-    width:100%;
-    height:100%;
-    padding-left:15%;
+.recommended-mobile{
+    height:calc(2vh + 8vw);
+    margin-left:0.4%;
 }
 
-.recommended-carousel-heading{
-    height:95%;
-    padding-top:3%;
-    float:left;
-    margin:0% 2.5% 0% 2.5%;
-}
-
-.recommended-desktop-heading{
+.recommended-heading-desktop{
     height:70%;
     padding:1.3% 0% 0% 1.5%;
 }
 
-.recommended-carousel-heading h6{
-    font-size:3.5vw;
-    font-family:"Darker Grotesque", sans-serif;
-    text-align:center;
-    color:rgb(102,102,102); /* Lighter Grey Text Color */
-    padding-bottom:5%;
+.recommended-heading-mobile{
+    height:70%;
+    padding:2% 0% 0% 1.5%;
 }
 
-.recommended-heading-line{
-    width:40%;
-    height:5%;
-    border-radius:50px;
-    margin-left:30%;
-    margin-right:30%;
-    background-color:rgb(208,73,37); /* Orange background color */
-}
-
-.recommended-desktop-heading h6{
+.recommended-heading-desktop h6{
     font-size:2.3vw;
     font-family:"Darker Grotesque", sans-serif;
     color:rgb(102,102,102); /* Lighter Grey Text Color */
     padding-bottom:0.5%;
+}
+
+.recommended-heading-mobile h6{
+    font-size:6vw;
+    font-family:"Darker Grotesque", sans-serif;
+    color:rgb(102,102,102); /* Lighter Grey Text Color */
+    padding-bottom:1%;
 }
 
 .recommended-heading-line-desktop{
@@ -521,13 +549,11 @@ a,a:hover {
     background-color:rgb(208,73,37); /* Orange background color */
 }
 
-.recommended-heading-active h6{
-    font-size:4vw;
-    color:rgb(208,73,37); /* Orange Text Color */
-}
-
-.recommended-heading-active{
-    padding-top:1.3%;
+.recommended-heading-line-mobile{
+    width:8%;
+    height:3px;
+    border-radius:50px;
+    background-color:rgb(208,73,37); /* Orange background color */
 }
 
 /* IMAGE CAROUSEL START */
@@ -818,3 +844,43 @@ input[type=text]{
     margin-top:2vw;
 }
 /* FOOTER END */
+
+/* MEDIA QUERIES */
+
+/* Extra small devices (phones) */
+@media only screen and (max-width:600px){
+    .header{
+        height:55vh;
+        background-image:url(../images/Django.jpg);
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size:contain;
+    }
+}
+
+@media only screen and (max-width:770px){
+    .header-index-container{
+        width:15%;
+        height:2%;
+        padding:0 5% 0 0;
+    }
+    
+    .header-slide-content{
+        width:60%;
+        padding:1% 1.5% 1% 1.5%;
+        position:absolute;
+        top:60%;
+        left:3%;
+        border-radius:10px;
+        background-color: rgba(24,24,25,0.92);
+    }
+    
+    .header-slide{
+        width:20%;
+    }
+        
+    .header-slide-active{
+        width:60%;
+    }
+}
+

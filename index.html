@@ -140,40 +140,54 @@
             <!-------------------- HEADER START -------------------->
             <div class="row">
                 <div class="header col-xs-12">
+                    <div class="header-buttons-container-mobile visible-xs">
+                        <div class="header-button-info" style="font-size:12px;">
+                            <i class="fas fa-info" ></i>
+                            More Info
+                        </div>
+                        <div class="header-button-play" style="padding-top:1.3%">Play</div>
+                        <div class="header-button-list" style="font-size:12px;">
+                            <i class="fas fa-plus"></i>
+                            My List
+                        </div>
+                    </div>
+                    
+                    
                     <div class="header-wrapper hidden-xs">
                         <div class="header-slider">
                             
                             <div class="header-slide header-slide-active" data-slide="1">
-                                <img src="images/header_poster1.jpeg" style="width:100%; height:100%;">
+                                <div class="header-poster1"></div>
                             </div>
                             
                             <div class="header-slide" data-slide="2">
-                                <img src="images/header_poster2.jpeg" style="width:100%; height:100%;border-left:2px solid rgb(255,255,255);border-right:2px solid rgb(255,255,255);">
+                                <div class="header-poster2"></div>
+                                <!--<img src="images/header_poster2.jpeg" style="width:100%; height:100%;border-left:2px solid rgb(255,255,255);border-right:2px solid rgb(255,255,255);">-->
                             </div>
                             
                             <div class="header-slide" data-slide="3">
-                                <img src="images/header_poster3.jpeg" style="width:100%; height:100%;">
+                                <div class="header-poster3"></div>
                             </div>
                         </div>
                         
                         <div class="header-slide-content">
-                                    <div class="header-text">
-                                        <h1>Welcome back Liandi!</h1>
-                                        <h4>Here are your top picks for the week:</h4>
-                                        <h3>1. Avengers: Infinity War</h3>
-                                    </div>
-                                    <div class="header-buttons-container">
-                                        <div class="header-button-info">
-                                            <i class="fas fa-info"></i>
-                                            More Info
-                                        </div>
-                                        <div class="header-button-play">Play</div>
-                                        <div class="header-button-list">
-                                            <i class="fas fa-plus"></i>
-                                            My List
-                                        </div>
-                                    </div>
+                            <div class="header-text">
+                                <h1>Welcome back Liandi!</h1>
+                                <h4>Here are your top picks for the week:</h4>
+                                <h3>1. Avengers: Infinity War</h3>
+                            </div>
+                            <div class="header-buttons-container">
+                                <div class="header-button-info">
+                                    <i class="fas fa-info"></i>
+                                    More Info
                                 </div>
+                                <div class="header-button-play">Play</div>
+                                <div class="header-button-list">
+                                    <i class="fas fa-plus"></i>
+                                    My List
+                                </div>
+                            </div>
+                        </div>
                         
                         <div class="header-index-container">
                             <div class="header-circle header-circle-active" data-index="1"></div>
@@ -188,28 +202,17 @@
             
             <!-------------------- RECOMMENDED START -------------------->
             <div class="row">
-                
-                <!-- Recommended Mobile + Tablet -->
-                <div class="recommended-mobile col-sm-12 hidden-md hidden-lg"><!-- Hide on Desktop -->
-                    <div class="recommended-carousel col-sm-12">
-                        <div class="recommended-carousel-heading">
-                            <h6>New Releases</h6>
-                           <!-- <div class="recommended-heading-line"></div>-->
-                        </div>
-                        <div class="recommended-carousel-heading recommended-heading-active">
-                            <h6>Recommended</h6>
-                            <div class="recommended-heading-line"></div>
-                        </div>
-                        <div class="recommended-carousel-heading">
-                            <h6>Trending</h6>
-                            <!--<div class="recommended-heading-line"></div>-->
-                        </div>
+                <!-- Recommended Mobile -->
+                <div class="recommended-mobile hidden-md hidden-lg"> <!-- Hide on Desktop -->
+                    <div class="recommended-heading-mobile">
+                        <h6>Recommended</h6>
+                        <div class="recommended-heading-line-mobile"></div>
                     </div>
                 </div>
                 
                 <!-- Recommended Desktop -->
-                <div class="recommended-desktop hidden-xs hidden-sm"> <!-- Hide on Mobile + Tablet -->
-                    <div class="recommended-desktop-heading">
+                <div class="recommended-desktop hidden-xs hidden-sm "> <!-- Hide on Mobile + Tablet -->
+                    <div class="recommended-heading-desktop">
                         <h6>Recommended</h6>
                         <div class="recommended-heading-line-desktop"></div>
                     </div>
@@ -225,10 +228,10 @@
                         <div class ="carousel">
 							
 							<div class ="image-container 1poster">
-                                <img src="images/Django.jpg" width="100%" height="100%"/>
+                                <img src="" width="100%" height="100%"/>
                                 <div class="poster-hover 1hover">
                                     <div class="poster-name 1name">Django Unchained</div>
-                                    <img src="images/Django.jpg" width="100%" height="72%"/>
+                                    <img src="" width="100%" height="72%"/>
                                     <div class="poster-buttons">
                                         <div class="poster-button-info">
                                             <i class="fas fa-info"></i>
@@ -242,10 +245,10 @@
                             </div> <!--image-hover-->
                             
                             <div class ="image-container 2poster">
-                                <img src="images/Django.jpg" width="100%" height="100%">
+                                <img src="" width="100%" height="100%">
                                 <div class="poster-hover 2hover">
                                     <div class="poster-name 2name">Django Unchained</div>
-                                    <img src="images/Django.jpg" width="100%" height="72%">
+                                    <img src="" width="100%" height="72%">
                                     <div class="poster-buttons">
                                         <div class="poster-button-info">
                                             <i class="fas fa-info"></i>
@@ -259,10 +262,10 @@
                             </div>
                             
                             <div class ="image-container 3poster">
-                                <img src="images/Django.jpg" width="100%" height="100%"/>
+                                <img src="" width="100%" height="100%"/>
                                 <div class="poster-hover 3hover">
                                     <div class ="poster-name 3name">Django Unchained</div>
-                                    <img src="images/Django.jpg" width="100%" height="72%"/>
+                                    <img src="" width="100%" height="72%"/>
                                     <div class ="poster-buttons">
                                         <div class="poster-button-info">
                                             <i class="fas fa-info"></i>
@@ -276,10 +279,10 @@
                             </div>
                             
                             <div class ="image-container 4poster">
-                                <img src="images/Django.jpg" width="100%" height="100%"/>
+                                <img src="" width="100%" height="100%"/>
                                 <div class="poster-hover 4hover">
                                     <div class ="poster-name 4name">Django Unchained</div>
-                                    <img src="images/Django.jpg" width="100%" height="72%"/>
+                                    <img src="" width="100%" height="72%"/>
                                     <div class ="poster-buttons">
                                         <div class="poster-button-info">
                                             <i class="fas fa-info"></i>
@@ -293,10 +296,10 @@
                             </div>
                             
                             <div class ="image-container 5poster">
-                                <img src="images/Django.jpg" width="100%" height="100%"/>
+                                <img src="" width="100%" height="100%"/>
                                 <div class="poster-hover 5hover">
                                     <div class ="poster-name 5name">Django Unchained</div>
-                                    <img src="images/Django.jpg" width="100%" height="72%"/>
+                                    <img src="" width="100%" height="72%"/>
                                     <div class ="poster-buttons">
                                         <div class="poster-button-info">
                                             <i class="fas fa-info"></i>
@@ -310,10 +313,10 @@
                             </div>
                             
                             <div class ="image-container 6poster">
-                                <img src="images/Django.jpg" width="100%" height="100%"/>
+                                <img src="" width="100%" height="100%"/>
                                 <div class="poster-hover 6hover">
                                     <div class ="poster-name 6name">Django Unchained</div>
-                                    <img src="images/Django.jpg" width="100%" height="72%"/>
+                                    <img src="" width="100%" height="72%"/>
                                     <div class ="poster-buttons">
                                         <div class="poster-button-info">
                                             <i class="fas fa-info"></i>
@@ -327,10 +330,10 @@
                             </div>
                             
                             <div class ="image-container 7poster">
-                                <img src="images/Django.jpg" width="100%" height="100%"/>
+                                <img src="" width="100%" height="100%"/>
                                 <div class="poster-hover 7hover">
                                     <div class ="poster-name 7name">Django Unchained</div>
-                                    <img src="images/Django.jpg" width="100%" height="72%"/>
+                                    <img src="" width="100%" height="72%"/>
                                     <div class ="poster-buttons">
                                         <div class="poster-button-info">
                                             <i class="fas fa-info"></i>
@@ -343,10 +346,10 @@
                                 </div>
                             </div>
 							<div class ="image-container 8poster">
-                                <img src="images/Django.jpg" width="100%" height="100%"/>
+                                <img src="" width="100%" height="100%"/>
                                 <div class="poster-hover 8hover">
                                     <div class ="poster-name 8name">Django Unchained</div>
-                                    <img src="images/Django.jpg" width="100%" height="72%"/>
+                                    <img src="" width="100%" height="72%"/>
                                     <div class ="poster-buttons">
                                         <div class="poster-button-info">
                                             <i class="fas fa-info"></i>
@@ -363,8 +366,8 @@
 
                             
                         </div> <!-- end of carousel -->
-                        <a id="prev" href="#"></a>
-                        <a id="next" href="#"></a>
+                        <a id="prev" href="#" class="hidden-xs"></a>
+                        <a id="next" href="#" class="hidden-xs"></a>
                        <!-- <div id="pager"></div>-->
 						
 		          </div>
