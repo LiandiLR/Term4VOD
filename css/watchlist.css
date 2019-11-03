@@ -420,7 +420,6 @@ content{
     margin:0 auto;
     overflow:hidden;
     background-color:rgb(24,24,25);
-    background-color: yellowgreen;
     overflow-x: scroll;
 }
 
@@ -443,11 +442,10 @@ content{
     height:96%;
     padding-left:1.5%;
     margin:0 auto;
-    background-color: crimson;
 }
 
 .image-carousel-poster-lg-mobile{
-    width:130px;/*28%;*/
+    width:180px;/*28%;*/
     height:98%;
     float:left;
     margin:5px 13px 20px 0px;
@@ -455,8 +453,16 @@ content{
     background-color: blue;
 }
 
+.image-carousel-poster-lg-mobile img {
+    width:180px;
+    height:100%;
+    float:left;
+    background-size: contain;
+    background-repeat: no-repeat;    
+}
+
 .image-carousel-poster-lg-tablet{
-    width:150px;/*28%;*/
+    width:180px;/*28%;*/
     height:98%;
     float:left;
     margin:5px 13px 20px 0px;

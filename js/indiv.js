@@ -45,7 +45,21 @@ $(function(){
         $(".budget h3").text("$" + movieBudget);
         $(".tagline h3").text(movieTagline);
         
-    };   
+    };  
+    
+    $(".my-list").on("click", function(moviesData){
+        
+        var movieName = moviesData.original_title;
+        var moviePoster = 'https://image.tmdb.org/t/p/original' + moviesData.poster_path;
+        console.log("works");
+        
+        localStorage.setItem("movieName", movieName);
+        localStorage.setItem("moviePoster", moviePoster);
+             
+            
+    });
+                     
+                     
     
     $(".play").on("mouseenter", function(){
         $(this).css({"background-color" : "#d04925", "color" : "#181819", "cursor" : "pointer"});
@@ -59,11 +73,11 @@ $(function(){
         $(this).css({"border" : "1px solid #656565", "cursor" : "pointer"});
     });
     
-    $(".action-buttons my-list").on("mouseleave", function(){
+    $(".my-list").on("mouseleave", function(){
         $(this).css({"border" : "none"});
     }); 
     
-    $(".my-list").hide();
+
     
     $(".poster-lg-container-mobile").on("mouseenter", function(){
         $(this).find(".action-buttons").fadeOut();    

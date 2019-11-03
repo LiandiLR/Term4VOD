@@ -230,7 +230,7 @@ $(function(){
 				//$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'> <div class='clickable'><img class='moviePosterImgTag' data='"+ movieIMDBid +"'  src='" + moviePoster + "' ></div></div>"); 
 				//console.log(movieName, movieGenre, movieIMDBid);
 				
-				$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><div class='poster-hover 5hover><div class ='poster-name 5name'>" + movieName + "</div><img class='library-poster' data='"+ movieIMDBid + "'  src='" + moviePoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div> <!-- movie poster -->");
+				$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><div class='poster-hover 5hover><div class ='poster-name 5name'>" + movieName + "</div><img class='library-poster' data='"+ movieIMDBid + "'  src='" + moviePoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div>");
                 
                 /*<div class ="image-container 5poster"><img src="images/Django.jpg" width="100%" height="100%"/><div class="poster-hover 5hover"><div class ="poster-name 5name">Django Unchained</div><img src="images/Django.jpg" width="100%" height="72%"/><div class ="poster-buttons"><div class="poster-button-info"><i class="fas fa-info"></i></div><div class="poster-button-play">Play</div><div class="poster-button-list"><i class="fas fa-plus"></i></div></div></div></div>*/
 			}; 
@@ -243,10 +243,25 @@ $(function(){
     
     /*---------------- POSTERS HOVER START ----------------*/
     
-    $(".library-poster").on("mouseenter", function(){
+    $(".poster-hover").on("mouseenter", function(){
         console.log("test");
     });
-    /*$(".library-poster").hover(function(){
+    
+    
+    $(".image-container").hover(function(){
+        $(this).find(".poster-name").slideDown();
+        $(this).find(".poster-buttons").fadeIn(500);
+        $(this).find("img").css({filter:"grayscale(100%)", opacity:"0.5", transition:"0.5s ease"})
+    },function(){
+        $(this).find(".poster-name").slideUp();
+        $(this).find(".poster-buttons").fadeOut(400);
+        $(this).find("img").css({filter:"grayscale(0%)", opacity:"1"})
+    });    
+    
+    
+    
+    
+  /*  $(".library-poster").hover(function(){
         console.log("test");
         $(this).find(".poster-name").slideDown();
         $(this).find(".poster-buttons").fadeIn(500);

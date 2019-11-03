@@ -561,7 +561,7 @@ a,a:hover {
     float: left;
     margin: 0 auto;
     margin-left: 10px;
-    margin-top: -7px;
+    margin-top: -12px;
 }
 
 .my-list h2 {
@@ -792,6 +792,5 @@ input[type=text]{
 
 .content-indiv{
     height: 80vh;
-    background-color:deeppink;
     
 }
