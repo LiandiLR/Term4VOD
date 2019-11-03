@@ -908,7 +908,6 @@ input[type=text]{
     text-align: center;
     background-color: rgb(24,24,25);
     color:rgb(208,73,37);
-    display:none;
 }
 
 .poster-buttons{
@@ -918,7 +917,6 @@ input[type=text]{
     top:78%;
     padding:15px 5px 0px 15px;
     background-color: rgba(24,24,25,0.9);
-    display:none;
 }
 
 .poster-button-info{
