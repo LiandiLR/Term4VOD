@@ -657,6 +657,12 @@ input:checked + .movies-series-slider-desktop:before {
     font-family: "Darker Grotesque", sans-serif;
 }
 
+#rating-textbox:disabled, #genre-textbox:disabled, #title-box:disabled, #release-year:disabled{
+    filter:grayscale(100%);
+    opacity:0.2;
+    border-color: transparent;
+}
+
 .library-genre-desktop{
     height:10vw;
     margin:0;
@@ -897,7 +903,9 @@ input[type=text]{
 }
 /* FOOTER END */
 
-
+.poster-hover{
+    display:none;
+}
 .poster-name{
     width:100%;
     height:12%;
@@ -908,7 +916,6 @@ input[type=text]{
     text-align: center;
     background-color: rgb(24,24,25);
     color:rgb(208,73,37);
-    display:none;
 }
 
 .poster-buttons{
@@ -918,7 +925,6 @@ input[type=text]{
     top:78%;
     padding:15px 5px 0px 15px;
     background-color: rgba(24,24,25,0.9);
-    display:none;
 }
 
 .poster-button-info{
