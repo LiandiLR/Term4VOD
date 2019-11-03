@@ -9,10 +9,11 @@ $(function(){
     
     /* Display User Image */
     console.log(userImage);
-    $(".nav-profile-image").css("background-image","url(" + userImage + ")");
+    $(".nav-profile-image").css("background-image","url(../images/" + userImage + ")");
     
     /* Print Username to welcome message */
     $(".header-text").find("h1").text("Welcome back " + userName);
+    $(".mobile-menu-section1").find("h3").text("Hi "+ userName);
     
      
     
@@ -93,14 +94,17 @@ $(function(){
             /* Set Header Class to Active */
             $(".header-slide").removeClass("header-slide-active");
             $('[data-slide = "1"]').addClass("header-slide-active");
+            $(".header-text").find("h3").text("1.Avengers:Infinity War");
         }else if(slideNr === 2){
              /* Set Header Class to Active */
             $(".header-slide").removeClass("header-slide-active");
             $('[data-slide = "2"]').addClass("header-slide-active");
+            $(".header-text").find("h3").text("2.Captain America:The Winter Soldier");
         }else{
             /* Set Header Class to Active */
             $(".header-slide").removeClass("header-slide-active");
             $('[data-slide = "3"]').addClass("header-slide-active");
+            $(".header-text").find("h3").text("3.Inception");
         }
     });
     /*---------------- HEADER SLIDER JS END ----------------*/
