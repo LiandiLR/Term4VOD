@@ -81,7 +81,7 @@ $(function(){
         if($("input[type=checkbox]").is(":checked")){
             $(".movies").show();
             $(".all-movies-heading").show();
-            $(".series").hide();
+            $("#addseriesPosters").hide();
             $(".all-series-heading").hide();
         }else{
             $(".movies").hide();
@@ -216,7 +216,7 @@ $(function(){
 			$.getJSON(apiCall, dataCallBack);
 			
 			function dataCallBack(moviesData){
-				//console.log(moviesData);
+				console.log(moviesData);
 				
 				var movieName = moviesData.results[0].original_title;
 				var movieOverview = moviesData.results[0].overview;
@@ -239,6 +239,69 @@ $(function(){
 			
 			
 		};
+    
+    
+    
+    
+    
+        var k = 0;
+        for (k; k < 24; k++){
+        
+            var seriesLength = series.length;
+			var randomNumberSeries = Math.floor((Math.random() * seriesLength));
+			var randomSeriesName = series[randomNumberSeries];
+			
+			var seriesNameLength = randomSeriesName.length;
+			var seriesNameAPISearch = randomSeriesName;
+            
+            console.log(randomSeriesName);
+			console.log(seriesNameLength);
+			
+			var seriesSettings = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.themoviedb.org/3/search/movie?api_key=9b788b49ee42354dbc57b8a25b87c9df&query=" + seriesNameAPISearch,
+				"method": "GET",
+				"headers": {},
+				"data": "{}"
+			}
+			
+			$.ajax(seriesSettings).done(function (response) {
+				
+			});
+			
+			for (i = 0; i < seriesNameLength; i++ ) {
+				seriesNameAPISearch = seriesNameAPISearch.replace(" ", "%20");
+			}
+			console.log(seriesNameAPISearch);
+			
+			var apiSeriesCall = seriesSettings.url;
+			
+			$.getJSON(apiSeriesCall, dataSeriesCallBack);
+			
+			function dataSeriesCallBack(seriesData){
+				console.log(seriesData);
+				
+				var seriesName = seriesData.results[0].original_title;
+				var seriesOverview = seriesData.results[0].overview;
+				var seriesRating = seriesData.results[0].vote_average;
+				var seriesTagline = seriesData.results[0].tagline;
+				var seriesRuntime = seriesData.results[0].runtime;
+				var seriesGenre = seriesData.results[0].genre_ids;
+				var seriesIMDBid = seriesData.results[0].id;
+				var seriesPoster = 'https://image.tmdb.org/t/p/original' + seriesData.results[0].poster_path;
+                
+                console.log(seriesName);
+                console.log(apiSeriesCall);
+				
+				//$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'> <div class='clickable'><img class='moviePosterImgTag' data='"+ movieIMDBid +"'  src='" + moviePoster + "' ></div></div>"); 
+				//console.log(movieName, movieGenre, movieIMDBid);
+				
+				$("#addseriesPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><div class='poster-hover 5hover><div class ='poster-name 5name'>" + seriesName + "</div><img class='library-poster' data='"+ seriesIMDBid + "'  src='" + seriesPoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div>");     
+        
+        
+        };
+    };
     
     
     /*---------------- POSTERS HOVER START ----------------*/
