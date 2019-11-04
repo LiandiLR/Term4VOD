@@ -173,7 +173,10 @@ a,a:hover {
     width:45px;
     height:45px;
     border-radius:50px;
-    background-color:beige;
+    background-image: url(../images/mike_2.jpeg);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center;
 }
 
 .nav-profile h6{
