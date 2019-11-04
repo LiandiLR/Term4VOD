@@ -143,7 +143,7 @@ $(document).ready(function(){
                 localStorage.setItem('username',userEmail);
                 localStorage.setItem('userimage',userImage);
                 console.log("user valid");
-                window.location.href = "../index.html";
+                window.location.href = "pages/landing.html";
             } else {
                 console.log("not valid");
             }   
@@ -167,7 +167,7 @@ $(document).ready(function(){
             if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
                 localStorage.setItem('username',userEmail);
                 console.log("user valid");
-                window.location.href = "../index.html";
+                window.location.href = "pages/landing.html";
             } else {
                 console.log("not valid");
             }   
@@ -191,7 +191,7 @@ $(document).ready(function(){
             if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
                 localStorage.setItem('username',userEmail);
                 console.log("user valid");
-                window.location.href = "../index.html";
+                window.location.href = "pages/landing.html";
             } else {
                 console.log("not valid");
             }   
