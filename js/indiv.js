@@ -12,12 +12,6 @@ $(function(){
 		
 		$.getJSON(apiCall, dataCallBack);
 
-		for(i=0; i < genreLenght; i++){
-			genreListName = genreListName + i + ',';	
-		}
-        
-		var genreListFinal = parseFloat(genreListName.substring(0, genreListName.length - 1));
-
 		
 		function dataCallBack(moviesData){
 			console.log(moviesData);
@@ -54,7 +48,7 @@ $(function(){
 			$(".poster-image-desktop").find("img").attr("src", moviePoster);
 			$(".genres h3").text(movieGenre);
 			$(".release-date h3").text(movieReleaseDate);
-			$(".runtime h3").text(movieRuntime);
+			$(".runtime h3").text(movieRuntime + ' mins');
 			$(".budget h3").text("$" + movieBudget);
 			$(".tagline h3").text(movieTagline);
 			
@@ -102,7 +96,7 @@ $(function(){
 			$(".poster-image-desktop").find("img").attr("src", moviePoster);
 			$(".genres h3").text(movieGenre);
 			$(".release-date h3").text(movieReleaseDate);
-			$(".runtime h3").text(movieRuntime);
+			$(".runtime h3").text(movieRuntime + ' mins');
 			$(".budget h3").text("$" + movieBudget);
 			$(".tagline h3").text(movieTagline);
 			
