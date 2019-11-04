@@ -2,18 +2,18 @@ $(function(){
     console.log("ready");
     
     /* GET USERNAME AND IMAGE FROM LOCAL STORAGE */
-    var userEmail = localStorage.getItem("username");
-    var userNameArray = userEmail.split('@');
-    var userName = userNameArray[0];
-    var userImage = localStorage.getItem("userimage");
+    //var userEmail = localStorage.getItem("username");
+    //var userNameArray = userEmail.split('@');
+    //var userName = userNameArray[0];
+    //var userImage = localStorage.getItem("userimage");
     
     /* Display User Image */
-    console.log(userImage);
-    $(".nav-profile-image").css("background-image","url(../images/" + userImage + ")");
+    //console.log(userImage);
+    //$(".nav-profile-image").css("background-image","url(../images/" + userImage + ")");
     
     /* Print Username to welcome message */
-    $(".header-text").find("h1").text("Welcome back " + userName);
-    $(".mobile-menu-section1").find("h3").text("Hi "+ userName);
+    //$(".header-text").find("h1").text("Welcome back " + userName);
+   // $(".mobile-menu-section1").find("h3").text("Hi "+ userName);
     
      
     
