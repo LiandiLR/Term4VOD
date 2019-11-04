@@ -90,39 +90,34 @@ $(function() {
         var movieGenre = moviesData.genres[genreListFinal].name;
         var moviePoster = 'https://image.tmdb.org/t/p/original' + moviesData.poster_path;
         
-        console.log(movieBudget, movieName, movieGenre, movieOverview, movieRating, movieReleaseDate, movieRuntime, movieTagline);
+        //console.log(movieBudget, movieName, movieGenre, movieOverview, movieRating, movieReleaseDate, movieRuntime, movieTagline);
         
+        $(".carousel").append("<div class ='image-container'><img src='" + moviePoster + "' width='100%' height='100%'/><div class='poster-hover'><div class ='poster-name'>" + movieName + "</div><img class='library-poster' data='"+ movieID + "'  src='" + moviePoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div>");
         
+        $(".image-container").on("click",function(){
+        $(this).fadeOut();
+        });
+    };
+    
+    
+    
+    /*---------------- IMAGE CAROUSEL JS START ---------------- */
+    $(".carousel").carouFredSel({
+        width: "100%",
+		
        
-        
-    };      
+		items: 6,
+		scroll: 1,
+		auto: {
+		  duration: 1250,
+		  timeoutDuration: 2500
+		},
+		prev: '#prev',
+		next: '#next',
+		pagination: '#pager'
+    });
     
-    
-  /*  for(i=0; i < movieslength; i++){
-        $('#AddHerePC').append("<div class='item col-xs-2'><img src="+  +"></div>");        
-    };   
-    
-    
-    var movieAPIsearch = "http://www.omdbapi.com/?apikey=c0e1ea77&plot=full&t=" + randomMovieName;*/
-    
-  /*  fetch(movieAPIsearch).then(res => res.json()).then((out) => {console.log('Output: ', out);}).catch(err => console.error(err));
-    
-    
-    fetch(seriesAPIsearch).then(res => res.json()).then((out) => {console.log('Output: ', out);}).catch(err => console.error(err));*/
-    
-    
-        var movieName = localStorage.getItem("movieName");
-        var moviePoster = localStorage.getItem("moviePoster");
-
-        console.log(movieName);
-        console.log(moviePoster);
-
-        $(".watchlist-1").find("img").attr("src", moviePoster);
-        $(".poster-image").find("img").attr("src", moviePoster); 
-    
-    
-    
-    
+    /*---------------- IMAGE CAROUSEL JS END ----------------*/ 
     
     
     

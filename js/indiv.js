@@ -7,9 +7,17 @@ $(function(){
 	
 		var movieID = localStorage.getItem('imdbID');
 		
+
 		var apiCall = 'https://api.themoviedb.org/3/movie/' + movieID + '?api_key=9b788b49ee42354dbc57b8a25b87c9df';
 		
 		$.getJSON(apiCall, dataCallBack);
+
+		for(i=0; i < genreLenght; i++){
+			genreListName = genreListName + i + ',';	
+		}
+        
+		var genreListFinal = parseFloat(genreListName.substring(0, genreListName.length - 1));
+
 		
 		function dataCallBack(moviesData){
 			console.log(moviesData);
@@ -103,15 +111,10 @@ $(function(){
     
     $(".my-list").on("click", function(moviesData){
         
-        var movieName = moviesData.original_title;
-        var moviePoster = 'https://image.tmdb.org/t/p/original' + moviesData.poster_path;
-        console.log("works");
         
-        localStorage.setItem("movieName", movieName);
-        localStorage.setItem("moviePoster", moviePoster);
-             
-            
-    });
+    });  
+    
+    
                      
                      
     
