@@ -14,7 +14,7 @@ $(function(){
 		for(i=0; i < genreLenght; i++){
 			genreListName = genreListName + i + ',';	
 		}
-		
+        
 		var genreListFinal = parseFloat(genreListName.substring(0, genreListName.length - 1));
 		
 		
@@ -45,19 +45,17 @@ $(function(){
         $(".budget h3").text("$" + movieBudget);
         $(".tagline h3").text(movieTagline);
         
+        /* ADD TO LIST CLICK EVENT */
+        $(".my-list").on("click", function(moviesData){
+            localStorage.setItem("movieName", movieName);
+            localStorage.setItem("moviePoster", moviePoster);
+            
+        }); // My list click event end
+        
+        
     };  
     
-    $(".my-list").on("click", function(moviesData){
-        
-        var movieName = moviesData.original_title;
-        var moviePoster = 'https://image.tmdb.org/t/p/original' + moviesData.poster_path;
-        console.log("works");
-        
-        localStorage.setItem("movieName", movieName);
-        localStorage.setItem("moviePoster", moviePoster);
-             
-            
-    });
+    
                      
                      
     

@@ -22,6 +22,8 @@
         <!-- LINK CSS/JS PROJECT FILEs -->
         <link rel="stylesheet" href="../css/watchlist.css">
         
+        <script src="../jquery/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+        
         <!--<script src="main.js"></script>-->
         
         <!-- LINK GOOGLE FONT -->
@@ -148,98 +150,169 @@
             <div class="row">
                                 
                 <!-------------------- IMAGE CAROUSEL MOBILE -------------------->
-                <div class="image-carousel-mobile col-xs-12 hidden-sm hidden-md hidden-lg"><!-- Hide on Tablet + Desktop -->
-                    <div class="image-carousel-visible">
-                        
-                            <!-- MOBILE POSTER CONTENT START -->
-                           <div class="image-carousel-mobile-content">
-                               <!-- POSTER 1 -->
-                                <div class="image-carousel-poster-lg-mobile watchlist-1">
-                                    <img src="">
-                                </div>                            
-                               
-                               <!-- POSTER 2 -->
-                                <div class="image-carousel-poster-lg-mobile watchlist-2">
-                                     <img src="">
-                                </div>                            
-                               
-                               <!-- POSTER 3 -->
-                                <div class="image-carousel-poster-lg-mobile watchlist-3">
-                                    <img src="">
-                                </div>
-                               
-                            </div>
-                            <!-- MOBILE POSTER CONTENT END -->
-                    </div>
-                </div>
                 
-                <!-------------------- IMAGE CAROUSEL TABLET -------------------->
-                <div class="image-carousel-tablet col-xs-12 hidden-xs hidden-md hidden-lg"><!-- Hide on Mobile + Desktop -->
-                    <div class="image-carousel-visible">
-                            <!-- TABLET POSTER CONTENT START -->
-                           <div class="image-carousel-tablet-content">
-                                <!-- POSTER 1 -->
-                                <div class="image-carousel-poster-lg-tablet">
-                                    <div class="recommended-poster1"></div>
-                                </div>                        
-                               
-                               <!-- POSTER 3 -->
-                                <div class="image-carousel-poster-lg-tablet">
-                                    <div class="recommended-poster1"></div>
-                                </div>
-                               
-                               <!-- POSTER 5 -->
-                                <div class="image-carousel-poster-lg-tablet">
-                                    <div class="recommended-poster1"></div>
-                                </div>
-                               
-                               <!-- POSTER 6 -->
-                                <div class="image-carousel-poster-lg-tablet">
-                                    <div class="image-carousel-poster-sm">
-                                        <div class="recommended-poster2"></div>
-                                    </div>
-                                    <div class="image-carousel-poster-sm-divider"></div>
-                                    <div class="image-carousel-poster-sm">
-                                        <div class="recommended-poster3"></div>
-                                    </div>
-                               </div>
-                            </div>
-                            <!-- TABLET POSTER CONTENT END -->
-                    </div>
-                </div>
                 
-                <!-------------------- IMAGE CAROUSEL DESKTOP -------------------->
-                <div class="image-carousel-desktop col-xs-12 hidden-xs hidden-sm"><!-- Hide on Mobile + Tablet -->
-                    <div class="image-carousel-visible">
-                            <!-- TABLET POSTER CONTENT START -->
-                           <div class="image-carousel-desktop-content">
-                                <!-- POSTER 1 -->
-                                <div class="image-carousel-poster-lg-desktop">
-                                    <div class="recommended-poster1"></div>
-                                </div>
-                                <div class="image-carousel-poster-lg-desktop">
-                                    <div class="recommended-poster3"></div>
-                                </div>
-                                <div class="image-carousel-poster-lg-desktop">
-                                    <div class="recommended-poster2"></div>
-                                </div>
-                                <div class="image-carousel-poster-lg-desktop">
-                                    <div class="recommended-poster1"></div>
-                                </div>
-                                <div class="image-carousel-poster-lg-desktop">
-                                    <div class="recommended-poster3"></div>
-                                </div>
-                                <div class="image-carousel-poster-lg-desktop">
-                                    <div class="recommended-poster2"></div>
-                                </div>
-                                <div class="image-carousel-poster-lg-desktop">
-                                    <div class="recommended-poster2"></div>
+                <!-------------------- IMAGE CAROUSEL START -------------------->
+            <div class="row">
+                <div class="image-carousel col-xs-12">
+                    <div class="wrapper col-xs-12">
+                        <div class ="carousel">
+							
+							<div class ="image-container 1poster">
+                                <img src="../images/Django.jpg" width="100%" height="100%"/>
+                                <div class="poster-hover 1hover">
+                                    <div class="poster-name 1name">Django Unchained</div>
+                                    <img src="../images/Django.jpg" width="100%" height="72%"/>
+                                    <div class="poster-buttons">
+                                        <div class="poster-button-info">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <div class="poster-button-play">Play</div>
+                                        <div class="poster-button-list">
+                                            <i class="fas fa-plus"></i>
+                                        </div> <!--poster-button-list-->
+                                    </div> <!--poster-buttons-->
+                                </div> <!--poster-hover-->
+                            </div> <!--image-hover-->
+                            
+                            <div class ="image-container 2poster">
+                                <img src="../images/jaws.jpg" width="100%" height="100%">
+                                <div class="poster-hover 2hover">
+                                    <div class="poster-name 2name">Django Unchained</div>
+                                    <img src="../images/jaws.jpg" width="100%" height="72%">
+                                    <div class="poster-buttons">
+                                        <div class="poster-button-info">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <div class="poster-button-play">Play</div>
+                                        <div class="poster-button-list">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                    </div>
+                            
+                            <div class ="image-container 3poster">
+                                <img src="../images/howtotrainyourdragon" width="100%" height="100%"/>
+                                <div class="poster-hover 3hover">
+                                    <div class ="poster-name 3name">Django Unchained</div>
+                                    <img src="../images/howtotrainyourdragon" width="100%" height="72%"/>
+                                    <div class ="poster-buttons">
+                                        <div class="poster-button-info">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <div class="poster-button-play">Play</div>
+                                        <div class="poster-button-list">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class ="image-container 4poster">
+                                <img src="../images/gonegirl.jpg" width="100%" height="100%"/>
+                                <div class="poster-hover 4hover">
+                                    <div class ="poster-name 4name">Django Unchained</div>
+                                    <img src="../images/gonegirl.jpg" width="100%" height="72%"/>
+                                    <div class ="poster-buttons">
+                                        <div class="poster-button-info">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <div class="poster-button-play">Play</div>
+                                        <div class="poster-button-list">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class ="image-container 5poster">
+                                <img src="../images/joker.jpg" width="100%" height="100%"/>
+                                <div class="poster-hover 5hover">
+                                    <div class ="poster-name 5name">Django Unchained</div>
+                                    <img src="../images/joker.jpg" width="100%" height="72%"/>
+                                    <div class ="poster-buttons">
+                                        <div class="poster-button-info">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <div class="poster-button-play">Play</div>
+                                        <div class="poster-button-list">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class ="image-container 6poster">
+                                <img src="../images/thehobbit.jpg" width="100%" height="100%"/>
+                                <div class="poster-hover 6hover">
+                                    <div class ="poster-name 6name">Django Unchained</div>
+                                    <img src="../images/thehobbit.jpg" width="100%" height="72%"/>
+                                    <div class ="poster-buttons">
+                                        <div class="poster-button-info">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <div class="poster-button-play">Play</div>
+                                        <div class="poster-button-list">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class ="image-container 7poster">
+                                <img src="../images/50firstdates.jpg" width="100%" height="100%"/>
+                                <div class="poster-hover 7hover">
+                                    <div class ="poster-name 7name">Django Unchained</div>
+                                    <img src="../images/50firstdates.jpg" width="100%" height="72%"/>
+                                    <div class ="poster-buttons">
+                                        <div class="poster-button-info">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <div class="poster-button-play">Play</div>
+                                        <div class="poster-button-list">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+							<div class ="image-container 8poster">
+                                <img src="../images/thecroods.jpg" width="100%" height="100%"/>
+                                <div class="poster-hover 8hover">
+                                    <div class ="poster-name 8name">Django Unchained</div>
+                                    <img src="../images/thecroods.jpg" width="100%" height="72%"/>
+                                    <div class ="poster-buttons">
+                                        <div class="poster-button-info">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <div class="poster-button-play">Play</div>
+                                        <div class="poster-button-list">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+							
+
+                            
+
+                            
+                        </div> <!-- end of carousel -->
+                        <a id="prev" href="#" class="hidden-xs"></a>
+                        <a id="next" href="#" class="hidden-xs"></a>
+                       <!-- <div id="pager"></div>-->
+						
+		          </div>
                 </div>
+        
             </div>
-            <!-------------------- IMAGE CAROUSEL END ------------------->
+            <!-------------------- IMAGE CAROUSEL END -------------------->
+                        
+                            
             
             
        
