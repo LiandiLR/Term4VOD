@@ -102,28 +102,6 @@ $(document).ready(function(){
         }
     })
     
- 
-    
-    
-    // Store
-        $(".password-hide-icon-desk").bind("click", function() {
-        var test = $(".password-hide-icon-desk").find("i").hasClass("fa-eye-slash");
-        
-        if(test === true){
-            $(".password-hide-icon-desk").find("i").removeClass('fa-eye-slash');
-            $(".password-hide-icon-desk").find("i").addClass('fa-eye');
-        }else{
-            $(".password-hide-icon-desk").find("i").removeClass('fa-eye');
-            $(".password-hide-icon-desk").find("i").addClass('fa-eye-slash');
-        }
-        
-        if ($('.password-text-desk').attr('type') =='password'){
-            $('.password-text-desk').attr('type','text');
-        }else if($('.password-text-desk').attr('type') =='text'){
-            $('.password-text-desk').attr('type','password');
-        }
-    })
-    
     
     
     
@@ -135,13 +113,11 @@ $(document).ready(function(){
     console.log(userEmail);
             
     var userPassword = document.getElementById("password-text-desk").value;   
-    console.log(userPassword); 
+    console.log(userPassword);    
         
         for (var i=0; i < threeUsers.length; i++){
             if ((userEmail === threeUsers[i].userName) && (userPassword === threeUsers[i].userPassword)){
-                var userImage = threeUsers[i].image
                 localStorage.setItem('username',userEmail);
-                localStorage.setItem('userimage',userImage);
                 console.log("user valid");
                 window.location.href = "pages/landing.html";
             } else {
@@ -204,12 +180,7 @@ $(document).ready(function(){
     
 });
 
-    
-    
-
-
-
-
+        
 
 
 

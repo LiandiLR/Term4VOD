@@ -62,18 +62,20 @@ $(function(){
     /*---------------- NAVIGATION JS END ----------------*/
     
     /* -------------------- MOVIES SERIES SWITCH JS START ----------------------*/
-    $(".movies-series-slider-mobile").on("click",function(){
+	
+	$(".movies-series-slider-mobile").on("click",function(){
         if($("input[type=checkbox]").is(":checked")){
             $(".movies").show();
             $(".all-movies-heading").show();
-            $(".series").hide();
+            $("#addseriesPosters").hide();
             $(".all-series-heading").hide();
-            
+			populateMovies();
         }else{
             $(".movies").hide();
             $(".all-movies-heading").hide();
-            $(".series").show();
+			$("#addseriesPosters").show();
             $(".all-series-heading").show();
+			populateSeries();
         }
     });
     
@@ -83,11 +85,13 @@ $(function(){
             $(".all-movies-heading").show();
             $("#addseriesPosters").hide();
             $(".all-series-heading").hide();
+			populateMovies();
         }else{
             $(".movies").hide();
             $(".all-movies-heading").hide();
-            $(".series").show();
+			$("#addseriesPosters").show();
             $(".all-series-heading").show();
+			populateSeries();
         }
     });
     
@@ -444,12 +448,8 @@ $(function(){
 				var movieIMDBid = moviesData.results[0].id;
 				var moviePoster = 'https://image.tmdb.org/t/p/original' + moviesData.results[0].poster_path;
 				
-				//$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'> <div class='clickable'><img class='moviePosterImgTag' data='"+ movieIMDBid +"'  src='" + moviePoster + "' ></div></div>"); 
-				//console.log(movieName, movieGenre, movieIMDBid);
-				
 				$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><img class='library-poster' data='"+ movieIMDBid + "'  src='" + moviePoster + "' width='100%' height='100%'><div class='poster-hover'><div class ='poster-name'>" + movieName + "</div><img class='library-poster' data='"+ movieIMDBid + "'  src='" + moviePoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div>");
                 
-                /*<div class ="image-container 5poster"><img src="images/Django.jpg" width="100%" height="100%"/><div class="poster-hover 5hover"><div class ="poster-name 5name">Django Unchained</div><img src="images/Django.jpg" width="100%" height="72%"/><div class ="poster-buttons"><div class="poster-button-info"><i class="fas fa-info"></i></div><div class="poster-button-play">Play</div><div class="poster-button-list"><i class="fas fa-plus"></i></div></div></div></div>*/
 			}; 
 			
 			
@@ -457,11 +457,14 @@ $(function(){
 			
 		};
 	
-	$('.movies-text-mobile').on("click",function(){
+	function populateMovies(){
 		
-		//$(".library-poster").remove();
+		$(".movie-poster").remove();
 		
-				var index = 0;
+		localStorage.setItem('movieIndiv', 'true');
+		localStorage.setItem('seriesIndiv', 'false');
+		
+		var index = 0;
 		for(index; index < 24; index++){
 			
 			var movieslength = movies.length;
@@ -507,24 +510,29 @@ $(function(){
 				var movieIMDBid = moviesData.results[0].id;
 				var moviePoster = 'https://image.tmdb.org/t/p/original' + moviesData.results[0].poster_path;
 				
-				//$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'> <div class='clickable'><img class='moviePosterImgTag' data='"+ movieIMDBid +"'  src='" + moviePoster + "' ></div></div>"); 
 				//console.log(movieName, movieGenre, movieIMDBid);
 				
 				$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><img class='library-poster' data='"+ movieIMDBid + "'  src='" + moviePoster + "' width='100%' height='100%'><div class='poster-hover'><div class ='poster-name'>" + movieName + "</div><img class='library-poster' data='"+ movieIMDBid + "'  src='" + moviePoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div>");
                 
-                /*<div class ="image-container 5poster"><img src="images/Django.jpg" width="100%" height="100%"/><div class="poster-hover 5hover"><div class ="poster-name 5name">Django Unchained</div><img src="images/Django.jpg" width="100%" height="72%"/><div class ="poster-buttons"><div class="poster-button-info"><i class="fas fa-info"></i></div><div class="poster-button-play">Play</div><div class="poster-button-list"><i class="fas fa-plus"></i></div></div></div></div>*/
+
 			}; 
 			
 			
 			
 			
 		};
-	});
+	};
     
     
     
     
-    $('.series-text-mobile').on("click",function(){
+    function populateSeries(){
+		
+		$(".movie-poster").remove();
+		
+		localStorage.setItem('seriesIndiv', 'true');
+		localStorage.setItem('movieIndiv', 'false');
+		
         var indexk = 0;
         for (indexk; indexk < 24; indexk++){
         
@@ -572,18 +580,12 @@ $(function(){
 				var seriesGenre = seriesData.results[0].genre_ids;
 				var seriesIMDBid = seriesData.results[0].id;
 				var seriesPoster = 'https://image.tmdb.org/t/p/original' + seriesData.results[0].poster_path;
-                
 				
-				//$("#addPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'> <div class='clickable'><img class='moviePosterImgTag' data='"+ movieIMDBid +"'  src='" + moviePoster + "' ></div></div>"); 
-				//console.log(movieName, movieGenre, movieIMDBid);
+				$("#addseriesPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><img class='library-poster' data='"+ seriesIMDBid + "'  src='" + seriesPoster + "' width='100%' height='100%'><div class='poster-hover'><div class ='poster-name'>" + seriesName + "</div><img class='library-poster' data='"+ seriesIMDBid + "'  src='" + seriesPoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div>");
 				
-				$("#addseriesPosters").append("<div class='movie-poster col-xs-6 col-sm-6 col-md-3 col-lg-2'><a href='indiv.html'><div class='poster-hover 5hover><div class ='poster-name 5name'>" + seriesName + "</div><img class='library-poster' data='"+ seriesIMDBid + "'  src='" + seriesPoster + "' width='100%' height='72%'><div class ='poster-buttons'><div class='poster-button-info'><i class='fas fa-info'></i></div><div class='poster-button-play'>Play</div><div class='poster-button-list'><i class='fas fa-plus'></i></div></div></a></div>");
-				
-
-        
-        };
+        	};
 		};
-	  });
+	  };
     
     /*---------------- POSTERS HOVER START ----------------*/
     
